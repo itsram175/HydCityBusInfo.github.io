@@ -911,6 +911,17 @@ body {
     .content .options_Container .cards a p {
         font-size: 0.5rem;
     }
+    
+    #subMenuPageHeading {
+        font-size: 1.5rem;
+        margin-top: -20px;
+    }
+
+    #subMenuPageUp_routeHeading,#subMenuPageDown_routeHeading {
+        font-size: 1.2rem;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        letter-spacing: 1.5px;
+    }
 
     .footer {
         height: 30vh;
