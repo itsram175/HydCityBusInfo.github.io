@@ -85,8 +85,18 @@ function open_Menu() {
         d.style.opacity = "1";
     }
 }
-
+//list="inputsDataList"
 // For Accessing the Options
+
+function showdataList() {
+    var input1 = document.getElementById("input1");
+    var input2 = document.getElementById("input2");
+
+    setTimeout(function () {
+        input1.setAttribute("list", "inputsDataList");
+        input2.setAttribute("list", "inputsDataList");
+    }, 3000);
+}
 
 function accessFeature(featureName) {
     // alert(featureName);
@@ -2653,28 +2663,28 @@ function getResult() {
         subMenuPageBSD.style.display = "flex";
         note.style.display = "flex";
 
-            if (arraysrc.includes(input1.value) && arraydst.includes(input2.value)) {
-                var i = arraysrc.indexOf(input1.value);
-                var j = arraydst.indexOf(input2.value);
-                arrayRG = array_FT_RG[i][j];
-                arrayOR = array_FT_OG[i][j];
+        if (arraysrc.includes(input1.value) && arraydst.includes(input2.value)) {
+            var i = arraysrc.indexOf(input1.value);
+            var j = arraydst.indexOf(input2.value);
+            arrayRG = array_FT_RG[i][j];
+            arrayOR = array_FT_OG[i][j];
 
-            }
-            else {
-                alert("Kindly enter the valid Bus Stop names from the given list at Source and Destinations");
-                subMenuPageBSD.style.display = "none";
-                
-            }
+        }
+        else {
+            alert("Kindly enter the valid Bus Stop names from the given list at Source and Destinations");
+            subMenuPageBSD.style.display = "none";
 
-            if(input1.value === input2.value){
-                subMenuPageBSD_routeHeading.innerHTML = input1.value;
-            }else{
-                subMenuPageBSD_routeHeading.innerHTML = input1.value + " - " + input2.value;
-            }
+        }
+
+        if (input1.value === input2.value) {
+            subMenuPageBSD_routeHeading.innerHTML = input1.value;
+        } else {
+            subMenuPageBSD_routeHeading.innerHTML = input1.value + " - " + input2.value;
+        }
 
         subMenuPageUp.style.display = "none";
         subMenuPageDown.style.display = "none";
-        
+
         // POPULATING THE LIST
         // REGULAR ROUTES
 
@@ -4352,7 +4362,7 @@ function populatingRouteListUp(ECValue) {
                 break;
 
             case "90L":
-                arrayHUP = ["LB NAGAR","KAMINENI","NAGOLE","UPPAL","TARNAKA","METTUGUDA","SECUNDERABAD","JBS"];
+                arrayHUP = ["LB NAGAR", "KAMINENI", "NAGOLE", "UPPAL", "TARNAKA", "METTUGUDA", "SECUNDERABAD", "JBS"];
                 arraySHUP = ["MGBS || METRO STATION", "CENTRAL LIBRARY || BUS STATION", "MJ MARKET", "MMTS STATION", "TELANGANA ASSEMBLY"]
                 routeDetailsNoteUp.style.display = "none";
                 routeDetailsNoteDown.style.display = "none";
