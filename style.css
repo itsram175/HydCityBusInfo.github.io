@@ -136,9 +136,24 @@ body {
     flex-wrap: wrap;
     margin: auto;
     width: 60%;
+    /* margin-left: -15px;
+    margin-top: 15px; */
+    /* justify-content: center;
+    align-items: center; */
+    /* background-color: blue; */
+    /* background-color: antiquewhite; */
+    /* margin-left: 175px;
+    margin-right: 200px; */
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .content .options_Container .cards {
+    /* background-color: rgb(9, 32, 45); */
+    /* background-color: rgb(26, 44, 63); */
+    /* border-style: solid; */
+    /* border-color: blue; */
+    /* border-radius: 20px; */
     margin-left: 15px;
     margin-top: 15px;
     transition-duration: 0.5s;
@@ -154,9 +169,9 @@ body {
 }
 
 .content .options_Container .cards a .icons {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100px;
     margin-top: 22px;
@@ -191,6 +206,9 @@ body {
     letter-spacing: 1px;
     padding: 15px;
     margin-top: 25px;
+    /* text-align: center; */
+    /* text-decoration: underline; */
+    /* border-bottom: solid; */
 }
 
 .content .options_Container .cards a p {
@@ -201,6 +219,7 @@ body {
     opacity: 0.6;
     font-family: 'Merienda', cursive;
 }
+
 
 /* Submenu Page */
 .subMenuPage {
@@ -277,7 +296,8 @@ body {
 }
 
 .subMenuPageOutput {
-    margin-top: 40px;
+    margin-top:40px;
+    padding-bottom: 10px;
 }
 
 .subMenuPageOutput h3 {
@@ -288,13 +308,14 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2);
     min-height: 50px;
     max-height: fit-content;
-    padding: 3px 0px;
+    padding: 2px 2px;
+    padding-top: 6px;
 }
 
 .subMenuPageOutput ul {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .subMenuPageOutput ul li {
@@ -303,6 +324,7 @@ body {
     padding: 10px 5px;
     padding-bottom: 25px;
     background-color: transparent;
+    
 }
 
 .subMenuPageOutput ul li .LI-heading {
@@ -314,7 +336,7 @@ body {
     text-align: center;
     letter-spacing: 2px;
     height: fit-content;
-    
+
 }
 
 .subMenuPageOutput ul li .LI-subhead {
@@ -322,8 +344,10 @@ body {
     text-align: center;
     font-size: 0.7rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* height: fit-content; */
 }
-.subMenuPageOutput .btnExpand{
+
+.subMenuPageOutput .btnExpand {
     color: rgb(55, 238, 55);
     font-size: 1.5rem;
     background-color: black;
@@ -336,13 +360,15 @@ body {
     font-family: 'Merienda', cursive;
     cursor: pointer;
 }
-.subMenuPageOutput .routeDetailsNote{
+
+.subMenuPageOutput .routeDetailsNote {
     width: 97%;
     height: fit-content;
     margin: 15px 0px;
     display: none;
 }
-.subMenuPageOutput .routeDetailsNote h3{
+
+.subMenuPageOutput .routeDetailsNote h3 {
     color: #F1C40F;
     border: none;
     height: fit-content;
@@ -351,12 +377,14 @@ body {
     text-align: left;
     background-color: transparent;
 }
-.subMenuPageOutput .routeDetailsNote p{
+
+.subMenuPageOutput .routeDetailsNote p {
     margin-top: -20px;
     font-family: 'Merienda', cursive;
     font-size: 0.8rem;
     opacity: 0.8;
 }
+
 .subMenuPageBSD {
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -371,8 +399,9 @@ body {
     transition-duration: 1s;
     padding-bottom: 5px;
 }
+
 .subMenuPageBSD h3 {
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Kdam Thmor Pro', sans-serif;
     height: fit-content;
     background-color: rgb(2, 12, 31);
     width: fit-content;
@@ -380,7 +409,8 @@ body {
     border-radius: 10px;
     margin-top: -25px;
     color: rgba(255, 255, 255, 1);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
     text-align: center;
     width: 87%;
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -388,30 +418,35 @@ body {
     max-height: fit-content;
     padding: 4px 0px;
 }
-.subMenuPageBSD p{
+
+.subMenuPageBSD p {
     width: 99%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
     font-size: 1.3rem;
     padding: 5px;
-    
+
 }
-.subMenuPageBSD ul{
+
+.subMenuPageBSD ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     width: 98%;
-    height:fit-content ;
+    height: fit-content;
     justify-content: center;
     padding-bottom: 5px;
-    
+
 }
-.subMenuPageBSD ul li{
+
+.subMenuPageBSD ul li {
     margin-left: 10px;
     margin-top: 5px;
     font-size: 1.2rem;
     font-family: 'Kdam Thmor Pro', sans-serif;
-    
+    cursor: pointer;
 }
+
 /* .subMenuPageBSD ul li:nth-child(even){
     color: rgb(63, 197, 74);
 }
@@ -421,11 +456,12 @@ body {
 
 
 /* Alternate Route CSS Section */
-.subMenuPageALT{
+.subMenuPageALT {
     display: none;
     border: none;
 }
-.subMenuPageALT .structureALT{
+
+.subMenuPageALT .structureALT {
     width: 100%;
     border: 2px solid rgba(255, 255, 255, 0.2);
     display: flex;
@@ -435,15 +471,17 @@ body {
     padding-bottom: 10px;
     margin-top: 5px;
 }
-.subMenuPageALT h4{
+
+.subMenuPageALT h4 {
     width: 96%;
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 10px;
     color: #F1C40F;
-    
+
 }
-.subMenuPageALT .ALT_cnt_row{
+
+.subMenuPageALT .ALT_cnt_row {
     display: flex;
     flex-direction: row;
     width: 96%;
@@ -453,9 +491,10 @@ body {
     border-radius: 10px;
     background-color: rgb(21, 7, 62);
     margin-top: 10px;
-    
+
 }
-.subMenuPageALT .ALT_cnt_row .ALT_route_No{
+
+.subMenuPageALT .ALT_cnt_row .ALT_route_No {
     display: flex;
     flex-direction: column;
     width: 35%;
@@ -465,16 +504,18 @@ body {
     border-width: 4px;
     align-items: center;
     justify-content: center;
-    
+
 }
-.subMenuPageALT .ALT_cnt_row .ALT_route_No p{
+
+.subMenuPageALT .ALT_cnt_row .ALT_route_No p {
     width: 80%;
     height: fit-content;
     text-align: center;
     font-size: 1rem;
-    
+
 }
-.subMenuPageALT .ALT_cnt_row .ALT_route_No h4{
+
+.subMenuPageALT .ALT_cnt_row .ALT_route_No h4 {
     width: 80%;
     height: fit-content;
     text-align: center;
@@ -482,24 +523,27 @@ body {
     margin-top: 0px;
     color: white;
     /* background-color: antiquewhite; */
-    
+
 }
-.subMenuPageALT .ALT_cnt_row .ALT_description{
+
+.subMenuPageALT .ALT_cnt_row .ALT_description {
     display: flex;
     flex-direction: column;
     width: 65%;
-    
+
     /* background-color: #071130; */
     background-color: #17202b;
 }
-.subMenuPageALT .ALT_cnt_row .ALT_description p{
+
+.subMenuPageALT .ALT_cnt_row .ALT_description p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     font-size: 1.1rem;
     width: 96%;
-    
+
 }
-.subMenuPageALT .ALT_cnt_row .ALT_description .ALT_description_P{
+
+.subMenuPageALT .ALT_cnt_row .ALT_description .ALT_description_P {
     color: white;
     font-size: 0.7rem;
     text-align: left;
@@ -510,13 +554,14 @@ body {
 }
 
 /* Fare Details Section */
-.subMenuPageFD{
+.subMenuPageFD {
     display: none;
     flex-direction: column;
     align-items: center;
-    
+
 }
-.subMenuPageFD h3{
+
+.subMenuPageFD h3 {
     font-family: 'Kaushan Script', cursive;
     height: fit-content;
     background-color: rgb(2, 12, 31);
@@ -533,6 +578,7 @@ body {
     max-height: fit-content;
     padding: 4px 0px;
 }
+
 .subMenuPageFD .styled-table {
     border-collapse: collapse;
     margin: 10px 0;
@@ -540,9 +586,10 @@ body {
     font-family: sans-serif;
     width: 95%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: 1.5px solid rgba(255, 255, 255,0.5);
-    
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+
 }
+
 .subMenuPageFD .styled-table thead tr {
     border: 1.5px solid rgba(255, 255, 255, 0.5);
     color: yellow;
@@ -551,18 +598,20 @@ body {
     /* background-color: rgb(23, 78, 23); */
     background-color: rgb(7, 9, 46);
     /* background-color: #17202b; */
-    
+
 }
+
 .subMenuPageFD .styled-table th,
 .styled-table td {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 12px 15px;
     border: 1.5px solid rgba(255, 255, 255, 0.5);
-    
-    
+
+
     font-size: 1.1rem;
 }
-.note{
+
+.note {
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     display: none;
@@ -576,17 +625,18 @@ body {
     transition-duration: 1s;
     padding: 5px;
 }
-.note h3{
+
+.note h3 {
     width: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2rem;
     color: #F1C40F;
 }
-.note p{
+
+.note p {
     font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 
 
@@ -609,14 +659,6 @@ body {
         margin: auto;
         justify-content: center;
         align-items: center;
-    }
-
-    .footer {
-        height: 35vh;
-    }
-
-    .footer p {
-        width: 80%;
     }
 }
 
@@ -688,16 +730,16 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-         width: 100%;
-         height: 100px;
-         margin-top: 22px;
-     }
-     
-     .content .options_Container .cards a .icons img {
-         height: fit-content;
-         width: fit-content;
-         transform: scale(1.5);
-     }
+        width: 100%;
+        height: 100px;
+        margin-top: 22px;
+    }
+
+    .content .options_Container .cards a .icons img {
+        height: fit-content;
+        width: fit-content;
+        transform: scale(1.5);
+    }
 
     .content .options_Container .cards a h4 {
         font-size: 18px;
@@ -708,34 +750,6 @@ body {
         font-size: 10px;
     }
 
-    .footer {
-        height: 30vh;
-    }
-
-    .footer h3 {
-        font-size: 18px;
-    }
-
-    .footer p {
-        width: 95%;
-        font-size: 12px;
-    }
-
-    .footer .center {
-        font-size: 15px;
-    }
-
-    .footer h5 {
-        font-size: 10px;
-    }
-
-    .footer .fimg {
-        transform: scale(0.7);
-    }
-
-    .footer .fimg img:hover {
-        transform: scale(0.9);
-    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -821,7 +835,7 @@ body {
     .content .options_Container .cards a p {
         font-size: 0.5rem;
     }
-    
+
     #subMenuPageHeading {
         font-size: 1.5rem;
         margin-top: -20px;
@@ -832,5 +846,4 @@ body {
         font-family: 'Kdam Thmor Pro', sans-serif;
         letter-spacing: 1.5px;
     }
-
 }
