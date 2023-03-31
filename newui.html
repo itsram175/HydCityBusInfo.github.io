@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== CSS ===============-->
+    <style>
+  /*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    --hue: 174;
+    --sat: 63%;
+    --first-color: hsl(var(--hue), var(--sat), 40%);
+    --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+    --title-color: black;
+    --text-color: hsl(var(--hue), 8%, 35%);
+    /* --body-color: rgb(2, 12, 31); */
+    /* --body-color:rgb(54, 82, 110); */
+    --body-color:#f8f8ff;
+    --container-color: #FFF;
+    /* --primary-color: rgb(13, 24, 37); */
+    --primary-color:rgb(7, 22, 50);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --h1-font-size: 1.4rem;
+    --normal-font-size: .938rem;
+    --tiny-font-size: .625rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+    padding: 3.5rem 0 2rem;
+}
+
+.section__height {
+    height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+    max-width: 968px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: #ffffff; */
+    background-color: var(--primary-color);
+    z-index: var(--z-fixed);
+    transition: .4s;
+    padding-bottom: 5px;
+}
+
+/*=============== NAV ===============*/
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list li {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nav__img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.nav__logo {
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.nav__svg {
+    height: 30px;
+
+}
+
+.inputs {
+    /* background-color:red; */
+    padding: 0;
+}
+
+form {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 1px solid #645979;
+    outline: none;
+    border-radius: 0px;
+    background-color: #ffffff;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+.list {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+}
+
+.list-items {
+    padding: 10px 5px;
+    border-bottom: solid 1px gray;
+}
+
+.list-items:hover {
+    background-color: #dddddd;
+}
+
+button {
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    /* background-color: rgb(133, 23, 23); */
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: var(--normal-font-size);
+}
+.section__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    text-align: center;
+    margin-top: -40px;
+    padding: 5px 10px;
+    background-color: var(--body-color);
+    width: fit-content;
+}
+
+.Route_output {
+    min-height: 100px;
+    max-height: fit-content;
+    width: 100%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.Route_output ul {
+    width: 100%;
+    margin: auto;
+}
+
+.Route_output ul li {
+    padding: 15px 0px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Route_output ul li:nth-child(1){
+    border-bottom: solid 2px gray;
+}
+.Route_output ul li span{
+    font-size: 1.1rem;
+}
+.Route_output ul li i{
+    font-size: 1.4rem;
+    margin-left: 2.5%;
+    margin-top: 1%;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+        width: 100%;
+        height: 4rem;
+        padding: 0 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+    }
+}
+
+.nav__list,
+.nav__link {
+    display: flex;
+}
+
+.nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: white;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.nav__list {
+    justify-content: space-around;
+}
+
+.nav__name {
+    font-size: var(--tiny-font-size);
+    /* display: none;*/
+    /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link {
+    position: relative;
+    transition: .3s;
+    color: white;
+    opacity: 1;
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+    /* box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15); */
+    box-shadow: 0px 0px 10px black;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+    .nav__name {
+        display: none;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .nav__list {
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding: 7rem 0 2rem;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        /* 4.5rem */
+    }
+
+    .nav__img {
+        display: none;
+    }
+
+    .nav__icon {
+        display: none;
+    }
+
+    .nav__name {
+        font-size: var(--normal-font-size);
+        /* display: block; */
+        /* Minimalist design, visible labels */
+    }
+
+    .nav__link:hover {
+        color: var(--first-color);
+    }
+
+    /* First design, remove if you choose the minimalist design */
+    .active-link::before {
+        content: '';
+        position: absolute;
+        bottom: -.75rem;
+        width: 4px;
+        height: 4px;
+        background-color: var(--first-color);
+        border-radius: 50%;
+    }
+
+    /* Minimalist design */
+    /* .active-link::before{
+      bottom: -.75rem;
+  } */
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+  </style>
+
+    <title>Hyderabad City Bus Info</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header scroll-header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Hyderabad City Bus Info</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-bus nav__icon'></i>
+                            <span class="nav__name">Bus Routes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user nav__icon'></i>
+                            <span class="nav__name">Bus Stops</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book-alt nav__icon'></i>
+                            <span class="nav__name">From - To</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class='bx bx-rupee nav__icon'></i>
+                            <span class="nav__name">Fare Chart</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contactme" class="nav__link">
+                            <i class='bx bx-dots-horizontal-rounded nav__icon'></i>
+                            <span class="nav__name">More</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="assets/img/perfil.png" alt="" class="nav__img">
+        </nav>
+    </header>
+
+    <main>
+        <!--=============== HOME ===============-->
+        <section class="container section section__height" id="home">
+            <form autocomplete="off">
+                <h2 class="section__title">Route Details</h2>
+                <div>
+                    <input type="text" id="input" placeholder="Route Number..." />
+                    <ul class="list"></ul>
+                    <button>Search</button>
+                </div>
+            </form>
+
+            <div class="Route_output">
+                <ul>
+                    <li><span>3K - KUSHAIGUDA - AFZALGUNJ</span> <i class="bx bx-right-arrow-circle"></i></li>
+                    <li><span>3K - AFZALGUNJ - KUSHAIGUDA</span> <i class="bx bx-right-arrow-circle"></i></li>
+                </ul>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="container section section__height" id="about">
+            <form autocomplete="off">
+                <h2 class="section__title">Bus Stop</h2>
+                <div>
+                    <input type="text" id="input" placeholder="Bus Stop Name..." />
+                    <ul class="list">
+
+                    </ul>
+                    <button>Search</button>
+                </div>
+            </form>
+        </section>
+
+        <!--=============== SKILLS ===============-->
+        <section class="container section section__height" id="skills">
+            <form autocomplete="off">
+                <h2 class="section__title">From - To</h2>
+                <div>
+                    <input type="text" id="input" placeholder="From Where?..." />
+                    <input type="text" id="input" placeholder="To Where?..." />
+                    <ul class="list"></ul>
+                    <button>Search</button>
+                </div>
+            </form>
+        </section>
+
+        <!--=============== PORTFOLIO ===============-->
+        <section class="container section section__height" id="portfolio">
+            <form autocomplete="off">
+                <h2 class="section__title">Fare Chart</h2>
+                <div>
+                    <input type="text" id="input" placeholder="From Where?..." />
+                    <input type="text" id="input" placeholder="To Where?..." />
+                    <ul class="list"></ul>
+                    <button>Search</button>
+                </div>
+            </form>
+        </section>
+
+        <!--=============== CONTACTME ===============-->
+        <section class="container section section__height" id="contactme">
+            <h2 class="section__title">More Options</h2>
+        </section>
+    </main>
+
+
+    <!--=============== MAIN JS ===============-->
+    <script>
+  /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 50,
+            sectionId = current.getAttribute('id')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+// function scrollHeader(){
+//     const header = document.getElementById('header')
+//     // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+//     if(this.scrollY >= 80) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+// }
+// window.addEventListener('scroll', scrollHeader)
+
+let names = ["Afzalgunj", "Ameerpet", "Amberpet", "Aziz Nagar", "Chaderghat", "Chintal", "City Bus Station", "Koti", "Badangpet", "Lalapet", "Shanthi Nagar", "Lalapet", "Tarnaka", "Tumkunta", "Kompally", "Hitech city", "Alwal", "Nizampet", "Miyapur", "Isnapur", "Patancheruvu", "Lingampally", "Mehdipatnam", "Secunderabad"];
+//Sort names in ascending order
+let sortedNames = names.sort();
+
+//reference
+let input = document.getElementById("input");
+
+//Execute function on keyup
+input.addEventListener("keyup", (e) => {
+    //loop through above array
+    //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+    removeElements();
+    for (let i of sortedNames) {
+        //convert input to lowercase and compare with each string
+
+        if (
+            i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+            input.value != ""
+        ) {
+            //create li element
+            let listItem = document.createElement("li");
+            //One common class name
+            listItem.classList.add("list-items");
+            listItem.style.cursor = "pointer";
+            listItem.setAttribute("onclick", "displayNames('" + i + "')");
+            //Display matched part in bold
+            let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+            word += i.substr(input.value.length);
+            //display the value in array
+            listItem.innerHTML = word;
+            document.querySelector(".list").appendChild(listItem);
+        }
+    }
+});
+function displayNames(value) {
+    input.value = value;
+    removeElements();
+}
+function removeElements() {
+    //clear all the item
+    let items = document.querySelectorAll(".list-items");
+    items.forEach((item) => {
+        item.remove();
+    });
+}
+
+  </script>
+</body>
+
+</html>
