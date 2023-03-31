@@ -10,7 +10,7 @@
 
     <!--=============== CSS ===============-->
     <style>
-  /*=============== GOOGLE FONTS ===============*/
+    /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
@@ -26,10 +26,10 @@
     --text-color: hsl(var(--hue), 8%, 35%);
     /* --body-color: rgb(2, 12, 31); */
     /* --body-color:rgb(54, 82, 110); */
-    --body-color:#f8f8ff;
+    --body-color: #f8f8ff;
     --container-color: #FFF;
     /* --primary-color: rgb(13, 24, 37); */
-    --primary-color:rgb(7, 22, 50);
+    --primary-color: rgb(7, 22, 50);
 
     /*========== Font and typography ==========*/
     --body-font: 'Open Sans', sans-serif;
@@ -202,6 +202,7 @@ button {
     font-weight: bold;
     font-size: var(--normal-font-size);
 }
+
 .section__title {
     font-size: var(--h1-font-size);
     color: var(--title-color);
@@ -238,16 +239,48 @@ button {
     align-items: center;
     justify-content: center;
 }
-.Route_output ul li:nth-child(1){
+
+.Route_output ul .firstLI {
     border-bottom: solid 2px gray;
 }
-.Route_output ul li span{
+
+.Route_output ul li span {
     font-size: 1.1rem;
 }
-.Route_output ul li i{
+
+.Route_output ul li i {
     font-size: 1.4rem;
     margin-left: 2.5%;
     margin-top: 1%;
+}
+
+.bustop_output {
+    padding: 10px;
+}
+
+.bustop_output p {
+    font-size: 1.05rem;
+    color: black;
+    font-weight: 900;
+}
+
+.bustop_output ul {
+    display: flex;
+    justify-content: center;
+}
+
+.bustop_output .note {
+    font-size: var(--normal-font-size);
+    font-weight: 100;
+
+}
+
+.bustop_output ul li {
+    height: fit-content;
+    width: fit-content;
+    font-weight: 700;
+    padding: 1%;
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -393,7 +426,7 @@ button {
         margin-right: auto;
     }
 }
-  </style>
+    </style>
 
     <title>Hyderabad City Bus Info</title>
 </head>
@@ -461,7 +494,7 @@ button {
 
             <div class="Route_output">
                 <ul>
-                    <li><span>3K - KUSHAIGUDA - AFZALGUNJ</span> <i class="bx bx-right-arrow-circle"></i></li>
+                    <li class="firstLI"><span>3K - KUSHAIGUDA - AFZALGUNJ</span> <i class="bx bx-right-arrow-circle"></i></li>
                     <li><span>3K - AFZALGUNJ - KUSHAIGUDA</span> <i class="bx bx-right-arrow-circle"></i></li>
                 </ul>
             </div>
@@ -479,6 +512,26 @@ button {
                     <button>Search</button>
                 </div>
             </form>
+            <div class="Route_output bustop_output">
+                <p>Frequently Available :</p>
+                <ul>
+                    <li>3K</li>
+                    <li>17D</li>
+                    <li>17H</li>
+                    <li>242</li>
+                </ul>
+                <p>Rarely Available :</p>
+                <ul>
+                    <li>3H</li>
+                    <li>3C</li>
+                    <li>17V</li>
+                    <li>241T</li>
+                    <li>281</li>
+                    <li>3K/281</li>
+                </ul>
+                <p>Note :</p>
+                <p class="note">The routes on which the trips scheduled within frequency of time is reffered as Frequently Available routes. And those routes which are not on time or scheduled on demand are known as rarley Available routes.</p>
+            </div>
         </section>
 
         <!--=============== SKILLS ===============-->
@@ -492,6 +545,27 @@ button {
                     <button>Search</button>
                 </div>
             </form>
+
+           <div class="Route_output bustop_output">
+                <p>Frequently Available :</p>
+                <ul>
+                    <li>3K</li>
+                    <li>17D</li>
+                    <li>17H</li>
+                    <li>242</li>
+                </ul>
+                <p>Rarely Available :</p>
+                <ul>
+                    <li>3H</li>
+                    <li>3C</li>
+                    <li>17V</li>
+                    <li>241T</li>
+                    <li>281</li>
+                    <li>3K/281</li>
+                </ul>
+                <p>Note :</p>
+                <p class="note">The routes on which the trips scheduled within frequency of time is reffered as Frequently Available routes. And those routes which are not on time or scheduled on demand are known as rarley Available routes.</p>
+            </div>
         </section>
 
         <!--=============== PORTFOLIO ===============-->
@@ -516,7 +590,7 @@ button {
 
     <!--=============== MAIN JS ===============-->
     <script>
-  /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+        /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
@@ -591,7 +665,7 @@ function removeElements() {
     });
 }
 
-  </script>
+    </script>
 </body>
 
 </html>
