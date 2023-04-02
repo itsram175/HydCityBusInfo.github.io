@@ -1,849 +1,504 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    --hue: 174;
+    --sat: 63%;
+    --first-color: hsl(var(--hue), var(--sat), 40%);
+    --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+    --title-color: black;
+    --text-color: hsl(var(--hue), 8%, 35%);
+    /* --body-color: rgb(2, 12, 31); */
+    /* --body-color:rgb(54, 82, 110); */
+    --body-color: #E3E9E9;
+    --container-color: #FFF;
+    /* --primary-color: rgb(13, 24, 37); */
+    --primary-color: rgb(7, 22, 50);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --h1-font-size: 1.4rem;
+    --normal-font-size: .938rem;
+    --tiny-font-size: .625rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --normal-font-size: 1rem;
+    }
+}
+
 * {
-    margin: 0;
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    /* background-color: rgb(7, 16, 24); */
-    background-color: rgb(2, 12, 31);
-    min-height: 100vh;
-    max-height: fit-content;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    color: white;
-    padding-bottom: 25px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    min-height: 8vh;
-    max-height: fit-content;
-    background-color: black;
-    position: sticky;
-}
-
-.navbar h1 {
-    color: white;
-    font-size: 25px;
-    /* background-color: blanchedalmond; */
-    /* height: 100%; */
-    width: 40%;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-
-}
-
-.hamburger-menu {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    height: 2.2rem;
-    width: 2.2rem;
-    cursor: pointer;
-    opacity: 0;
-}
-
-.hamburger-menu .bar {
-    height: 5px;
-    background: white;
-    border-radius: 5px;
-    margin: 3px 0px;
-    transform-origin: left;
-    transition: all 0.5s;
-}
-
-.nav-list {
-    display: flex;
-    width: 40%;
-    /* background-color: red; */
-    justify-content: right;
-    align-items: right;
-}
-
-.nav-list li {
-    list-style-type: none;
-    margin-left: 15px;
-    transition-duration: 0.5s;
-    transition-property: all;
-    /* background-color: aqua; */
-}
-
-.nav-list li a {
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: 18px;
-    padding: 20px 10px;
-    transition-duration: 0.5s;
-    transition-property: all;
-    color: white;
-    font-family: 'Kaushan Script', cursive;
-}
-
-.nav-list li a:hover {
-    /* color: rgb(0, 255, 191); */
-    background-color: rgb(21, 37, 54);
-    /* background-color: rgb(2, 12, 31); */
-}
-
-.mobile_menu {
-    background-color: black;
-    height: 0px;
-    transition-duration: 0.5s;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    height: 100vh;
     overflow: hidden;
 }
 
-.mobile_menu ul li {
-    text-align: center;
-    padding: 10px;
+ul {
+    list-style: none;
 }
 
-.mobile_menu ul li:hover {
-    background-color: rgb(21, 37, 54);
-}
-
-.mobile_menu ul li a {
-    color: white;
+a {
     text-decoration: none;
 }
 
-#homePage {
-    transition-duration: 0.5s;
-    transition-property: all;
+textarea {
+    padding: 15px;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    resize: none;
+}
+
+.ContactBlock {
+    width: 100%;
+    min-height: 180px;
+    max-height: fit-content;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0px;
+    padding: 10px 0px;
+    padding-bottom: 20px;
+    display: none;
+    z-index: 1;
+}
+
+.ContactBlock form {
+    width: 95%;
+    margin: auto;
+}
+
+.ContactBlock h2 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.ContactBlock .contact-button {
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 12px;
+    background-color: #004581;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+    font-size: var(--normal-font-size);
+}
+
+.ContactBlock #UpdateBlock li{
+    width: 95%;
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #566774;
+    font-size: 1rem;
+}
+.ContactBlock #UpdateBlock li .UpdateText{
+    font-size: var(--tiny-font-size);
+}
+.ContactBlock #UpdateBlock li .UpdateLink{
+    display: block;
+    outline: none;
+    width: 95%;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    margin: 5px auto;
+    font-weight: bold;
+    font-size: var(--normal-font-size);
+}
+.inputs {
+    width: 100%;
+    min-height: 180px;
+    max-height: fit-content;
+    background-color: var(--primary-color);
+    padding-top: 3%;
+    margin-top: -50px;
+}
+
+.section__title {
+    font-size: var(--h1-font-size);
+    color: white;
+    text-align: center;
+    margin-top: -40px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.sideBar {
+    height: 95%;
+    width: 90%;
+    background-color: rgba(5, 12, 28, 0.95);
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: -1000px;
+    transition-duration: 0.7s;
+    box-shadow: -3px 0px 10px black;
+    z-index: 10;
+}
+
+.sideBar .sideBar_Menu {
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+}
+
+.sideBar .sideBar_Menu h2 {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sideBar .sideBar_Menu .menuItems {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 15px 5px;
+    border-bottom: solid 1px gray;
+}
+
+.noColor {
+    background-color: transparent;
+}
+
+.sideBar .sideBar_Menu .menuItems:nth-child(2) {
+    border-top: solid 1px gray;
+}
+
+.form {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 1px solid #645979;
+    outline: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.list {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    min-height: 0px;
+    max-height: 250px;
+    overflow: scroll;
+}
+
+.list-items {
+    padding: 10px 5px;
+    border-bottom: solid 1px gray;
+}
+
+.list-items:hover {
+    background-color: #dddddd;
+}
+
+button {
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 12px;
+    background-color: #004581;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: var(--normal-font-size);
+}
+
+
+.output {
+    min-height: 200px;
+    max-height: fit-content;
+    width: 100%;
     display: block;
 }
 
-.content h3 {
-    font-family: 'Kaushan Script', cursive;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    margin-top: 10px;
-    padding-bottom: 15px;
-}
-
-.content .content_Container {
-    margin-left: -15px;
-}
-
-.content .options_Container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 60%;
-    /* margin-left: -15px;
-    margin-top: 15px; */
-    /* justify-content: center;
-    align-items: center; */
-    /* background-color: blue; */
-    /* background-color: antiquewhite; */
-    /* margin-left: 175px;
-    margin-right: 200px; */
-    /* align-items: center;
-    justify-content: center; */
-}
-
-.content .options_Container .cards {
-    /* background-color: rgb(9, 32, 45); */
-    /* background-color: rgb(26, 44, 63); */
-    /* border-style: solid; */
-    /* border-color: blue; */
-    /* border-radius: 20px; */
-    margin-left: 15px;
-    margin-top: 15px;
-    transition-duration: 0.5s;
-    background-color: rgb(13, 24, 37);
-    /* border-color: rgb(91, 149, 255); */
-    box-shadow: 0px 0px 20px black;
-    height: 250px;
-    width: 30%;
-    padding-bottom: 5px;
-    /* width: 300px; */
-    cursor: pointer;
-    color: white;
-}
-
-.content .options_Container .cards a .icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.RouteListContainer {
     width: 100%;
-    height: 100px;
-    margin-top: 22px;
+    display: none;
 }
 
-.content .options_Container .cards a .icons img {
-    height: fit-content;
-    width: fit-content;
-    transform: scale(0.25);
+.RouteListContainer .RouteList {
+    width: 95%;
+    padding: 20px 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #566774;
+    font-size: 1rem;
 }
 
-.content .options_Container .cards:hover {
-    /* background-color: rgb(10, 28, 49); */
-    border-style: solid;
-    /* border-color: rgb(91, 149, 255); */
-    border-width: 1px;
-    box-shadow: 0px 0px 5px rgb(91, 149, 255);
-    background-color: rgb(2, 12, 31);
-    transform: scale(1.05);
-}
-
-.content .options_Container .cards a {
-    text-decoration: none;
-    color: white;
-}
-
-.content .options_Container .cards a h4 {
-    color: white;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    /* font-size: 150%; */
-    font-size: 22px;
-    letter-spacing: 1px;
-    padding: 15px;
-    margin-top: 25px;
+.Bus_DetailsOp {
+    width: 95%;
+    padding: 20px 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px auto;
     /* text-align: center; */
-    /* text-decoration: underline; */
-    /* border-bottom: solid; */
-}
-
-.content .options_Container .cards a p {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 11px;
-    margin-top: -10px;
-    opacity: 0.6;
-    font-family: 'Merienda', cursive;
-}
-
-
-/* Submenu Page */
-.subMenuPage {
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 94%;
-    margin: 0px auto;
-    margin-top: 30px;
-    min-height: 150px;
-    max-height: fit-content;
-    transition-duration: 1s;
-    padding-bottom: 5px;
-}
-
-.subMenuPage h3 {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 1.6rem;
-    height: fit-content;
-    background-color: rgb(2, 12, 31);
-    width: fit-content;
-    padding: 0px 10px;
-    border-radius: 10px;
-    margin-top: -25px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.subMenuPage label {
-    width: 96%;
-    padding-left: 10px;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #566774;
     font-size: 1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 10px;
-}
-
-.subMenuPage input {
-    width: 92%;
-    height: 40px;
-    border-radius: 10px;
-    padding-left: 10px;
-    outline: none;
-    border: none;
-}
-
-.subMenuPage button {
-    width: 50%;
-    height: 40px;
-    margin-top: 10px;
-}
-
-.subMenuPage ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style-type: none;
-    width: 95%;
-    margin: 5px auto;
-}
-
-.subMenuPage ul li {
-    height: 30px;
-    width: 47%;
-    background-color: brown;
-    border-radius: 10px;
-    text-align: center;
-    padding: 5px 5px;
-    padding-top: 10px;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 1.1rem;
-    margin-top: 5px;
-}
-
-.subMenuPageOutput {
-    margin-top:40px;
-    padding-bottom: 10px;
-}
-
-.subMenuPageOutput h3 {
-    font-size: 1.4rem;
-    text-align: center;
-    width: 87%;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    min-height: 50px;
-    max-height: fit-content;
-    padding: 2px 2px;
-    padding-top: 6px;
-}
-
-.subMenuPageOutput ul {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.subMenuPageOutput ul li {
-    width: 95%;
-    height: 15px;
-    padding: 10px 5px;
-    padding-bottom: 25px;
-    background-color: transparent;
-    
-}
-
-.subMenuPageOutput ul li .LI-heading {
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    text-transform: uppercase;
-    opacity: 0.8;
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 2px;
-    height: fit-content;
-
-}
-
-.subMenuPageOutput ul li .LI-subhead {
-    color: gray;
-    text-align: center;
-    font-size: 0.7rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* height: fit-content; */
-}
-
-.subMenuPageOutput .btnExpand {
-    color: rgb(55, 238, 55);
-    font-size: 1.5rem;
-    background-color: black;
-    height: fit-content;
-    text-align: center;
-    width: 70%;
-    padding: 10px;
-    margin-top: -25px;
-    border-radius: 10px;
-    font-family: 'Merienda', cursive;
-    cursor: pointer;
-}
-
-.subMenuPageOutput .routeDetailsNote {
-    width: 97%;
-    height: fit-content;
-    margin: 15px 0px;
     display: none;
 }
 
-.subMenuPageOutput .routeDetailsNote h3 {
-    color: #F1C40F;
-    border: none;
-    height: fit-content;
-    width: 100%;
-    font-size: 1.4rem;
-    text-align: left;
-    background-color: transparent;
-}
-
-.subMenuPageOutput .routeDetailsNote p {
-    margin-top: -20px;
-    font-family: 'Merienda', cursive;
-    font-size: 0.8rem;
-    opacity: 0.8;
-}
-
-.subMenuPageBSD {
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 94%;
-    margin: 0px auto;
-    margin-top: 30px;
-    min-height: 200px;
-    max-height: fit-content;
-    transition-duration: 1s;
-    padding-bottom: 5px;
-}
-
-.subMenuPageBSD h3 {
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    height: fit-content;
-    background-color: rgb(2, 12, 31);
-    width: fit-content;
-    padding: 0px 10px;
-    border-radius: 10px;
-    margin-top: -25px;
-    color: rgba(255, 255, 255, 1);
-    font-size: 1.4rem;
-    letter-spacing: 1.5px;
-    text-align: center;
-    width: 87%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    min-height: 40px;
-    max-height: fit-content;
-    padding: 4px 0px;
-}
-
-.subMenuPageBSD p {
-    width: 99%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 300;
-    font-size: 1.3rem;
+.Bus_DetailsOp .Bus_Numbers {
+    width: 95%;
     padding: 5px;
-
-}
-
-.subMenuPageBSD ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    width: 98%;
-    height: fit-content;
-    justify-content: center;
-    padding-bottom: 5px;
-
-}
-
-.subMenuPageBSD ul li {
-    margin-left: 10px;
-    margin-top: 5px;
-    font-size: 1.2rem;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    cursor: pointer;
-}
-
-/* .subMenuPageBSD ul li:nth-child(even){
-    color: rgb(63, 197, 74);
-}
-.subMenuPageBSD ul li:nth-child(odd){
-    color: rgb(233, 192, 45);
-} */
-
-
-/* Alternate Route CSS Section */
-.subMenuPageALT {
-    display: none;
-    border: none;
-}
-
-.subMenuPageALT .structureALT {
-    width: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 15px;
-    padding-bottom: 10px;
-    margin-top: 5px;
-}
-
-.subMenuPageALT h4 {
-    width: 96%;
-    font-size: 1.5rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 10px;
-    color: #F1C40F;
-
-}
-
-.subMenuPageALT .ALT_cnt_row {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #566774;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
-    width: 96%;
-    min-height: 110px;
-    max-height: fit-content;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: rgb(21, 7, 62);
-    margin-top: 10px;
-
-}
-
-.subMenuPageALT .ALT_cnt_row .ALT_route_No {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    background-color: black;
-    border-right-style: solid;
-    border-color: rgb(12, 172, 12);
-    border-width: 4px;
-    align-items: center;
     justify-content: center;
-
-}
-
-.subMenuPageALT .ALT_cnt_row .ALT_route_No p {
-    width: 80%;
+    flex-wrap: wrap;
     height: fit-content;
-    text-align: center;
-    font-size: 1rem;
+}
+
+.Bus_DetailsOp .Bus_Numbers li {
+    margin: 5px 5px;
 
 }
 
-.subMenuPageALT .ALT_cnt_row .ALT_route_No h4 {
-    width: 80%;
-    height: fit-content;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0px;
-    color: white;
-    /* background-color: antiquewhite; */
-
+.Bus_DetailsOp .Bus_Numbers li:nth-child(1) {
+    margin-left: 0%;
 }
 
-.subMenuPageALT .ALT_cnt_row .ALT_description {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-
-    /* background-color: #071130; */
-    background-color: #17202b;
-}
-
-.subMenuPageALT .ALT_cnt_row .ALT_description p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    font-size: 1.1rem;
-    width: 96%;
-
-}
-
-.subMenuPageALT .ALT_cnt_row .ALT_description .ALT_description_P {
-    color: white;
-    font-size: 0.7rem;
-    text-align: left;
-    width: 95%;
-    margin-top: -5px;
-    opacity: 0.8;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Fare Details Section */
-.subMenuPageFD {
+.Fare_ChartOP {
+    padding-bottom: 10px;
     display: none;
-    flex-direction: column;
-    align-items: center;
-
 }
 
-.subMenuPageFD h3 {
-    font-family: 'Kaushan Script', cursive;
-    height: fit-content;
-    background-color: rgb(2, 12, 31);
-    width: fit-content;
-    padding: 0px 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    color: rgba(255, 255, 255, 1);
-    font-size: 1.5rem;
-    text-align: center;
-    width: 87%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    min-height: 40px;
-    max-height: fit-content;
-    padding: 4px 0px;
-}
-
-.subMenuPageFD .styled-table {
+.Fare_ChartOP .styled-table {
     border-collapse: collapse;
-    margin: 10px 0;
     font-size: 0.9em;
     font-family: sans-serif;
-    width: 95%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: 1.5px solid rgba(255, 255, 255, 0.5);
-
+    width: 100%;
+    margin-top: -10px;
 }
 
-.subMenuPageFD .styled-table thead tr {
-    border: 1.5px solid rgba(255, 255, 255, 0.5);
-    color: yellow;
+.Fare_ChartOP .styled-table thead tr {
+    border: 1.5px solid black;
+    color: white;
     text-align: left;
     font-size: 1.3rem;
-    /* background-color: rgb(23, 78, 23); */
-    background-color: rgb(7, 9, 46);
-    /* background-color: #17202b; */
-
+    background-color: var(--primary-color);
 }
 
-.subMenuPageFD .styled-table th,
+.Fare_ChartOP .styled-table th,
 .styled-table td {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 12px 15px;
-    border: 1.5px solid rgba(255, 255, 255, 0.5);
-
-
+    border: 1.5px solid black;
     font-size: 1.1rem;
 }
 
-.note {
-    border: 2px solid rgba(255, 255, 255, 0.2);
+/*=============== NAV ===============*/
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list li {
+    padding: 5px;
     border-radius: 10px;
-    display: none;
+}
+
+.nav__img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.nav__logo {
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+        width: 100%;
+        height: 4rem;
+        padding: 0 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+        z-index: 100;
+    }
+}
+
+.nav__list,
+.nav__link {
+    display: flex;
+}
+
+.nav__link {
     flex-direction: column;
     align-items: center;
-    width: 91%;
-    margin: 0px auto;
-    margin-top: 10px;
-    min-height: 100px;
-    max-height: fit-content;
-    transition-duration: 1s;
-    padding: 5px;
+    row-gap: 4px;
+    color: white;
+    font-weight: 600;
+    opacity: 0.5;
 }
 
-.note h3 {
-    width: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2rem;
-    color: #F1C40F;
+.nav__list {
+    justify-content: space-around;
 }
 
-.note p {
-    font-size: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.nav__name {
+    font-size: var(--tiny-font-size);
 }
 
+.nav__icon {
+    font-size: 1.5rem;
+}
 
+/*Active link*/
+.active-link {
+    position: relative;
+    transition: .3s;
+    color: white;
+    opacity: 1;
+}
 
+/* Change background header */
+.scroll-header {
+    /* box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15); */
+    box-shadow: 0px 0px 10px black;
+}
 
-@media only screen and (max-width: 1024px) {
-    .navbar h1 {
-        margin-left: 15px;
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+    .nav__name {
+        display: none;
     }
+}
 
-    .nav-list {
-        width: 65%;
-    }
-
-    .slider-text {
-        margin-top: -62px;
-    }
-
-    .content .options_Container {
-        width: 75%;
-        margin: auto;
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .nav__list {
         justify-content: center;
-        align-items: center;
+        column-gap: 3rem;
     }
 }
 
-
-@media only screen and (max-width: 780px) {
-    .navbar h1 {
-        font-size: 20px;
-        width: 70%;
+@media screen and (min-width: 767px) {
+    body {
+        margin: 0;
     }
 
-    .hamburger-menu {
-        opacity: 1;
-        margin-left: 10px;
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        /* 4.5rem */
     }
 
-    .mobile_menu {
-        transition-duration: 0.5s;
-        height: 0px;
-    }
-
-    .nav-list {
+    .nav__img {
         display: none;
     }
 
-    .slider {
-        background-color: black;
-        height: 45vh;
-    }
-
-    .slider-text {
-        margin-top: -53px;
-        height: 7vh;
-        opacity: 0.7;
-    }
-
-    .slider-text h4 {
-        font-size: 15px;
-    }
-
-    .slider-text p {
-        margin-top: 2px;
-        font-size: 12px;
-    }
-
-    .content h3 {
-        font-size: 25px;
-    }
-
-    .content .content_Container {
-        margin-left: -10px;
-    }
-
-    .content .options_Container {
-        width: 95%;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content .options_Container .cards {
-        width: 45%;
-        height: 200px;
-        margin-top: 10px;
-        margin-left: 10px;
-        box-shadow: 0px 0px 10px black;
-    }
-
-    .content .options_Container .cards a .icons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100px;
-        margin-top: 22px;
-    }
-
-    .content .options_Container .cards a .icons img {
-        height: fit-content;
-        width: fit-content;
-        transform: scale(1.5);
-    }
-
-    .content .options_Container .cards a h4 {
-        font-size: 18px;
-        padding-top: 0px;
-    }
-
-    .content .options_Container .cards a p {
-        font-size: 10px;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-    .navbar h1 {
-        font-size: 1rem;
-        width: 70%;
-    }
-
-    .hamburger-menu {
-        opacity: 1;
-        margin-left: 10px;
-    }
-
-    .mobile_menu {
-        transition-duration: 0.5s;
-        height: 0px;
-    }
-
-    .nav-list {
+    .nav__icon {
         display: none;
     }
 
-    .slider {
-        background-color: black;
-        height: 45vh;
+    .nav__name {
+        font-size: var(--normal-font-size);
+        /* display: block; */
+        /* Minimalist design, visible labels */
     }
 
-    .slider-text {
-        margin-top: -53px;
-        height: 7vh;
-        opacity: 0.7;
+    .nav__link:hover {
+        color: var(--first-color);
     }
 
-    .slider-text h4 {
-        font-size: 15px;
+    /* First design, remove if you choose the minimalist design */
+    .active-link::before {
+        content: '';
+        position: absolute;
+        bottom: -.75rem;
+        width: 4px;
+        height: 4px;
+        background-color: var(--first-color);
+        border-radius: 50%;
     }
 
-    .slider-text p {
-        margin-top: 2px;
-        font-size: 12px;
-    }
+    /* Minimalist design */
+    /* .active-link::before{
+      bottom: -.75rem;
+  } */
+}
 
-    .content h3 {
-        font-size: 25px;
-    }
-
-    .content .content_Container {
-        margin-left: -10px;
-    }
-
-    .content .options_Container {
-        width: 95%;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content .options_Container .cards {
-        width: 45%;
-        height: 200px;
-        margin-top: 10px;
-        margin-left: 10px;
-        box-shadow: 0px 0px 10px black;
-        overflow: hidden;
-    }
-
-    .content .options_Container .cards a .icons {
-        height: 60px;
-        /* background-color: aqua; */
-    }
-
-    .content .options_Container .cards a .icons img {
-        /* transform: scale(0.5); */
-        height: 100%;
-    }
-
-    .content .options_Container .cards a h4 {
-        font-size: 1rem;
-        padding-top: 0px;
-        text-align: center;
-    }
-
-    .content .options_Container .cards a p {
-        font-size: 0.5rem;
-    }
-
-    #subMenuPageHeading {
-        font-size: 1.5rem;
-        margin-top: -20px;
-    }
-
-    #subMenuPageUp_routeHeading,#subMenuPageDown_routeHeading {
-        font-size: 1.2rem;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        letter-spacing: 1.5px;
+/* For large devices */
+@media screen and (min-width: 1024px) {
+    .sideBar {
+        display: none;
     }
 }
