@@ -3,355 +3,165 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Hyderabad City Bus Info</title>
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+
+    <title>Hyderabad City Bus Info</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <h1 onclick="window.location.reload();">Hyderabad City Bus Info</h1>
-        <div class="hamburger-menu" onclick="open_Menu()">
-            <div class="bar top"></div>
-            <div class="bar middle"></div>
-            <div class="bar bottom"></div>
+    <!--=============== HEADER ===============-->
+    <!-- <header class="header scroll-header" id="header">
+        
+    </header> -->
+    <nav class="nav container">
+        <!-- <a href="#" class="nav__logo">Hyderabad City Bus Info</a> -->
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link active-link" onclick="accessFeature(this.innerText,this)" id="navLink1">
+                        <i class='bx bx-bus nav__icon'></i>
+                        <span class="nav__name">Bus Routes</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" onclick="accessFeature(this.innerText,this)" id="navLink2">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__name">Bus Stops</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" onclick="accessFeature(this.innerText,this)" id="navLink3">
+                        <i class='bx bx-book-alt nav__icon'></i>
+                        <span class="nav__name">From - To</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" onclick="accessFeature(this.innerText,this)" id="navLink4">
+                        <i class='bx bx-rupee nav__icon'></i>
+                        <span class="nav__name">Fare Chart</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" onclick="accessFeature(this.innerText,this)" id="navLink5">
+                        <i class='bx bx-dots-horizontal-rounded nav__icon'></i>
+                        <span class="nav__name" id="navName5">More</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <ul class="nav-list">
-            <li><a onclick="window.location.reload();">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Other Info</a></li>
-            <li><a href="#">Feed Back</a></li>
-        </ul>
     </nav>
 
-    <div class="mobile_menu" id="mobile_menu" style="height: 0px;">
-        <ul>
-            <li><a onclick="window.location.reload();">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Other Info</a></li>
-            <li><a href="#">Feed Back</a></li>
+    <div class="sideBar" style="margin-right: -1000px;">
+        <ul class="sideBar_Menu">
+            <h2>More Options</h2>
+            <li class="menuItems" onclick="accessMoreFeatures(this)" id="menuItems1">Alternate Route</li>
+            <li class="menuItems" onclick="accessMoreFeatures(this)" id="menuItems2">Tourist Zone</li>
+            <li class="menuItems" onclick="accessMoreFeatures(this)" id="menuItems3">CBT Exam Centers</li>
+            <li class="menuItems" onclick="accessMoreFeatures(this)" id="menuItems4">Contact Us</li>
+            <li class="menuItems" onclick="accessMoreFeatures(this)" id="menuItems5">Check For Update</li>
         </ul>
     </div>
 
-    <div class="content" id="homePage">
-        <h3 id="subHeading">Explore</h3>
-
-
-
-        <div class="content_Container">
-
-            <!-- Cards -->
-
-            <div class="options_Container">
-                <div class="cards">
-                    <a onclick="accessFeature('Route Details')">
-                        <div class="icons">
-                          <img src="https://itsram175.github.io/HydCityBusInfo.github.io/Icons/journey.png" alt="Image">
-                        </div>
-                        <h4>Route Details</h4>
-                        <p>Lists all the Stops of the desired Route Number</p>
-                    </a>
-                </div>
-
-                <div class="cards">
-                    <a onclick="accessFeature('Bus Stop')">
-                        <div class="icons">
-                            <img src="https://itsram175.github.io/HydCityBusInfo.github.io/Icons/busstop2.png" alt="">
-                        </div>
-                        <h4>Bus Stop</h4>
-                        <p>List all the bus route Numbers which comes to the desired Bus Stop</p>
-                    </a>
-                </div>
-
-                <div class="cards">
-                    <a onclick="accessFeature('From - To')">
-                        <div class="icons">
-                            <img src="https://itsram175.github.io/HydCityBusInfo.github.io/Icons/destination.png" alt="">
-                        </div>
-                        <h4>From - To</h4>
-                        <p>Lists all the bus route Numbers which runs between desired Source and Destination</p>
-                    </a>
-                </div>
-
-                <div class="cards">
-                    <a onclick="accessFeature('Alternate Route')">
-                        <div class="icons">
-                            <img src="https://itsram175.github.io/HydCityBusInfo.github.io/Icons/altroute.png" alt="">
-                        </div>
-                        <h4>Alternatives</h4>
-                        <p>Provides Detailed Alternate Route to desired Source and Destination</p>
-                    </a>
-                </div>
-
-                <div class="cards">
-                    <a onclick="accessFeature('Fare Details')">
-                        <div class="icons">
-                            <img src="https://itsram175.github.io/HydCityBusInfo.github.io/Icons/FareChart1.png" alt="">
-                        </div>
-                        <h4>Ticket Rate</h4>
-                        <p>Lists fare amount from Source to Destination for Different Bus Services</p>
-                    </a>
-                </div>
-
-                <div class="cards">
-                    <a onclick="accessFeature('Tourism')">
-                        <div class="icons">
-                            <img src="https://itsram175.github.io/HydCityBusInfo.github.io/Icons/destination.png" alt="">
-                        </div>
-                        <h4>Tourism</h4>
-                        <p>Provides Detailed Route to tourist places in Hyderabad by City Buses</p>
-                    </a>
-                </div>
-
-
-
-
+    <div class="inputs">
+        <div class="form">
+            <h2 class="section__title" id="section_title">Route Details</h2>
+            <div>
+                <input type="text" id="input1" placeholder="Enter Route Number..." />
+                <ul class="list" id="list1"></ul>
+                <input type="text" id="input2" placeholder="To Where?" style="display: none;" />
+                <ul class="list" id="list2"></ul>
+                <button onclick="searchOutput()">Search</button>
             </div>
         </div>
     </div>
 
+    <div class="output" id="outputMain">
 
-    <div class="subMenuPage" id="subMenuPage">
-        <h3 id="subMenuPageHeading">Route Details</h3>
-        <label for="input1" id="input1Label">Route Number</label>
-        <input type="text" name="input1" placeholder="Enter Route Number" id="input1" onclick="showdataList()">
-        <label for="input1" id="input2Label">Route Number</label>
-        <input type="text" name="input2" placeholder="Enter Route Number" id="input2" onclick="showdataList()">
-        <ul>
-            <li id="btnBack" style="background-color: brown; cursor: pointer;" onclick="goBackS_H()">Back</li>
-            <li id="btnGet" style="background-color: green; margin-Left:10px; cursor: pointer;" onclick="getResult()">Get</li>
-        </ul>
+        <div id="Output1">
+            <ul class="RouteListContainer">
+                <li class="RouteList" id="RouteList_Up">224G - MIYAPUR X ROADS - GANDIMAISAMMA </li>
+                <li class="RouteList" id="RouteList_Down">224G - GANDIMAISAMMA - GANDIMAISAMMA </li>
+            </ul>
+        </div>
+
+        <div class="Bus_DetailsOp" id="Output2">
+            <p>Frequently Available</p>
+            <ul class="Bus_Numbers" id="FA_Routes">
+                <li>3K</li>
+                <li>15H</li>
+                <li>17H</li>
+                <li>3K</li>
+                <li>15H</li>
+                <li>17H</li>
+                <li>3K</li>
+                <li>15H</li>
+                <li>17H</li>
+                <li>3K</li>
+                <li>15H</li>
+                <li>17H</li>
+            </ul>
+            <p>Rarely Available</p>
+            <ul class="Bus_Numbers" id="RA_Routes">
+                <li>14P</li>
+                <li>17D</li>
+                <li>3D</li>
+            </ul>
+        </div>
+
+        <div class="Fare_ChartOP Bus_DetailsOp" id="Output3">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Bus Service Type</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>City Ordinary</td>
+                        <td id="FD_co">10/-</td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>Metro Express</td>
+                        <td id="FD_me">20/-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
-    <div class="subMenuPage subMenuPageOutput" id="subMenuPageUp" style="height: 250px; display: none;">
-        <h3 id="subMenuPageUp_routeHeading">3K - AFZALGUNJ - ECIL X ROADS</h3>
-        <ul style="filter: blur(5px);" id="subMenuPageUp_UL">
-            <li>
-                <p class="LI-heading" onclick="goToBusStopDetails(this.innerHTML)">AFZALGUNJ</p>
-                <p class="LI-subhead">Bus Stop || MMTS</p>
+    <div class="ContactBlock" style="display: none;">
+        <h2 id="ContactHeading">Contact Us</h2>
+        <form action="" id="Contact_Form">
+            <input type="text" placeholder="Enter Your Name">
+            <input type="text" placeholder="Enter Your Email Id">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Message Here..."
+                required></textarea>
+            <input type="submit" value="Send" class="contact-button" id="sendBtn">
+        </form>
+
+        <ul id="UpdateBlock" style="display: none;">
+            <li><span class="UpdateSubHeading">Update Found</span><br>
+                <span class="UpdateText">Download the update from RT Apps Store</span><br>
+                <a href="https://www.google.com" class="UpdateLink">Download</a>
             </li>
-            <li>
-                <p class="LI-heading" onclick="goToBusStopDetails(this.innerHTML)">AFZALGUNJ</p>
-                <p class="LI-subhead">Bus Stop || MMTS</p>
-            </li>
-
         </ul>
-        <div class="routeDetailsNote" id="routeDetailsNoteUp">
-            <h3>Note :</h3>
-            <p id="routeDetailsNoteUpData">Sometimes this Route Bus may Ends its Trip at CBS also. So Kindly Check the Destination of the bus On Route Board while Boarding the Bus.</p>
-        </div>
-
-        <p class="btnExpand" onclick="expandResult('UP')" id="btnExpandUp" style="margin-top: -25px;">Tap to Expand</p>
-    </div>
-
-    <div class="subMenuPage subMenuPageOutput" id="subMenuPageDown" style="height: 250px; display: none;">
-        <h3 id="subMenuPageDown_routeHeading">3K - ECIL X ROADS - AFZALGUNJ</h3>
-        <ul style="filter: blur(5px);" id="subMenuPageDown_UL">
-            <li>
-                <p class="LI-heading" onclick="goToBusStopDetails(this.innerHTML)">AFZALGUNJ</p>
-                <p class="LI-subhead">Bus Stop || MMTS</p>
-            </li>
-            <li>
-                <p class="LI-heading" onclick="goToBusStopDetails(this.innerHTML)">AFZALGUNJ</p>
-                <p class="LI-subhead">Bus Stop || MMTS</p>
-            </li>
-
-        </ul>
-        <div class="routeDetailsNote" id="routeDetailsNoteDown">
-            <h3>Note :</h3>
-            <p id="routeDetailsNoteDownData">Sometimes this Route Bus may Ends its Trip at CBS also. So Kindly Check the Destination of the bus On Route Board while Boarding the Bus.</p>
-        </div>
-        <p class="btnExpand" onclick="expandResult('DOWN')" id="btnExpandDown">Tap to Expand</p>
-
     </div>
 
 
-
-    <div class="subMenuPageBSD" id="subMenuPageBSD">
-        <h3 id="subMenuPageBSD_routeHeading" style="font-size: 1.5rem;">LALAPET</h3>
-        <p style="color: rgb(120, 225, 120);">Regular Routes:</p>
-        <ul id="subMenuPageBSD_RO_UL">
-            <li onclick="goToRouteDetails(this.innerHTML)">3K</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">15H</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">17H</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">17D</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">242</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">242A</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">241T</li>
-        </ul>
-        <p style="color: rgb(191, 95, 95);">Other Routes:</p>
-        <ul id="subMenuPageBSD_OR_UL">
-            <li onclick="goToRouteDetails(this.innerHTML)">3K</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">15H</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">17H</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">17D</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">242</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">242A</li>
-            <li onclick="goToRouteDetails(this.innerHTML)">241T</li>
-        </ul>
-
-        
-
-    </div>
-
-    <div class="subMenuPageBSD subMenuPageALT" id="subMenuPageALT">
-        <h3 id="subMenuPageALT_routeHeading" style="font-size: 1.5rem;">LALAPET - NAGOLE</h3>
-
-        <!-- ALTERNATE ROUTE 1 -->
-
-        <div class="structureALT" id="structureALT1">
-            <h4>Route 1:</h4>
-            <div class="ALT_cnt_row" id="art_row_1_1">
-                <div class="ALT_route_No" id="ALT_Numbers">
-
-                    <h4 id="h4_1_1">17H</h4>
-                    <p id="rtp_1_1" style="font-size: 1.1rem;">3K, 17D, 241, 242, 281</p>
-                </div>
-
-                <div class="ALT_description" id="ALT_Description">
-                    <p class="ALT_RT_DET" id="det_1_1">Lalapet - Tarnaka</p>
-                    <p id="detailedALT_1_1" class="ALT_description_P"></p>
-                </div>
-            </div>
-
-            <div class="ALT_cnt_row" id="art_row_1_2">
-                <div class="ALT_route_No">
-
-                    <h4 id="h4_1_2">290U</h4>
-                    <p id="rtp_1_2">290, 279, 90L</p>
-                </div>
-                <div class="ALT_description">
-                    <p class="ALT_RT_DET" id="det_1_2">Tarnaka - Nagole</p>
-                    <p id="detailedALT_1_2" class="ALT_description_P"></p>
-                </div>
-            </div>
-
-            <div class="ALT_cnt_row" id="art_row_1_3">
-                <div class="ALT_route_No">
-
-                    <h4 id="h4_1_3">290U</h4>
-                    <p id="rtp_1_3">290, 279, 90L</p>
-                </div>
-                <div class="ALT_description">
-                    <p class="ALT_RT_DET" id="det_1_3">Tarnaka - Nagole</p>
-                    <p id="detailedALT_1_3" class="ALT_description_P"></p>
-                </div>
-            </div>
-            
-
-        </div>
-
-        <!-- ALTERNATE ROUTE 2 -->
-
-        <div class="structureALT" id="structureALT2">
-            <h4>Route 2:</h4>
-            <div class="ALT_cnt_row" id="art_row_2_1">
-                <div class="ALT_route_No" id="ALT_Numbers">
-
-                    <h4 id="h4_2_1">17H</h4>
-                    <p id="rtp_2_1" style="font-size: 1.1rem;">3K, 17D, 241, 242, 281</p>
-                </div>
-
-                <div class="ALT_description" id="ALT_Description">
-                    <p class="ALT_RT_DET" id="det_2_1">Lalapet - Tarnaka</p>
-                    <p id="detailedALT_2_1" class="ALT_description_P"></p>
-                </div>
-            </div>
-
-            <div class="ALT_cnt_row" id="art_row_2_2">
-                <div class="ALT_route_No">
-                    <h4 id="h4_2_2">290U</h4>
-                    <p id="rtp_2_2">290, 279, 90L</p>
-                </div>
-                <div class="ALT_description">
-                    <p class="ALT_RT_DET" id="det_2_2">Tarnaka - Nagole</p>
-                    <p id="detailedALT_2_2" class="ALT_description_P"></p>
-                </div>
-            </div>
-
-            <div class="ALT_cnt_row" id="art_row_2_3">
-                <div class="ALT_route_No">
-
-                    <h4 id="h4_2_3">290U</h4>
-                    <p id="rtp_2_3">290, 279, 90L</p>
-                </div>
-                <div class="ALT_description">
-                    <p class="ALT_RT_DET" id="det_2_3">Tarnaka - Nagole</p>
-                    <p id="detailedALT_2_3" class="ALT_description_P"></p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="subMenuPageFD" id="subMenuPageFD">
-        <h3 id="subMenuPageFD_routeHeading" style="font-size: 1.5rem;">LALAPET - MEDCHAL</h3>
-
-        <table class="styled-table">
-            <thead>
-                <tr>
-                    <th>Bus Service Type</th>
-                    <th>Fare</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>City Ordinary</td>
-                    <td id="FD_co">10/-</td>
-                </tr>
-                <tr class="active-row">
-                    <td>Metro Express</td>
-                    <td id="FD_me">20/-</td>
-                </tr>
-                <!-- and so on... -->
-            </tbody>
-        </table>
-    </div>
-
-    <div class="note" id="note">
-        <h3>Note :</h3>
-        <p id="noteText">Regular Routes are those Routes which will be running continueously with specified Frequency.
-            Other Routes are those which can be find rarely and once in a day. Choosing Regular Route Buses is strongly
-            Recommended.</p>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    <datalist id="inputsDataList">
-        <option>1</option>
-        <option>2</option>
-    </datalist>
-
-
-
-
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
