@@ -7,6 +7,7 @@
 
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="style.css">
@@ -15,10 +16,7 @@
 </head>
 
 <body>
-    <!--=============== HEADER ===============-->
-    <!-- <header class="header scroll-header" id="header">
-        
-    </header> -->
+
     <nav class="nav container">
         <!-- <a href="#" class="nav__logo">Hyderabad City Bus Info</a> -->
 
@@ -86,12 +84,24 @@
         </div>
     </div>
 
+    <div class="AlertboxBlock">
+        <div class="Alertbox">
+            <h1>Oops!</h1>
+            <p id="AlertBoxText">We are working on this route, Kindly choose the Options from the list provided or Try
+                Again Later.</p>
+            <button onclick="closeAlertBox()">Close</button>
+        </div>
+    </div>
+
     <div class="output" id="outputMain">
 
         <div id="Output1">
             <ul class="RouteListContainer">
-                <li class="RouteList" id="RouteList_Up">224G - MIYAPUR X ROADS - GANDIMAISAMMA </li>
-                <li class="RouteList" id="RouteList_Down">224G - GANDIMAISAMMA - GANDIMAISAMMA </li>
+                <li class="RouteList" id="RouteList_Up" onclick="showDetailedRoute(this.id)">224G - MIYAPUR X ROADS -
+                    GANDIMAISAMMA </li>
+                <li class="RouteList" id="RouteList_Down" onclick="showDetailedRoute(this.id)">224G - GANDIMAISAMMA -
+                    GANDIMAISAMMA </li>
+                <p id="OutputTip">Click on the above options to view Full Route.</p>
             </ul>
         </div>
 
@@ -117,6 +127,7 @@
                 <li>17D</li>
                 <li>3D</li>
             </ul>
+            <p id="OutputTip">Click on the Route Number to view Route Details.</p>
         </div>
 
         <div class="Fare_ChartOP Bus_DetailsOp" id="Output3">
@@ -140,6 +151,150 @@
             </table>
         </div>
 
+        <div class="AlternateRouteOP Bus_DetailsOp" id="Output4">
+            <div class="AltRoute1" id="AltRoute1">
+                <h3 class="AltRouteid">Route 1</h3>
+
+                <div class="AltRoute1List" id="AltRoute1List1_1">
+                    <ul class="AltRoute1NumbersBlock">
+                        <li class="Alt1MainRT" id="Alt1MainRT1_1">3K</li>
+                        <li class="Alt1OptRT" id="Alt1OptRT1_1">17H, 17D, 242</li>
+                    </ul>
+                    <ul class="AltRoute1TextBlock">
+                        <li class="Alt1MainText" id="Alt1MainText1_1">Lalapet - Tarnaka</li>
+                        <li class="Alt1OptText" id="Alt1OptText1_1">First go to Tarnaka by Bus of Routes shown Left
+                            side.</li>
+                    </ul>
+                </div>
+
+                <div class="AltRoute1List" id="AltRoute1List1_2">
+                    <ul class="AltRoute1NumbersBlock">
+                        <li class="Alt1MainRT" id="Alt1MainRT1_2">90L</li>
+                        <li class="Alt1OptRT" id="Alt1OptRT1_2">290U, 279, 290/229</li>
+                    </ul>
+                    <ul class="AltRoute1TextBlock">
+                        <li class="Alt1MainText" id="Alt1MainText1_2">Tarnaka - LB Nagar</li>
+                        <li class="Alt1OptText" id="Alt1OptText1_2">Board the buses of routes shown left side and Get
+                            down at LB Nagar.</li>
+                    </ul>
+                </div>
+
+                <div class="AltRoute1List" id="AltRoute1List1_3">
+                    <ul class="AltRoute1NumbersBlock">
+                        <li class="Alt1MainRT" id="Alt1MainRT1_3">90L</li>
+                        <li class="Alt1OptRT" id="Alt1OptRT1_3">290U, 279, 290/229</li>
+                    </ul>
+                    <ul class="AltRoute1TextBlock">
+                        <li class="Alt1MainText" id="Alt1MainText1_3">Tarnaka - LB Nagar</li>
+                        <li class="Alt1OptText" id="Alt1OptText1_3">Board the buses of routes shown left side and Get
+                            down at LB Nagar.</li>
+                    </ul>
+                </div>
+
+                <p class="ArrivedMsg">You have Arrived at your Destination</p>
+            </div>
+
+
+        </div>
+
+        <div class="sidebarDetailedRoute" id="Output5">
+
+            <div class="DetailedRouteOp Bus_DetailsOp">
+                <h2 id="DetailedRouteHeading">3K - KUSHAIGUDA - AFZALGUNJ</h2>
+
+                <ul class="DetailedStopslist">
+                    <li>
+                        <p class="MainStopName">AFZALGUNJ</p>
+                        <p class="SubStopName">Central Library || Bus Station</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">CITY BUS STATION</p>
+                        <p class="SubStopName">MGBS || Bus Pass Counter</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">CHADERGHAT</p>
+                        <p class="SubStopName">Central Library || Bus Station</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">KOTI WOMENS COLLEGE</p>
+                        <p class="SubStopName">MGBS || Bus Pass Counter</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">RAM KOTI</p>
+                        <p class="SubStopName">Central Library || Bus Station</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">KACHEGUDA</p>
+                        <p class="SubStopName">MGBS || Bus Pass Counter</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">BARKATPURA</p>
+                        <p class="SubStopName">Central Library || Bus Station</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">FEVER HOSPITAL</p>
+                        <p class="SubStopName">MGBS || Bus Pass Counter</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">RAM KOTI</p>
+                        <p class="SubStopName">Central Library || Bus Station</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">KACHEGUDA</p>
+                        <p class="SubStopName">MGBS || Bus Pass Counter</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">BARKATPURA</p>
+                        <p class="SubStopName">Central Library || Bus Station</p>
+                    </li>
+                    <li>
+                        <p class="MainStopName">FEVER HOSPITAL</p>
+                        <p class="SubStopName">MGBS || Bus Pass Counter</p>
+                    </li>
+
+                </ul>
+
+                <div class="DetailedRoutebuttons">
+                    <button onclick="switchUpDown()" id="switchTripBtn">Down Trip</button>
+                    <button onclick="gobackfromDetailedRoute()">Back</button>
+                </div>
+
+            </div>
+
+
+            <div class="CBTExamCentersOP" id="Output6">
+
+                <div class="CenterHeading">
+                    <h2 id="CenterHeadingH2">ION Digital Zone 1 - Moula Ali</h2>
+                    <p id="CenterHeadingP">CVK Technologies, Moula Ali, Coca cola Factory.</p>
+                </div>
+                <img src="pic1.jpeg" alt="Image" id="CBT_TRST_Image">
+                <p class="CenterDescriptionP">The ION Digital Zone 1 - Moula Ali is located at Moula Ali near Coca Cola
+                    Factory. The nearest bus stop
+                    to reach the Exam Center is ZTS X Roads. Direct Buses to reach ZTS X Roads from Major Areas are
+                    given below:
+                </p>
+
+                <div class="CBTBusListCNT">
+                    <button onclick="openDirectBusList()">View Direct Buses</button>
+                    <ul class="CBTdirectBusList" id="CBTdirectBusList">
+                        <li class="CBTfromList">SECUNDERABAD</li>
+                        <li class="CBTfromList">AFZALGUNJ</li>
+                        <li class="CBTfromList">MGBS/CBS</li>
+                        <li class="CBTfromList">TARNAKA</li>
+                        <li class="CBTfromList">More</li>
+                    </ul>
+
+                    <button>View Alternate Route</button>
+                    <button onclick="goBackFromCBTOutput()">Go Back</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
     </div>
 
     <div class="ContactBlock" style="display: none;">
@@ -159,6 +314,8 @@
             </li>
         </ul>
     </div>
+
+
 
 
     <script src="script.js"></script>
