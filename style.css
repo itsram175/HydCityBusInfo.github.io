@@ -18,7 +18,7 @@
     --container-color: #FFF;
     /* --primary-color: rgb(13, 24, 37); */
     --primary-color: rgb(7, 22, 50);
-    --secondary-color:#004581;
+    --secondary-color: #004581;
 
     /*========== Font and typography ==========*/
     --body-font: 'Open Sans', sans-serif;
@@ -115,7 +115,7 @@ textarea {
     text-align: center;
 }
 
-.ContactBlock #UpdateBlock li{
+.ContactBlock #UpdateBlock li {
     width: 95%;
     padding: 10px 10px;
     background-color: white;
@@ -126,10 +126,12 @@ textarea {
     font-weight: bold;
     font-size: 1rem;
 }
-.ContactBlock #UpdateBlock li .UpdateText{
+
+.ContactBlock #UpdateBlock li .UpdateText {
     font-size: var(--tiny-font-size);
 }
-.ContactBlock #UpdateBlock li .UpdateLink{
+
+.ContactBlock #UpdateBlock li .UpdateLink {
     display: block;
     outline: none;
     width: 95%;
@@ -142,6 +144,7 @@ textarea {
     font-weight: bold;
     font-size: var(--normal-font-size);
 }
+
 .inputs {
     width: 100%;
     min-height: 180px;
@@ -160,50 +163,58 @@ textarea {
     width: 100%;
 }
 
-.AlertboxBlock{
+.AlertboxBlock {
     width: 100%;
     position: fixed;
     top: 0px;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 0;
 }
-.Alertbox{
+
+.Alertbox {
     width: 95%;
     background-color: white;
     border-radius: 10px;
     padding: 10px;
     /* display: none; */
 }
-.Alertbox h1{
+
+.Alertbox h1 {
     color: black;
     width: 100%;
     text-align: center;
 }
-.Alertbox p{
+
+.Alertbox p {
     font-size: 13px;
 }
-#AlertBoxYesBtn{
+
+#AlertBoxYesBtn {
     display: none;
 }
-.DirectBuses{
+
+.DirectBuses {
     width: 95%;
     background-color: white;
     border-radius: 10px;
     padding: 10px;
     display: none;
 }
-.DirectBuses h3{
+
+.DirectBuses h3 {
     color: black;
 }
-.DirectBuses p{
+
+.DirectBuses p {
     color: black;
     font-size: 13px;
     font-weight: bold;
 }
+
 .sideBar {
     height: 95%;
     width: 90%;
@@ -325,7 +336,6 @@ button {
 
 .RouteList {
     width: 95%;
-    padding: 20px 10px;
     background-color: white;
     border-radius: 10px;
     margin: 10px auto;
@@ -334,10 +344,50 @@ button {
     font-weight: bold;
     box-shadow: 0px 0px 10px #566774;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    height: 65px;
+    justify-content: center;
+    padding: 0px;
 }
 
-#OutputTip{
-    width: 100%;    
+.RouteList #rtNumber_DN, #rtNumber_UP{
+    background-color: rgb(7, 20, 45);
+    color: white;
+    height: 100%;
+    padding: 10px 10px;
+    border-radius: 10px 0px 0px 10px;
+    width: 30%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.RouteList #rtNumber_UP p, #rtNumber_DN p{
+    width: fit-content;
+    padding: 0px 7px;
+    height: 100%;
+}
+.RouteList #rtSD_UP,#rtSD_DN {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.RouteList #rtSD_UP p,#rtSD_DN p{
+    padding: 3px 0px;
+    font-size: 17px;
+}
+
+.RouteList #rtoNo_R, #rtoNo_R_DN {
+    border-top: solid 3px white;
+}
+
+#OutputTip {
+    width: 100%;
     text-align: center;
     font-size: 13px;
 }
@@ -411,16 +461,18 @@ button {
     font-size: 1.1rem;
 }
 
-.AlternateRouteOP{
+.AlternateRouteOP {
     display: none;
     padding: 10px;
 }
-.AltRouteid{
+
+.AltRouteid {
     width: 100%;
     font-weight: bold;
     padding-left: 5px;
 }
-.AltRoute1List{
+
+.AltRoute1List {
     display: flex;
     box-shadow: 0px 0px 10px #566774;
     border-radius: 10px;
@@ -429,7 +481,8 @@ button {
     height: fit-content;
     background-color: white;
 }
-.AltRoute1NumbersBlock{
+
+.AltRoute1NumbersBlock {
     width: 32%;
     padding: 5px;
     background-color: var(--primary-color);
@@ -438,11 +491,13 @@ button {
     flex-direction: column;
     justify-content: center;
 }
-.AltRoute1TextBlock{
+
+.AltRoute1TextBlock {
     width: 68%;
     padding: 5px;
 }
-.Alt1MainRT{
+
+.Alt1MainRT {
     width: 100%;
     text-align: center;
     font-size: 25px;
@@ -450,35 +505,41 @@ button {
     font-weight: bold;
 
 }
-.Alt1OptRT{
+
+.Alt1OptRT {
     width: 100%;
     text-align: center;
     font-size: 14px;
     color: white;
 }
-.Alt1MainText{
+
+.Alt1MainText {
     width: 100%;
     text-align: center;
     font-size: 16px;
+    
 }
-.Alt1OptText{
+
+.Alt1OptText {
     width: 100%;
-    font-size: 12px;
+    font-size: 10px;
 }
-.ArrivedMsg{
+
+.ArrivedMsg {
     padding-top: 10px;
     width: 100%;
     text-align: left;
     color: black;
     font-size: 13px;
 }
-#AltRoute2{
+
+#AltRoute2 {
     margin-top: 10px;
-    display: none;  
+    display: none;
 }
 
 /* Detailed Route Output Starts */
-.sidebarDetailedRoute{
+.sidebarDetailedRoute {
     position: absolute;
     top: 0;
     left: -1000px;
@@ -486,12 +547,13 @@ button {
     width: 100%;
     height: 100%;
     /* background-color: var(--primary-color); */
-    background-color:#E3E9E9;
+    background-color: #E3E9E9;
     transition-duration: 0.5s;
     /* display: none; */
 
 }
-.DetailedRouteOp{
+
+.DetailedRouteOp {
     display: block;
     overflow: scroll;
     padding: 0;
@@ -502,25 +564,78 @@ button {
     background-color: transparent;
     box-shadow: 0px 0px 0px black;
 }
-.DetailedRouteOp h2{
+
+.DetailedRouteOp h2 {
     width: 100%;
+    height: 70px;
     text-align: center;
     color: white;
     /* border-bottom: solid 2px gray; */
     /* box-shadow: 0px 0px 5px black; */
-    padding: 10px 0px;
+    padding: 0px 0px;
     font-size: 20px;
-    /* background-color: rgb(2, 12, 31); */
-    background-color: var(--secondary-color);
+    background-color: rgb(7, 20, 45);
+    /* background-color: var(--secondary-color); */
+    display: flex;
+    align-items: center;
 }
-.DetailedRouteOp .DetailedStopslist{
+
+.DetailedRouteOp h2 #detRTNumber {
+    height: 100%;
+    margin: 0px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 22px;
+    padding: 0px 0px;
+    border-right: solid 3.5px green;
+    /* background-color: #004581; */
+}
+
+.DetailedRouteOp h2 #detRTNumber p {
+    height: fit-content;
+    width: fit-content;
+    padding: 0px 7px;
+    /* background-color: #004581; */
+}
+
+.DetailedRouteOp h2 #detRTNumber #rtmNo {
+    padding-bottom: 2px;
+}
+
+.DetailedRouteOp h2 #detRTNumber #rtoNo {
+    border-top: solid 3px white;
+    margin-top: -2px;
+    padding-top: 2px;
+    /* background-color: #566774; */
+}
+
+.DetailedRouteOp h2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10px;
+    /* width: 70%; */
+}
+
+.DetailedRouteOp h2 div p {
+    margin-top: 3px;
+    padding: 0px;
+}
+
+.DetailedRouteOp .DetailedStopslist {
     width: 100%;
     padding: 5px;
-    /* height: 310px; */
     overflow: scroll;
     background-color: #E3E9E9;
 }
-.DetailedRouteOp .DetailedStopslist li{
+
+.DetailedRouteOp .DetailedStopslist li {
     padding: 7px 0px;
     text-align: center;
     background-color: white;
@@ -529,22 +644,25 @@ button {
     width: 95%;
     margin: auto;
     margin-top: 5px;
-    
+
 }
-.DetailedRouteOp .DetailedStopslist li .MainStopName{
+
+.DetailedRouteOp .DetailedStopslist li .MainStopName {
     color: black;
     font-size: 18px;
     letter-spacing: 1.5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.DetailedRouteOp .DetailedStopslist li .SubStopName{
+
+.DetailedRouteOp .DetailedStopslist li .SubStopName {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.6);
     font-weight: lighter;
     letter-spacing: 1px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.DetailedRouteOp .DetailedRoutebuttons{
+
+.DetailedRouteOp .DetailedRoutebuttons {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -552,7 +670,12 @@ button {
     padding-top: 0px;
     background-color: #E3E9E9;
 }
-.DetailedOPNote{
+
+.DetailedRouteOp .DetailedRoutebuttons button {
+    background-color: rgb(7, 20, 45);
+}
+
+.DetailedOPNote {
     width: 94%;
     margin: 5px auto;
     padding: 5px;
@@ -560,45 +683,50 @@ button {
     border-radius: 10px;
     box-shadow: 0px 0px 2px #566774;
 }
-.DetailedOPNote h3{
+
+.DetailedOPNote h3 {
     font-size: 18px;
     color: yellow;
-    
+
 }
-.DetailedOPNote p{
+
+.DetailedOPNote p {
     font-size: 14px;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Detailed Route Output Ends */
 
-.CBTExamCentersOP{
+.CBTExamCentersOP {
     display: block;
     padding: 0px;
     padding-bottom: 5px;
     color: black;
     background-color: white;
 }
-.CBTExamCentersOP .CenterHeading{
+
+.CBTExamCentersOP .CenterHeading {
     background-color: var(--secondary-color);
     color: white;
     padding: 5px;
 }
-.CBTExamCentersOP .CenterHeading h2{
+
+.CBTExamCentersOP .CenterHeading h2 {
     width: 100%;
     text-align: center;
     font-size: 22px;
     padding: 2px 0px;
 }
-.CBTExamCentersOP .CenterHeading p{
+
+.CBTExamCentersOP .CenterHeading p {
     width: 100%;
     text-align: center;
     font-size: 13px;
     padding-bottom: 3px;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.CBTExamCentersOP .CenterDescriptionP{
+.CBTExamCentersOP .CenterDescriptionP {
     /* padding: 5px; */
     font-size: 15px;
     display: block;
@@ -611,36 +739,41 @@ button {
     padding-bottom: 2px;
 }
 
-.CBTBusListCNT{
+.CBTBusListCNT {
     display: block;
     padding: 0px;
 }
-.CBTBusListCNT button{
+
+.CBTBusListCNT button {
     width: 85%;
     margin: auto;
     margin-top: 2px;
 }
-.CBTBusListCNT button:nth-child(4){
+
+.CBTBusListCNT button:nth-child(4) {
     background-color: white;
     color: var(--secondary-color);
     border: solid 2px var(--secondary-color);
     margin-top: 5px;
 }
-.CBTdirectBusList{
+
+.CBTdirectBusList {
     /* background-color: var(--secondary-color); */
     margin-top: 3px;
     /* margin-bottom: 3px; */
     width: 100%;
     display: flex;
     gap: 5px;
-    padding: 0px; /*5px*/
+    padding: 0px;
+    /*5px*/
     flex-wrap: wrap;
     justify-content: center;
     height: 0px;
     overflow: hidden;
 
 }
-.CBTfromList{
+
+.CBTfromList {
     padding: 10px 5px;
     border-radius: 5px;
     width: 45%;
@@ -650,12 +783,13 @@ button {
     border: solid 2px var(--secondary-color);
     font-weight: bold;
 }
-.CBTExamCentersOP img{
+
+.CBTExamCentersOP img {
     width: 100%;
     height: 250px;
 }
 
-.nav__link svg{
+.nav__link svg {
     height: 25px;
 }
 
@@ -727,7 +861,7 @@ button {
     font-size: var(--tiny-font-size);
 }
 
-.nav__link svg{
+.nav__link svg {
     height: 25px;
 }
 
@@ -776,7 +910,7 @@ button {
         display: none;
     }
 
-    .nav__link svg{
+    .nav__link svg {
         height: 25px;
     }
 
@@ -813,5 +947,3 @@ button {
         display: none;
     }
 }
-
-
