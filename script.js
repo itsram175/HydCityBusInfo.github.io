@@ -141,7 +141,7 @@ let RT281_UP = [SHD[670], SHD[184], SHD[668], SHD[1117], SHD[667], SHD[669], SHD
 
 let RT281_DN = [SHD[316], SHD[272], SHD[935], SHD[733], SHD[1121], SHD[1120], SHD[828], SHD[851], SHD[1119], SHD[893], SHD[971], SHD[1118], SHD[830], SHD[667], SHD[1117], SHD[668], SHD[184], SHD[670]]
 
-// console.log(BusstopsArray.length);
+console.log(BusstopsArray.length);
 
 
 let test = ["ABIDS", "ABIDS GPO", "ADARSH NAGAR", "ADIBATLA", "ADIKMET", "AFZALGUNJ"]
