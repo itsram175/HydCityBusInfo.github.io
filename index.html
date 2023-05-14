@@ -38,15 +38,15 @@
                         <svg fill="#fff" version="1.1" id="Capa_1" viewBox="0 0 512 512" xml:space="preserve">
                             <g>
                                 <path d="M472,64H40C17.944,64,0,81.944,0,104c0,4.418,3.582,8,8,8h32v16.002c-8.826,0.026-16,7.213-16,16.045V432h-8
-		c-4.418,0-8,3.582-8,8s3.582,8,8,8h64c4.418,0,8-3.582,8-8s-3.582-8-8-8h-8v-16h160v24c0,4.418,3.582,8,8,8s8-3.582,8-8v-24h144v24
-		c0,4.418,3.582,8,8,8s8-3.582,8-8v-24h32v16h-8c-4.418,0-8,3.582-8,8s3.582,8,8,8h64c4.418,0,8-3.582,8-8s-3.582-8-8-8h-8V144.048
-		c0-8.832-7.174-16.019-16-16.045V112h32c4.418,0,8-3.582,8-8C512,81.944,494.056,64,472,64z M56,432H40.001l0.047-288L56,144.048
-		V432z M392,400H248v-16h144V400z M440,400h-32v-16h8c4.418,0,8-3.582,8-8s-3.582-8-8-8H224c-4.418,0-8,3.582-8,8s3.582,8,8,8h8v16
-		H72v-88h368V400z M72,296V152h176v144H72z M440,296H264V152h176V296z M456,128.002c-5.894,0.017-11.038,3.235-13.814,7.998H69.814
-		c-2.776-4.762-7.92-7.98-13.814-7.998V112h400V128.002z M472,432h-15.999l0.047-288L472,144.048V432z M17.376,96
-		C20.678,86.689,29.571,80,40,80h432c10.429,0,19.322,6.689,22.624,16H17.376z" />
+                                    c-4.418,0-8,3.582-8,8s3.582,8,8,8h64c4.418,0,8-3.582,8-8s-3.582-8-8-8h-8v-16h160v24c0,4.418,3.582,8,8,8s8-3.582,8-8v-24h144v24
+                                    c0,4.418,3.582,8,8,8s8-3.582,8-8v-24h32v16h-8c-4.418,0-8,3.582-8,8s3.582,8,8,8h64c4.418,0,8-3.582,8-8s-3.582-8-8-8h-8V144.048
+                                    c0-8.832-7.174-16.019-16-16.045V112h32c4.418,0,8-3.582,8-8C512,81.944,494.056,64,472,64z M56,432H40.001l0.047-288L56,144.048
+                                    V432z M392,400H248v-16h144V400z M440,400h-32v-16h8c4.418,0,8-3.582,8-8s-3.582-8-8-8H224c-4.418,0-8,3.582-8,8s3.582,8,8,8h8v16
+                                    H72v-88h368V400z M72,296V152h176v144H72z M440,296H264V152h176V296z M456,128.002c-5.894,0.017-11.038,3.235-13.814,7.998H69.814
+                                    c-2.776-4.762-7.92-7.98-13.814-7.998V112h400V128.002z M472,432h-15.999l0.047-288L472,144.048V432z M17.376,96
+                                    C20.678,86.689,29.571,80,40,80h432c10.429,0,19.322,6.689,22.624,16H17.376z" />
                                 <path d="M224,168H96c-4.418,0-8,3.582-8,8v96c0,4.418,3.582,8,8,8h128c4.418,0,8-3.582,8-8v-96C232,171.582,228.418,168,224,168z
-		 M216,264H104v-80h112V264z" />
+                                     M216,264H104v-80h112V264z" />
                                 <path
                                     d="M128,216h16c4.418,0,8-3.582,8-8s-3.582-8-8-8h-16c-4.418,0-8,3.582-8,8S123.582,216,128,216z" />
                                 <path
@@ -153,8 +153,26 @@
 
         <div id="Output1">
             <ul class="RouteListContainer">
-                <li class="RouteList" id="RouteList_Up" onclick="showDetailedRoute(this.id)">224G - MIYAPUR X ROAD - GANDIMAISAMMA </li>
-                <li class="RouteList" id="RouteList_Down" onclick="showDetailedRoute(this.id)">224G - GANDIMAISAMMA - GANDIMAISAMMA </li>
+                <li class="RouteList" id="RouteList_Up" onclick="showDetailedRoute(this.id)">
+                    <div id="rtNumber_UP">
+                        <p id="rtmNo_R">224G</p>
+                        <p id="rtoNo_R"></p>
+                    </div>
+                    <div id="rtSD_UP">
+                        <p id="rtSource_UP">MIYAPUR X ROADS</p>
+                        <p id="rtDestination_UP">GANDIMAISAMMA</p>
+                    </div>
+                </li>
+                <li class="RouteList" id="RouteList_Down" onclick="showDetailedRoute(this.id)">
+                    <div id="rtNumber_DN">
+                        <p id="rtmNo_R_DN">224G</p>
+                        <p id="rtoNo_R_DN"></p>
+                    </div>
+                    <div id="rtSD_DN">
+                        <p id="rtSource_DN">MIYAPUR X ROADS</p>
+                        <p id="rtDestination_DN">GANDIMAISAMMA</p>
+                    </div>
+                </li>
                 <p id="OutputTip">Click on the above options to view Full Route.</p>
             </ul>
         </div>
@@ -296,7 +314,16 @@
         <div class="sidebarDetailedRoute" id="Output5">
 
             <div class="DetailedRouteOp Bus_DetailsOp">
-                <h2 id="DetailedRouteHeading">3K - KUSHAIGUDA - AFZALGUNJ</h2>
+                <h2 id="DetailedRouteHeading">
+                    <div id="detRTNumber">
+                        <p id="rtmNo"></p>
+                        <p id="rtoNo"></p>
+                    </div>
+                    <div>
+                        <p id="detRTSource"></p>
+                        <p id="detRTDestination"></p>
+                    </div>
+                </h2>
 
                 <ul class="DetailedStopslist">
                     <li>
@@ -324,7 +351,7 @@
                     <h2 id="CenterHeadingH2">ION Digital Zone 1 - Moula Ali</h2>
                     <p id="CenterHeadingP">CVK Technologies, Moula Ali, Coca cola Factory.</p>
                 </div>
-                <img src="" alt="Image" id="CBT_TRST_Image">
+                <img src="pic1.jpeg" alt="Image" id="CBT_TRST_Image">
                 <p class="CenterDescriptionP">The ION Digital Zone 1 - Moula Ali is located at Moula Ali near Coca Cola
                     Factory. The nearest bus stop
                     to reach the Exam Center is ZTS X Roads. Direct Buses to reach ZTS X Roads from Major Areas are
