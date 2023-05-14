@@ -351,8 +351,7 @@ button {
     padding: 0px;
 }
 
-.RouteList #rtNumber_DN,
-#rtNumber_UP {
+.RouteList #rtNumber_DN,#rtNumber_UP {
     background-color: rgb(7, 20, 45);
     color: white;
     height: 100%;
@@ -364,17 +363,16 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-.RouteList #rtNumber_UP p,
-#rtNumber_DN p {
+.RouteList #rtNumber_UP p, #rtNumber_DN p {
     width: fit-content;
     padding: 0px 7px;
     height: 100%;
 }
 
-.RouteList #rtSD_UP,
-#rtSD_DN {
+.RouteList #rtSD_UP,#rtSD_DN {
     height: 100%;
     width: 70%;
     display: flex;
@@ -383,14 +381,12 @@ button {
     justify-content: center;
 }
 
-.RouteList #rtSD_UP p,
-#rtSD_DN p {
+.RouteList #rtSD_UP p,#rtSD_DN p {
     padding: 3px 0px;
     font-size: 17px;
 }
 
-.RouteList #rtoNo_R,
-#rtoNo_R_DN {
+.RouteList #rtoNo_R,#rtoNo_R_DN {
     border-top: solid 3px white;
 }
 
@@ -461,8 +457,7 @@ button {
     background-color: var(--primary-color);
 }
 
-.Fare_ChartOP .styled-table th,
-.styled-table td {
+.Fare_ChartOP .styled-table th, .styled-table td {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 12px 15px;
     border: 1.5px solid black;
@@ -847,8 +842,7 @@ button {
     }
 }
 
-.nav__list,
-.nav__link {
+.nav__list, .nav__link {
     display: flex;
 }
 
