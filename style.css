@@ -351,7 +351,8 @@ button {
     padding: 0px;
 }
 
-.RouteList #rtNumber_DN, #rtNumber_UP{
+.RouteList #rtNumber_DN,
+#rtNumber_UP {
     background-color: rgb(7, 20, 45);
     color: white;
     height: 100%;
@@ -364,12 +365,16 @@ button {
     align-items: center;
     justify-content: center;
 }
-.RouteList #rtNumber_UP p, #rtNumber_DN p{
+
+.RouteList #rtNumber_UP p,
+#rtNumber_DN p {
     width: fit-content;
     padding: 0px 7px;
     height: 100%;
 }
-.RouteList #rtSD_UP,#rtSD_DN {
+
+.RouteList #rtSD_UP,
+#rtSD_DN {
     height: 100%;
     width: 70%;
     display: flex;
@@ -377,12 +382,15 @@ button {
     align-items: center;
     justify-content: center;
 }
-.RouteList #rtSD_UP p,#rtSD_DN p{
+
+.RouteList #rtSD_UP p,
+#rtSD_DN p {
     padding: 3px 0px;
     font-size: 17px;
 }
 
-.RouteList #rtoNo_R, #rtoNo_R_DN {
+.RouteList #rtoNo_R,
+#rtoNo_R_DN {
     border-top: solid 3px white;
 }
 
@@ -517,7 +525,7 @@ button {
     width: 100%;
     text-align: center;
     font-size: 16px;
-    
+
 }
 
 .Alt1OptText {
