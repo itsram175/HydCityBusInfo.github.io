@@ -1,3 +1,7 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 /*=============== VARIABLES CSS ===============*/
 :root {
     --header-height: 3rem;
@@ -348,7 +352,8 @@ button {
     padding: 0px;
 }
 
-.RouteList #rtNumber_DN,#rtNumber_UP {
+.RouteList #rtNumber_DN,
+#rtNumber_UP {
     background-color: rgb(7, 20, 45);
     color: white;
     height: 100%;
@@ -361,15 +366,18 @@ button {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-.RouteList #rtNumber_UP p, #rtNumber_DN p {
+.RouteList #rtNumber_UP p,
+#rtNumber_DN p {
     width: fit-content;
     padding: 0px 7px;
     height: 100%;
 }
 
-.RouteList #rtSD_UP,#rtSD_DN {
+.RouteList #rtSD_UP,
+#rtSD_DN {
     height: 100%;
     width: 70%;
     display: flex;
@@ -378,12 +386,15 @@ button {
     justify-content: center;
 }
 
-.RouteList #rtSD_UP p,#rtSD_DN p {
+.RouteList #rtSD_UP p,
+#rtSD_DN p {
+    font-family: 'Space Grotesk', sans-serif;
     padding: 3px 0px;
     font-size: 17px;
 }
 
-.RouteList #rtoNo_R,#rtoNo_R_DN {
+.RouteList #rtoNo_R,
+#rtoNo_R_DN {
     border-top: solid 3px white;
 }
 
@@ -454,7 +465,8 @@ button {
     background-color: var(--primary-color);
 }
 
-.Fare_ChartOP .styled-table th, .styled-table td {
+.Fare_ChartOP .styled-table th,
+.styled-table td {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 12px 15px;
     border: 1.5px solid black;
@@ -578,6 +590,8 @@ button {
     /* background-color: var(--secondary-color); */
     display: flex;
     align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 1px;
 }
 
 .DetailedRouteOp h2 #detRTNumber {
@@ -592,7 +606,7 @@ button {
     font-size: 22px;
     padding: 0px 0px;
     border-right: solid 3.5px green;
-    /* background-color: #004581; */
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .DetailedRouteOp h2 #detRTNumber p {
@@ -839,7 +853,8 @@ button {
     }
 }
 
-.nav__list, .nav__link {
+.nav__list,
+.nav__link {
     display: flex;
 }
 
