@@ -224,91 +224,298 @@
         </div>
 
         <div class="AlternateRouteOP Bus_DetailsOp" id="Output4">
-            <div class="AltRoute1" id="AltRoute1">
-                <h3 class="AltRouteid">Route 1</h3>
 
-                <div class="AltRoute1List" id="AltRoute1List1_1">
-                    <ul class="AltRoute1NumbersBlock">
-                        <li class="Alt1MainRT" id="Alt1MainRT1_1">3K</li>
-                        <li class="Alt1OptRT" id="Alt1OptRT1_1">17H, 17D, 242</li>
-                    </ul>
-                    <ul class="AltRoute1TextBlock">
-                        <li class="Alt1MainText" id="Alt1MainText1_1">Lalapet - Tarnaka</li>
-                        <li class="Alt1OptText" id="Alt1OptText1_1">First go to Tarnaka by Bus of Routes shown Left
-                            side.</li>
-                    </ul>
+            <div class="creativeOutput">
+                <p class="optionNumber" id="wayTitle">LALAPET - SECUNDERABAD - MEDCHAL</p>
+
+                <div class="xRoad_Left" id="xRoad_Left">
+                    <p class="xRoad"></p>
+                    <p class="yRoad"></p>
+                    <p class="sMark markPointers"></p>
+                    <p class="eMark1 markPointers"></p>
+                    <p class="eMark2 markPointers"></p>
+                    <p class="dMark markPointers"></p>
+                    <p class="walkLinerY"></p>
+                    <p class="walkLinerX"></p>
+                    <p class="DestinationName" id="xrl_DestinationName">LB NAGAR</p>
+                    <p class="ExchangeName" id="xrl_Exchange1Name">TARNAKA</p>
+
+                    <div class="routeBtw">
+                        <p class="main" id="xrl_mainRoute1">3K, 17H</p>
+                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])">View More</p>
+                    </div>
+
+                    <p class="directX"></p>
+                    <p class="directY"></p>
+
+                    <div class="routeBtw routeBtw2">
+                        <p class="main" id="xrl_mainRoute2">90L</p>
+                        <p class="moreRoute vm2" onclick="viewMoreALTCO(this.classList[1])">View More</p>
+                    </div>
+
+                    <p class="sourceName" id="xrl_SourceName">LALAPET</p>
+
+                    <p class="arrowX">V</p>
+                    <p class="arrowY">V</p>
+
+                    <p class="endMargin"></p>
+
+                    <div class="mapLegend">
+                        <div class="symbols">
+                            <p class="busWay"></p>
+                            <p class="directMark"></p>
+                            <p class="arrowMark">></p>
+                            <p class="walkWay"></p>
+                            <p class="walkLine"></p>
+                            <p class="markPointers orangeMark"></p>
+                            <p class="markPointers blueMark1"></p>
+                            <p class="markPointers blueMark2"></p>
+                            <p class="markPointers greenMark"></p>
+
+                            <div class="routeBtw routeBtwLegend">
+                                <p class="main">#</p>
+                                <p class="moreRoute">View More</p>
+                            </div>
+                        </div>
+
+                        <div class="symbolsDescription">
+                            <p class="brName">Bus Route</p>
+                            <p class="wwName">Walk Way</p>
+                            <p>Your Bus Stop</p>
+                            <p>Exchange Bus Stop</p>
+                            <p>Exchange Bus Stop</p>
+                            <p>Destination Bus Stop</p>
+                            <p class="rtbtwName">Buses Between 2 Points</p>
+                        </div>
+                    </div>
+                    <p class="endMargin mapLegendEnd"></p>
+                    <p id="popUpMsg">Confused with Map Route..? Click on Button below to view Descriptive Route</p>
+                    <button onclick="viewALTdescRoute()" id="expMapBtn">Explain Map</button>
                 </div>
 
-                <div class="AltRoute1List" id="AltRoute1List1_2">
-                    <ul class="AltRoute1NumbersBlock">
-                        <li class="Alt1MainRT" id="Alt1MainRT1_2">90L</li>
-                        <li class="Alt1OptRT" id="Alt1OptRT1_2">290U, 279, 290/229</li>
-                    </ul>
-                    <ul class="AltRoute1TextBlock">
-                        <li class="Alt1MainText" id="Alt1MainText1_2">Tarnaka - LB Nagar</li>
-                        <li class="Alt1OptText" id="Alt1OptText1_2">Board the buses of routes shown left side and Get
-                            down at LB Nagar.</li>
-                    </ul>
+                <div class="xRoad_Left xRoad_Right" id="xRoad_Right">
+
+                    <div class="xRoadBlock xRoad">
+                        <p class="walkLinerX"></p>
+                        <p class="eMark2 markPointers"></p>
+                        <p class="directX"></p>
+                        <p class="arrowX">V</p>
+                        <p class="dMark markPointers"></p>
+                    </div>
+
+                    <div class="yRoadBlock yRoad">
+                        <p class="walkLinerY"></p>
+                        <p class="eMark1 markPointers"></p>
+                        <p class="arrowY">V</p>
+                        <p class="directY"></p>
+                        <p class="sMark markPointers"></p>
+                    </div>
+
+                    <p class="DestinationName" id="xrr_DestinationName">MEDCHAL</p>
+                    <p class="e2Name" id="xrr_Exchange2Name">SEC-BAD Stn.</p>
+                    <p class="e1Name" id="xrr_Exchange1Name">SEC-BAD</p>
+                    <p class="sourceName" id="xrr_SourceName">LALAPET</p>
+
+                    <div class="routeBtw routeBtw2">
+                        <p class="main" id="xrr_mainRoute2">229</p>
+                        <p class="moreRoute vm2" id="xrr_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View
+                            More</p>
+                    </div>
+
+                    <div class="routeBtw">
+                        <p class="main" id="xrr_mainRoute1">17H</p>
+                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="xrr_mainRoute1VM">View
+                            More</p>
+                    </div>
+
+                    <p class="endMargin"></p>
+
+                    <div class="mapLegend">
+                        <div class="symbols">
+                            <p class="busWay"></p>
+                            <p class="directMark"></p>
+                            <p class="arrowMark">></p>
+                            <p class="walkWay"></p>
+                            <p class="walkLine"></p>
+                            <p class="markPointers orangeMark"></p>
+                            <p class="markPointers blueMark1"></p>
+                            <p class="markPointers blueMark2"></p>
+                            <p class="markPointers greenMark"></p>
+
+                            <div class="routeBtw routeBtwLegend">
+                                <p class="main">#</p>
+                                <p class="moreRoute">View More</p>
+                            </div>
+                        </div>
+
+                        <div class="symbolsDescription">
+                            <p class="brName">Bus Route</p>
+                            <p class="wwName">Walk Way</p>
+                            <p>Your Bus Stop</p>
+                            <p>Exchange Bus Stop</p>
+                            <p>Exchange Bus Stop</p>
+                            <p>Destination Bus Stop</p>
+                            <p class="rtbtwName">Buses Between 2 Points</p>
+                        </div>
+                    </div>
+                    <p class="endMargin mapLegendEnd"></p>
+                    <p id="popUpMsg">Confused with Map Route..? Click on Button below to view Descriptive Route</p>
+                    <button onclick="viewALTdescRoute()" id="expMapBtn">Explain Map</button>
                 </div>
 
-                <div class="AltRoute1List" id="AltRoute1List1_3">
-                    <ul class="AltRoute1NumbersBlock">
-                        <li class="Alt1MainRT" id="Alt1MainRT1_3">90L</li>
-                        <li class="Alt1OptRT" id="Alt1OptRT1_3">290U, 279, 290/229</li>
-                    </ul>
-                    <ul class="AltRoute1TextBlock">
-                        <li class="Alt1MainText" id="Alt1MainText1_3">Tarnaka - LB Nagar</li>
-                        <li class="Alt1OptText" id="Alt1OptText1_3">Board the buses of routes shown left side and Get
-                            down at LB Nagar.</li>
-                    </ul>
+                <div class="yRoad_Down" id="yRoad_Down">
+                    <div class="yRoad yRoadBlockUSL">
+                        <p class="sMark markPointers"></p>
+                        <p class="directY"></p>
+                        <p class="arrowY">V</p>
+                        <p class="eMark1 markPointers"></p>
+                        <p class="directY"></p>
+                        <p class="arrowY">V</p>
+                        <p class="dMark markPointers"></p>
+                    </div>
+
+                    <p class="sourceName" id="yrd_SourceName">LALAPET</p>
+                    <p class="e1Name" id="yrd_Exchange1Name">ECIL X R</p>
+                    <p class="DestinationName" id="yrd_DestinationName">SUCHITRA</p>
+
+                    <div class="routeBtw">
+                        <p class="main" id="yrd_mainRoute1">17H</p>
+                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yrd_mainRoute1VM">View More</p>
+                    </div>
+
+                    <div class="routeBtw routeBtw2">
+                        <p class="main" id="yrd_mainRoute2">229</p>
+                        <p class="moreRoute vm2" id="yrd_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View More</p>
+                    </div>
+
+                    <p class="endMargin"></p>
+                    <div class="mapLegend">
+                        <div class="symbols">
+                            <p class="busWay"></p>
+                            <p class="directMark"></p>
+                            <p class="arrowMark">></p>
+                            <p class="markPointers orangeMark"></p>
+                            <p class="markPointers blueMark1"></p>
+                            <p class="markPointers greenMark"></p>
+
+                            <div class="routeBtw routeBtwLegend">
+                                <p class="main">#</p>
+                                <p class="moreRoute">View More</p>
+                            </div>
+                        </div>
+
+                        <div class="symbolsDescription">
+                            <p class="brName">Bus Route</p>
+                            <p>Your Bus Stop</p>
+                            <p>Exchange Bus Stop</p>
+                            <p>Destination Bus Stop</p>
+                            <p class="rtbtwName">Buses Between 2 Points</p>
+                        </div>
+                    </div>
+                    <p class="endMargin mapLegendEnd"></p>
+                    <p id="popUpMsg">Confused with Map Route..? Click on Button below to view Descriptive Route</p>
+                    <button onclick="viewALTdescRoute()" id="expMapBtn">Explain Map</button>
                 </div>
 
-                <!-- <p class="ArrivedMsg">You have Arrived at your Destination</p> -->
+                <div class="yRoad_Down yRoad_Up" id="yRoad_Up">
+                    <div class="yRoad yRoadBlockUSL">
+                        <p class="dMark markPointers"></p>
+                        <p class="arrowY">V</p>
+                        <p class="directY"></p>
+                        <p class="eMark1 markPointers"></p>
+                        <p class="arrowY">V</p>
+                        <p class="directY"></p>
+                        <p class="sMark markPointers"></p>
+                    </div>
+
+                    <p class="DestinationName" id="yru_DestinationName">NIMBOLI A</p>
+                    <p class="e1Name" id="yru_Exchange1Name">FEVER HSP</p>
+                    <p class="sourceName" id="yru_SourceName">LALAPET</p>
+
+                    <div class="routeBtw routeBtw2">
+                        <p class="main" id="yru_mainRoute2">2J</p>
+                        <p class="moreRoute vm2" id="yru_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View More</p>
+                    </div>
+
+                    <div class="routeBtw">
+                        <p class="main" id="yru_mainRoute1">3K</p>
+                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yru_mainRoute1VM">View More</p>
+                    </div>
+
+                    <p class="endMargin"></p>
+                    <div class="mapLegend">
+                        <div class="symbols">
+                            <p class="busWay"></p>
+                            <p class="directMark"></p>
+                            <p class="arrowMark">></p>
+                            <p class="markPointers orangeMark"></p>
+                            <p class="markPointers blueMark1"></p>
+                            <p class="markPointers greenMark"></p>
+
+                            <div class="routeBtw routeBtwLegend">
+                                <p class="main">#</p>
+                                <p class="moreRoute">View More</p>
+                            </div>
+                        </div>
+
+                        <div class="symbolsDescription">
+                            <p class="brName">Bus Route</p>
+                            <p>Your Bus Stop</p>
+                            <p>Exchange Bus Stop</p>
+                            <p>Destination Bus Stop</p>
+                            <p class="rtbtwName">Buses Between 2 Points</p>
+                        </div>
+                    </div>
+                    <p class="endMargin mapLegendEnd"></p>
+                    <p id="popUpMsg">Confused with Map Route..? Click on Button below to view Descriptive Route</p>
+                    <button onclick="viewALTdescRoute()" id="expMapBtn">Explain Map</button>
+                </div>
+
+                <div class="popUpBox" id="popUpBox">
+                    <p class="cancelIcon"></p>
+                    <p class="xMark" onclick="closePopUpBox()">X</p>
+                    <div class="infoBox" id="infoBox">
+                        <div class="infoBoxInfo">
+                            <p id="sdNames">LALAPET - SECUNDERABAD</p>
+                            <p>Frequently Available:</p>
+                            <ul id="ALT_FA_Routes">
+                                <li>15H</li>
+                                <li>17DS</li>
+                                <li>17H</li>
+                                <li>242</li>
+                            </ul>
+                            <p>Rarely Available:</p>
+                            <ul id="ALT_RA_Routes">
+                                <li>14P</li>
+                                <li>15D</li>
+                                <li>17D</li>
+                                <li>242A</li>
+                                <li>242B</li>
+                            </ul>
+                        </div>
+                        <p class="endMargin" id="infoBoxEndMargin"></p>
+
+                        <div class="DescriptiveRoute">
+                            <p id="ALTtitle">LALAPET - SECUNDERABAD - MEDCHAL </p>
+                            <ul id="DescriptiveRouteAltUL">
+                                <li>1. First Go To Secunderabad by buses shown in the orange outlined box.</li>
+                                <li>2. You will be getting down at Secunderabad Blue Sea Hotel Bus Stop.</li>
+                                <li>3. From there walk to Secunderabad Railways Station Bus Stop.</li>
+                                <li>4. At Secunderabad Railways Station Bus Stop Board any bus shown in the Green
+                                    Outlined Box and Get down at Medchal</li>
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
             </div>
 
 
-            <div class="AltRoute1" id="AltRoute2">
-                <h3 class="AltRouteid">Route 2</h3>
 
-                <div class="AltRoute1List" id="AltRoute2List2_1">
-                    <ul class="AltRoute1NumbersBlock">
-                        <li class="Alt1MainRT" id="Alt2MainRT2_1">3K</li>
-                        <li class="Alt1OptRT" id="Alt2OptRT2_1">17H, 17D, 242</li>
-                    </ul>
-                    <ul class="AltRoute1TextBlock">
-                        <li class="Alt1MainText" id="Alt2MainText2_1">Lalapet - Tarnaka</li>
-                        <li class="Alt1OptText" id="Alt2OptText2_1">First go to Tarnaka by Bus of Routes shown Left
-                            side.</li>
-                    </ul>
-                </div>
 
-                <div class="AltRoute1List" id="AltRoute2List2_2">
-                    <ul class="AltRoute1NumbersBlock">
-                        <li class="Alt1MainRT" id="Alt2MainRT2_2">90L</li>
-                        <li class="Alt1OptRT" id="Alt2OptRT2_2">290U, 279, 290/229</li>
-                    </ul>
-                    <ul class="AltRoute1TextBlock">
-                        <li class="Alt1MainText" id="Alt2MainText2_2">Tarnaka - LB Nagar</li>
-                        <li class="Alt1OptText" id="Alt2OptText2_2">Board the buses of routes shown left side and Get
-                            down at LB Nagar.</li>
-                    </ul>
-                </div>
-
-                <div class="AltRoute1List" id="AltRoute2List2_3">
-                    <ul class="AltRoute1NumbersBlock">
-                        <li class="Alt1MainRT" id="Alt2MainRT2_3">90L</li>
-                        <li class="Alt1OptRT" id="Alt2OptRT2_3">290U, 279, 290/229</li>
-                    </ul>
-                    <ul class="AltRoute1TextBlock">
-                        <li class="Alt1MainText" id="Alt2MainText2_3">Tarnaka - LB Nagar</li>
-                        <li class="Alt1OptText" id="Alt2OptText2_3">Board the buses of routes shown left side and Get
-                            down at LB Nagar.</li>
-                    </ul>
-                </div>
-
-            </div>
-            <p class="ArrivedMsg">We have shown only few bus numbers on left side between those Source and Destinations
-                mentioned. There may be many buses available, try to check them by using From - To option below.</p>
         </div>
 
         <div class="sidebarDetailedRoute" id="Output5">
@@ -373,6 +580,7 @@
                 </div>
 
             </div>
+
 
         </div>
 
