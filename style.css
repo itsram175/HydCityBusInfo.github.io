@@ -11,7 +11,7 @@
     --sat: 63%;
     --first-color: hsl(var(--hue), var(--sat), 40%);
     --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-    --title-color: black;
+    --title-color: var(--black-color);
     --text-color: hsl(var(--hue), 8%, 35%);
     /* --body-color: rgb(2, 12, 31); */
     /* --body-color:rgb(54, 82, 110); */
@@ -20,6 +20,9 @@
     /* --primary-color: rgb(13, 24, 37); */
     --primary-color: rgb(7, 22, 50);
     --secondary-color: #004581;
+
+    --black-color:#000;
+
 
     /*========== Font and typography ==========*/
     --body-font: 'Open Sans', sans-serif;
@@ -123,7 +126,7 @@ textarea {
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
-    color: black;
+    color: var(--black-color);
     font-weight: bold;
     font-size: 1rem;
 }
@@ -185,7 +188,7 @@ textarea {
 }
 
 .Alertbox h1 {
-    color: black;
+    color: var(--black-color);
     width: 100%;
     text-align: center;
 }
@@ -207,11 +210,11 @@ textarea {
 }
 
 .DirectBuses h3 {
-    color: black;
+    color: var(--black-color);
 }
 
 .DirectBuses p {
-    color: black;
+    color: var(--black-color);
     font-size: 13px;
     font-weight: bold;
 }
@@ -225,7 +228,7 @@ textarea {
     right: 0;
     margin-right: -1000px;
     transition-duration: 0.7s;
-    box-shadow: -3px 0px 10px black;
+    box-shadow: -3px 0px 10px var(--black-color);
     z-index: 10;
 }
 
@@ -329,7 +332,7 @@ button {
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
-    color: black;
+    color: var(--black-color);
     font-weight: bold;
     box-shadow: 0px 0px 10px #566774;
     font-size: 1rem;
@@ -341,7 +344,7 @@ button {
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
-    color: black;
+    color: var(--black-color);
     font-weight: bold;
     box-shadow: 0px 0px 10px #566774;
     font-size: 1rem;
@@ -366,7 +369,7 @@ button {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    font-family: 'Space Grotesk', sans-serif;
+    
 }
 
 .RouteList #rtNumber_UP p,
@@ -388,7 +391,6 @@ button {
 
 .RouteList #rtSD_UP p,
 #rtSD_DN p {
-    font-family: 'Space Grotesk', sans-serif;
     padding: 3px 0px;
     font-size: 17px;
 }
@@ -411,7 +413,7 @@ button {
     border-radius: 10px;
     margin: 10px auto;
     /* text-align: center; */
-    color: black;
+    color: var(--black-color);
     font-weight: bold;
     box-shadow: 0px 0px 10px #566774;
     font-size: 1rem;
@@ -425,7 +427,7 @@ button {
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
-    color: black;
+    color: var(--black-color);
     font-weight: bold;
     box-shadow: 0px 0px 10px #566774;
     font-size: 1rem;
@@ -452,13 +454,12 @@ button {
 .Fare_ChartOP .styled-table {
     border-collapse: collapse;
     font-size: 0.9em;
-    font-family: sans-serif;
     width: 100%;
     margin-top: -10px;
 }
 
 .Fare_ChartOP .styled-table thead tr {
-    border: 1.5px solid black;
+    border: 1.5px solid var(--black-color);
     color: white;
     text-align: left;
     font-size: 1.3rem;
@@ -467,16 +468,11 @@ button {
 
 .Fare_ChartOP .styled-table th,
 .styled-table td {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 12px 15px;
-    border: 1.5px solid black;
+    border: 1.5px solid var(--black-color);
     font-size: 1.1rem;
 }
 
-.AlternateRouteOP {
-    display: none;
-    padding: 10px;
-}
 
 .AltRouteid {
     width: 100%;
@@ -541,7 +537,7 @@ button {
     padding-top: 10px;
     width: 100%;
     text-align: left;
-    color: black;
+    color: var(--black-color);
     font-size: 13px;
 }
 
@@ -574,7 +570,7 @@ button {
     border-radius: 0px;
     /* background-color: rgb(2, 12, 31); */
     background-color: transparent;
-    box-shadow: 0px 0px 0px black;
+    box-shadow: 0px 0px 0px var(--black-color);
 }
 
 .DetailedRouteOp h2 {
@@ -590,7 +586,6 @@ button {
     /* background-color: var(--secondary-color); */
     display: flex;
     align-items: center;
-    font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -606,7 +601,6 @@ button {
     font-size: 22px;
     padding: 0px 0px;
     border-right: solid 3.5px green;
-    font-family: 'Space Grotesk', sans-serif;
 }
 
 .DetailedRouteOp h2 #detRTNumber p {
@@ -662,10 +656,9 @@ button {
 }
 
 .DetailedRouteOp .DetailedStopslist li .MainStopName {
-    color: black;
+    color: var(--black-color);
     font-size: 18px;
     letter-spacing: 1.5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .DetailedRouteOp .DetailedStopslist li .SubStopName {
@@ -673,7 +666,6 @@ button {
     color: rgba(0, 0, 0, 0.6);
     font-weight: lighter;
     letter-spacing: 1px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .DetailedRouteOp .DetailedRoutebuttons {
@@ -715,7 +707,7 @@ button {
     display: block;
     padding: 0px;
     padding-bottom: 5px;
-    color: black;
+    color: var(--black-color);
     background-color: white;
 }
 
@@ -748,7 +740,7 @@ button {
     width: 98%;
     /* box-shadow: 0px 0px 5px #566774; */
     border-radius: 10px;
-    color: black;
+    color: var(--black-color);
     font-weight: 600;
     padding-bottom: 2px;
 }
@@ -807,7 +799,310 @@ button {
     height: 25px;
 }
 
+/* Creative Output section */
 
+.AlternateRouteOP {
+    display: none;
+    padding: 10px;
+    height: 100vh;
+}
+
+.creativeOutput {
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.optionNumber {
+    border-bottom: solid 2px var(--black-color);
+    font-size: 16px;
+    margin-top: -5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.xRoad_Left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.yRoad {
+    height: 200px;
+    width: 22px;
+    background-color: black;
+    margin-top: -40px;
+    margin-left: 50px;
+}
+
+.xRoad {
+    height: 22px;
+    width: 220px;
+    background-color: black;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.markPointers {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    border: solid 2px black;
+}
+
+.sMark {
+    background-color: rgb(255, 98, 0);
+    margin-left: 50px;
+    margin-top: -20px;
+}
+
+.dMark {
+    background-color: green;
+    margin-left: -240px;
+    margin-top: -40px;
+}
+
+.eMark1 {
+    background-color: var(--secondary-color);
+    margin-left: 50px;
+    margin-top: -170px;
+}
+
+.eMark2 {
+    background-color: var(--secondary-color);
+    margin-left: -50px;
+    margin-top: -80px;
+}
+
+.walkLinerY, .walkLinerX {
+    border: 2px dashed white;
+    height: 20px;
+    width: 3px;
+    margin-left: 50px;
+    margin-top: -20px;
+}
+
+.walkLinerX {
+    transform: rotate(90deg);
+    margin-top: -35px;
+    margin-left: 16px;
+    height: 28px;
+}
+
+.ExchangeName {
+    border: 3px dashed var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 50px;
+    margin-left: 190px;
+}
+
+.DestinationName {
+    border: 3px dashed green;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: -70px;
+    margin-left: -200px;
+}
+
+.routeBtw {
+    border: 2px solid rgb(255, 98, 0);
+    padding: 4px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 180px;
+    color: var(--black-color);
+
+}
+
+.routeBtw .main {
+    border-bottom: 2px solid rgb(255, 98, 0);
+}
+
+.routeBtw .moreRoute {
+    font-size: 12px;
+    padding-top: 3px;
+    color: blue;
+}
+
+.routeBtw2 {
+    margin-top: -130px;
+    margin-left: -150px;
+    border: 2px solid rgb(34, 129, 5);
+}
+
+.routeBtw2 .main {
+    border-bottom: 2px solid rgb(34, 129, 5);
+}
+
+.sourceName {
+    margin-top: 85px;
+    margin-left: 185px;
+    border: 3px dashed rgb(255, 98, 0);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.directX {
+    height: 60px;
+    width: 4px;
+    background-color: white;
+    transform: rotate(90deg);
+    margin-top: -159px;
+    margin-left: -142px;
+    border: 1px solid black;
+}
+
+.directY {
+    height: 94px;
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 4px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.arrowX {
+    transform: rotate(90deg);
+    margin-top: -198.5px;
+    color: white;
+    margin-left: -190px;
+
+}
+
+.arrowY {
+    transform: rotate(180deg);
+    margin-top: 45px;
+    color: white;
+    margin-left: 49.3px;
+
+}
+
+.endMargin {
+    background-color: var(--black-color);
+    height: 1.5px;
+    width: 100%;
+    margin-top: 130px;
+}
+
+.mapLegend {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    /* margin-left: -80px; */
+    /* background-color: #004581; */
+    width: 100%;
+}
+
+.mapLegend .symbols {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapLegend .symbols .markPointers {
+    margin-top: 3px;
+    height: 30px;
+    width: 30px;
+}
+
+.mapLegend .symbols .orangeMark {
+    background-color: rgb(255, 98, 0);
+    margin-top: 23px;
+}
+
+.blueMark1 {
+    background-color: var(--secondary-color);
+}
+
+.blueMark2 {
+    background-color: var(--secondary-color);
+}
+
+.greenMark {
+    background-color: green;
+}
+
+.symbolsDescription {
+    margin-top: -7px;
+    margin-left: 5px;
+
+}
+
+.symbolsDescription p {
+    margin-top: 15px;
+}
+
+.symbolsDescription p:nth-child(3) {
+    margin-top: 25px;
+}
+.mapLegendEnd{
+    margin-top: 10px;
+}
+.busWay {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.walkWay {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    margin-top: 11px;
+    border-radius: 10px;
+}
+
+.directMark {
+    height: 3px;
+    width: 36px;
+    background-color: white;
+    margin-top: -20px;
+}
+
+.arrowMark {
+    margin-top: -12.8px;
+    color: white;
+    margin-left: 26px;
+    font-size: 20px;
+}
+
+.walkLine {
+    height: 1px;
+    width: 39px;
+    border: 2px dashed white;
+    background-color: black;
+    margin-top: -20px;
+}
+
+.brName {
+    padding-top: 6px;
+    padding-bottom: 10px;
+}
+
+.rtbtwName {
+    padding-top: 16px;
+}
+
+.routeBtwLegend {
+    margin-left: 0px;
+    margin-top: 7px;
+    width: 42px;
+    height: 60px;
+    border-color: var(--black-color);
+}
+.routeBtwLegend .main{
+    border-color: var(--black-color);
+}
 
 /* Bottom Navigation Bar*/
 .nav {
@@ -832,6 +1127,412 @@ button {
     font-weight: 800;
     font-size: 1.5rem;
     text-align: center;
+}
+
+.popUpBox {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.cancelIcon {
+    background-color: white;
+    width: fit-content;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-left: 260px;
+    margin-top: -50px;
+}
+
+.xMark {
+    color: black;
+    margin-top: -32px;
+    margin-left: 260px;
+    font-size: 22px;
+}
+
+.infoBox {
+    /* height: 295px; */
+    min-height: 210px;
+    max-height: fit-content;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.infoBox p {
+    font-size: 15px;
+    padding: 5px 0px;
+    width: 90%;
+}
+#sdNames{
+    width: 100%;
+}
+.infoBox p:nth-child(1) {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    border-bottom: 2px solid black;
+}
+.infoBox ul{
+    box-shadow: 0px 0px 10px #566774;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.infoBox ul li{
+    font-size: 17px;
+    margin-left: 7px;
+}
+.infoBox .endMargin{
+    height: 1.7px;
+    width: 90%;
+    padding: 0px;
+    margin-top: 10px;
+}
+.infoBoxInfo{
+    width: 90%;
+}
+.DescriptiveRoute{
+    width: 95%;
+}
+#ALTtitle{
+    width: 100%;
+}
+#popUpMsg{
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 0px 10px;
+    color:var(--primary-color);
+}
+
+.infoBox .DescriptiveRoute{
+    display: none;
+}
+
+.infoBox .DescriptiveRoute ul{
+    width: 100%;
+    flex-direction: column;
+    box-shadow: none;
+    height: fit-content;
+    margin: 0;
+    padding: 0px 5px;
+}
+
+.infoBox .DescriptiveRoute ul li{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+
+/* Right Side Route */
+.xRoad_Right .xRoad{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 25px;
+    margin-left: 55px;
+}
+.xRoad_Right .xRoadBlock .walkLinerX{
+    margin-top: 0px;
+    margin-left: 15px;
+    height: 35px;
+}
+.xRoad_Right .xRoadBlock .eMark2{
+    margin-top: 0px;
+    margin-left: 15px;
+}
+.xRoad_Right .xRoadBlock .directX{
+    margin-top: 0px;
+    margin-left: 35px;
+    height: 80px;
+    
+}
+.xRoad_Right .xRoadBlock .arrowX{
+    margin-top: 0px;
+    margin-left: 30px;
+    transform: rotate(-90deg);
+}
+.xRoad_Right .xRoadBlock .dMark{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.xRoad_Right .yRoad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: -30px;
+    margin-left: -150px;
+}
+.xRoad_Right .yRoadBlock .walkLinerY{
+    margin-top: 21px;
+    margin-left: 0px;
+}
+.xRoad_Right .yRoadBlock .eMark1{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.xRoad_Right .yRoadBlock .arrowY{
+    margin-top: -5px;
+    margin-left: 0px;
+}
+.xRoad_Right .yRoadBlock .directY{
+    margin-top: -12px;
+    margin-left: 0px;
+}
+.xRoad_Right .yRoadBlock .sMark{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.xRoad_Right .DestinationName{
+    margin-top: -255px;
+    margin-left: 180px;
+    font-size: 15px;
+}
+.xRoad_Right .e2Name{
+    margin-top: -30px;
+    margin-left: -120px;
+}
+.xRoad_Right .e1Name{
+    margin-top: 50px;
+    margin-left: -240px;
+    transform: rotate(90deg);
+}
+.xRoad_Right .sourceName{
+    margin-top: 105px;
+    margin-left: -20px;
+    font-size: 15px;
+}
+.xRoad_Right .routeBtw{
+    margin-top: 35px;
+    margin-left: -50px;
+}
+.xRoad_Right .routeBtw2{
+    margin-top: -180px;
+    margin-left: 85px;
+}
+.xRoad_Right .endMargin{
+    margin-top: 72px;
+    margin-left: 0px;
+}
+.xRoad_Right .mapLegend{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+}
+.xRoad_Right .mapLegend .routeBtwLegend{
+    margin-top: 5px;
+    margin-left: 0px;
+}
+.xRoad_Right .mapLegendEnd{
+    margin-top: 5px;
+}
+.e2Name, .e1Name{
+    font-size: 14px;
+    border: 3px dashed var(--secondary-color);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Universal yRoad Block */
+.yRoadBlockUSL{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    height: fit-content;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.yRoadBlockUSL .sMark{
+    margin: 0;
+    margin-top: -10px;
+}
+.yRoadBlockUSL .directY{
+    margin: 0;
+    height: 50px;
+}
+.yRoadBlockUSL .arrowY{
+    margin: 0;
+    margin-top: -15px;
+    margin-left:-1.5px;
+    transform: rotate(0deg);
+}
+.yRoadBlockUSL .eMark1{
+    margin: 0;
+    margin-top: -4px;
+}
+.yRoadBlockUSL .dMark{
+    margin: 0;
+    margin-top: -4px;
+}
+
+.yRoad_Down .sourceName{
+    margin: 0;
+    margin-top: -235px;
+    margin-left: 5px;
+    width: 110px;
+    text-align: center;
+    height: 30px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.yRoad_Down .e1Name{
+    margin: 0;
+    margin-top: 60px;
+    margin-left: 5px;
+    width: 110px;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.yRoad_Down .DestinationName{
+    margin: 0;
+    margin-top: 60px;
+    margin-left: 5px;
+    width: 110px;
+    text-align: center;
+    height: 30px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.yRoad_Down .routeBtw{
+    margin: 0;
+    margin-top: -4px;
+    width: 80px;
+    margin-top: -180px;
+    margin-left: 160px;
+}
+.yRoad_Down .routeBtw2{
+    margin: 0;
+    margin-top: 45px;
+    width: 80px;
+    margin-left: 160px;
+}
+
+.yRoad_Down .endMargin{
+    margin-top: 55px;
+}
+.yRoad_Down .mapLegend{
+    margin-top: 5px;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    margin-left: -20px;
+}
+.yRoad_Down .mapLegend .symbols{
+    width: 30%;
+    padding-left: 0px;
+}
+.yRoad_Down .mapLegend .orangeMark{
+    margin-top: 10px;
+}
+.yRoad_Down .mapLegend .symbolsDescription{
+    width: 70%;
+    padding-left: 0px;
+    margin-left: -15px;
+}
+.yRoad_Down .mapLegend  .symbolsDescription p:nth-child(2) {
+    margin-top: 12px;
+}
+.yRoad_Down .mapLegend  .symbolsDescription p:nth-child(3) {
+    margin-top: 15px;
+}
+.yRoad_Down .mapLegend .symbols .routeBtwLegend{
+    margin-left: 0px;
+    margin-top: 7px;
+    width: 42px;
+    height: 60px;
+}
+.yRoad_Down .mapLegendEnd{
+    margin-top: 10px;
+}
+
+.yRoad_Up .sourceName{
+    margin: 0px;
+    margin-top: 60px;
+    margin-left: 165px;
+}
+.yRoad_Up .e1Name{
+    margin: 0px;
+    margin-top: 60px;
+    margin-left: 165px;
+}
+.yRoad_Up .DestinationName{
+    margin: 0px;
+    margin-top: -235px;
+    margin-left: 165px;
+}
+
+.yRoad_Up .routeBtw{
+    margin-left: 40px;
+    margin-top: 45px;
+}
+.yRoad_Up .routeBtw2{
+    margin-left: 40px;
+    margin-top: -180px;
+}
+.yRoad_Up .yRoadBlockUSL .sMark{
+    margin: 0;
+    margin-top: 0px;
+}
+.yRoad_Up .yRoadBlockUSL .directY{
+    margin: 0;
+    margin-top: -13px;
+    height: 50px;
+}
+.yRoad_Up .yRoadBlockUSL .arrowY{
+    margin: 0;
+    margin-top: -4px;
+    margin-left:0px;
+    transform: rotate(180deg);
+}
+.yRoad_Up .yRoadBlockUSL .eMark1{
+    margin: 0;
+    margin-top: -4px;
+}
+.yRoad_Up .yRoadBlockUSL .dMark{
+    margin: 0;
+    margin-top: -10px;
 }
 
 
