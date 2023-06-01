@@ -21,7 +21,7 @@
     --primary-color: rgb(7, 22, 50);
     --secondary-color: #004581;
 
-    --black-color:#000;
+    --black-color: #000;
 
 
     /*========== Font and typography ==========*/
@@ -222,7 +222,8 @@ textarea {
 .sideBar {
     height: 95%;
     width: 90%;
-    background-color: rgba(5, 12, 28, 0.95);
+    /* background-color: rgba(5, 12, 28, 0.95); */
+    background-color: rgb(13, 26, 47);
     position: fixed;
     top: 0;
     right: 0;
@@ -369,7 +370,7 @@ button {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    
+
 }
 
 .RouteList #rtNumber_UP p,
@@ -402,13 +403,18 @@ button {
 
 #OutputTip {
     width: 100%;
-    text-align: center;
+    font-size: 13px;
+    margin-top: 50px;
+}
+
+.BSOPtip {
+    width: 100%;
     font-size: 13px;
 }
 
 .Bus_DetailsOp {
     width: 95%;
-    padding: 20px 10px;
+    padding: 10px 10px;
     background-color: white;
     border-radius: 10px;
     margin: 10px auto;
@@ -444,6 +450,352 @@ button {
 
 .Bus_Numbers li:nth-child(1) {
     margin-left: 0%;
+}
+
+.fromToBusStopOp {
+    height: 100%;
+    width: 100%;
+}
+
+.CreativeBusStopOP {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.busStopMainTitle {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid var(--black-color);
+}
+
+#crossRoads4BS {
+    width: 100%;
+}
+
+.crossRoadsBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+
+}
+
+.crossRoadsBlock .yRoad {
+    margin: 0;
+}
+
+.crossRoadsBlock .xRoad {
+    margin: 0;
+    width: 75%;
+    margin-top: -110px;
+}
+
+
+
+.busStopicons {
+    width: 28px;
+    height: 28px;
+    background-color: #004581;
+    border-radius: 50%;
+    margin: 0;
+    border: 2px solid black;
+    margin-left: 10px;
+}
+
+#crossRoads4BS .BS4X1 {
+    /* margin-top: -50px;
+    margin-left: -50px;  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    /* margin-left: -85px; */
+
+}
+
+#crossRoads4BS .BS4X2 {
+    /* margin-top: 55px;
+    margin-left: -25px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-left: -85px; */
+    margin-top: 29px;
+}
+
+#crossRoads4BS .BS4Y1 {
+    /* margin-top: -85px;
+    margin-left: 20px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -35px;
+   margin-left: -40px;
+    
+}
+
+#crossRoads4BS .BS4Y2 {
+    /* margin-top: 85px;
+    margin-left: 25px; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 35px;
+    margin-left: 13px;
+}
+
+.towardsNamesBlock {
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    width: 100%;
+    margin-top: -140px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.towardsNames {
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+}
+
+#crossRoads4BS .towardsNamesBlock #towardsNameX1 {
+    transform: rotate(-90deg);
+    margin-left: -85%;
+    margin-top: 85px;
+    width: 110px;
+}
+
+#crossRoads4BS .towardsNamesBlock #towardsNameX2 {
+    transform: rotate(90deg);
+    margin-left: 85%;
+    margin-top: -30px;
+    width: 110px;
+}
+
+#crossRoads4BS .towardsNamesBlock #towardsNameY2 {
+    margin-top: 82px;
+}
+
+#crossRoads4BS .BSOPtip {
+    margin-top: 5px;
+    /* display: none; */
+}
+
+#crossRoads3BS .crossRoadsBlock {
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    height: 150px;
+    margin-top: 35px;
+}
+
+#crossRoads3BS .crossRoadsBlock .yRoad {
+    margin: 0;
+    /* width: 25px; */
+}
+
+#crossRoads3BS .crossRoadsBlock .xRoad {
+    margin: 0;
+    width: 75%;
+    height: 30px;
+}
+
+#crossRoads3BS .busStopIconsBlock {
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    margin-top: -180px;
+    flex-direction: column;
+}
+
+#crossRoads3BS .busStopIconsBlock .BS3X1 {
+    margin-top: -83px;
+    margin-left: -110px;
+}
+
+#crossRoads3BS .busStopIconsBlock .BS3X2 {
+    margin-top: 23px;
+    margin-left: -110px;
+}
+
+#crossRoads3BS .busStopIconsBlock .BS3Y2 {
+    margin-left: 55px;
+    margin-top: 10px;
+}
+
+#crossRoads3BS .towardsNamesBlock {
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    margin-top: -180px;
+    height: 185px;
+}
+
+#crossRoads3BS .towardsNamesBlock #towardsNameX13BS {
+    transform: rotate(-90deg);
+    margin-left: -85%;
+    margin-top: 5px;
+    width: 110px;
+}
+
+#crossRoads3BS .towardsNamesBlock #towardsNameX23BS {
+    transform: rotate(90deg);
+    margin-left: 85%;
+    margin-top: -30px;
+    width: 110px;
+}
+
+#crossRoads3BS .towardsNamesBlock #towardsNameY23BS {
+    margin-top: 120px;
+    width: 110px;
+}
+
+#SecunderabadBusStops {
+    width: 100%;
+}
+
+#SecunderabadBusStops .crossRoadsBlock {
+    margin: 0;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#SecunderabadBusStops .crossRoadsBlock .yRoad {
+    margin: 0;
+    height: 100px;
+}
+
+#SecunderabadBusStops .crossRoadsBlock .xRoad {
+    margin: 0;
+}
+
+#SecunderabadBusStops .crossRoadsBlock .SBSxRoad1 {
+    width: 100px;
+    margin-top: -128px;
+    margin-left: -20px;
+}
+
+#SecunderabadBusStops .crossRoadsBlock .SBSxRoad2 {
+    margin-top: -27px;
+    width: 100px;
+}
+
+#SecunderabadBusStops .crossRoadsBlock .SBSyRoad1 {
+    height: 150px;
+}
+
+#SecunderabadBusStops .crossRoadsBlock .SBSyRoad2 {
+    margin-top: 50px;
+}
+
+#SecunderabadBusStops .crossRoadsBlock {
+    margin: 0;
+}
+
+#SecunderabadBusStops .busStopIconsBlock {
+    width: 100%;
+    margin-top: -152px;
+    height: 200px;
+    align-items: flex-start;
+}
+
+#SecunderabadBusStops .busStopIconsBlock .SECBS1 {
+    margin-top: 25px;
+    margin-left: 75px;
+}
+
+#SecunderabadBusStops .busStopIconsBlock .SECBS2 {
+    margin-top: 110px;
+    margin-left: -25px;
+}
+
+#SecunderabadBusStops .busStopIconsBlock .SECBS3 {
+    margin-top: 22px;
+    margin-left: 35px;
+}
+
+#SecunderabadBusStops .busStopIconsBlock .SECBS4 {
+    margin-top: 22px;
+    margin-left: 35px;
+}
+
+#SecunderabadBusStops .busStopIconsBlock .SECBS5 {
+    margin-top: 80px;
+    margin-left: 30px;
+}   
+
+#SecunderabadBusStops .towardsNamesBlock {
+    margin: 0;
+    margin-top: -205px;
+}
+
+#SecunderabadBusStops .towardsNamesBlock .towardsNames {
+    font-size: 16px;
+}
+
+#SecunderabadBusStops .towardsNamesBlock #towardsNameSECBS1 {
+    margin-top: 2px;
+    margin-left: 45px;
+}
+
+#SecunderabadBusStops .towardsNamesBlock #towardsNameSECBS2 {
+    margin-top: 22px;
+    margin-left: -150px;
+    font-size: 14px;
+    width: 100px;
+    
+}
+
+#SecunderabadBusStops .towardsNamesBlock #towardsNameSECBS3 {
+    margin-top: -90px;
+    margin-left: 200px;
+    font-size: 15px;
+    
+}
+
+#SecunderabadBusStops .towardsNamesBlock #towardsNameSECBS4 {
+    margin-top: 110px;
+    margin-left: 255px;
+    transform: rotate(90deg);
+
+}
+
+#SecunderabadBusStops .towardsNamesBlock #towardsNameSECBS5 {
+    margin-left: -140px;
+    margin-top: -35px;
+}
+
+#SecunderabadBusStops .BSOPtip {
+    margin-top: -40px;
+}
+
+.popUpForBS {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popUpForBS .infoBox {
+    width: 90%;
+}
+
+.popUpForBS .infoBox #bsName {
+    width: 100%;
 }
 
 .Fare_ChartOP {
@@ -600,7 +952,8 @@ button {
     flex-wrap: wrap;
     font-size: 22px;
     padding: 0px 0px;
-    border-right: solid 3.5px green;
+    /* background-color: #061925; */
+    border-right: solid 2px rgb(201, 255, 7);
 }
 
 .DetailedRouteOp h2 #detRTNumber p {
@@ -657,14 +1010,14 @@ button {
 
 .DetailedRouteOp .DetailedStopslist li .MainStopName {
     color: var(--black-color);
-    font-size: 18px;
-    letter-spacing: 1.5px;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
 .DetailedRouteOp .DetailedStopslist li .SubStopName {
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(0, 0, 0, 0.6);
-    font-weight: lighter;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -679,6 +1032,10 @@ button {
 
 .DetailedRouteOp .DetailedRoutebuttons button {
     background-color: rgb(7, 20, 45);
+    font-size: 16px;
+    width: 48%;
+    margin: auto;
+    margin-top: 5px;
 }
 
 .DetailedOPNote {
@@ -712,7 +1069,7 @@ button {
 }
 
 .CBTExamCentersOP .CenterHeading {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
     padding: 5px;
 }
@@ -880,7 +1237,8 @@ button {
     margin-top: -80px;
 }
 
-.walkLinerY, .walkLinerX {
+.walkLinerY,
+.walkLinerX {
     border: 2px dashed white;
     height: 20px;
     width: 3px;
@@ -1043,9 +1401,11 @@ button {
 .symbolsDescription p:nth-child(3) {
     margin-top: 25px;
 }
-.mapLegendEnd{
+
+.mapLegendEnd {
     margin-top: 10px;
 }
+
 .busWay {
     height: 40px;
     width: 40px;
@@ -1100,7 +1460,8 @@ button {
     height: 60px;
     border-color: var(--black-color);
 }
-.routeBtwLegend .main{
+
+.routeBtwLegend .main {
     border-color: var(--black-color);
 }
 
@@ -1181,9 +1542,11 @@ button {
     padding: 5px 0px;
     width: 90%;
 }
-#sdNames{
+
+#sdNames {
     width: 100%;
 }
+
 .infoBox p:nth-child(1) {
     text-align: center;
     padding-top: 10px;
@@ -1191,10 +1554,10 @@ button {
     font-size: 18px;
     border-bottom: 2px solid black;
 }
-.infoBox ul{
+
+.infoBox ul {
     box-shadow: 0px 0px 10px #566774;
     width: 100%;
-    padding: 5px;
     border-radius: 10px;
     height: 35px;
     display: flex;
@@ -1204,38 +1567,49 @@ button {
     margin-top: 5px;
     margin-bottom: 10px;
     background-color: white;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-bottom: 2px;
 }
-.infoBox ul li{
+
+.infoBox ul li {
     font-size: 17px;
-    margin-left: 7px;
+    /* margin-left: 7px; */
+    padding: 5px 4px;
+    padding-bottom: 3px;
 }
-.infoBox .endMargin{
+
+.infoBox .endMargin {
     height: 1.7px;
     width: 90%;
     padding: 0px;
     margin-top: 10px;
 }
-.infoBoxInfo{
+
+.infoBoxInfo {
     width: 90%;
 }
-.DescriptiveRoute{
+
+.DescriptiveRoute {
     width: 95%;
 }
-#ALTtitle{
+
+#ALTtitle {
     width: 100%;
 }
-#popUpMsg{
+
+#popUpMsg {
     font-size: 12px;
     margin-top: 5px;
     padding: 0px 10px;
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
 
-.infoBox .DescriptiveRoute{
+.infoBox .DescriptiveRoute {
     display: none;
 }
 
-.infoBox .DescriptiveRoute ul{
+.infoBox .DescriptiveRoute ul {
     width: 100%;
     flex-direction: column;
     box-shadow: none;
@@ -1244,18 +1618,18 @@ button {
     padding: 0px 5px;
 }
 
-.infoBox .DescriptiveRoute ul li{
+.infoBox .DescriptiveRoute ul li {
     font-size: 14px;
     margin-top: 10px;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
 
 /* Right Side Route */
-.xRoad_Right .xRoad{
+.xRoad_Right .xRoad {
     display: flex;
     align-items: center;
     width: fit-content;
@@ -1264,32 +1638,37 @@ button {
     margin-top: 25px;
     margin-left: 55px;
 }
-.xRoad_Right .xRoadBlock .walkLinerX{
+
+.xRoad_Right .xRoadBlock .walkLinerX {
     margin-top: 0px;
     margin-left: 15px;
     height: 35px;
 }
-.xRoad_Right .xRoadBlock .eMark2{
+
+.xRoad_Right .xRoadBlock .eMark2 {
     margin-top: 0px;
     margin-left: 15px;
 }
-.xRoad_Right .xRoadBlock .directX{
+
+.xRoad_Right .xRoadBlock .directX {
     margin-top: 0px;
     margin-left: 35px;
     height: 80px;
-    
+
 }
-.xRoad_Right .xRoadBlock .arrowX{
+
+.xRoad_Right .xRoadBlock .arrowX {
     margin-top: 0px;
     margin-left: 30px;
     transform: rotate(-90deg);
 }
-.xRoad_Right .xRoadBlock .dMark{
+
+.xRoad_Right .xRoadBlock .dMark {
     margin-top: 0px;
     margin-left: 0px;
 }
 
-.xRoad_Right .yRoad{
+.xRoad_Right .yRoad {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1299,70 +1678,87 @@ button {
     margin-top: -30px;
     margin-left: -150px;
 }
-.xRoad_Right .yRoadBlock .walkLinerY{
+
+.xRoad_Right .yRoadBlock .walkLinerY {
     margin-top: 21px;
     margin-left: 0px;
 }
-.xRoad_Right .yRoadBlock .eMark1{
+
+.xRoad_Right .yRoadBlock .eMark1 {
     margin-top: 0px;
     margin-left: 0px;
 }
-.xRoad_Right .yRoadBlock .arrowY{
+
+.xRoad_Right .yRoadBlock .arrowY {
     margin-top: -5px;
     margin-left: 0px;
 }
-.xRoad_Right .yRoadBlock .directY{
+
+.xRoad_Right .yRoadBlock .directY {
     margin-top: -12px;
     margin-left: 0px;
 }
-.xRoad_Right .yRoadBlock .sMark{
+
+.xRoad_Right .yRoadBlock .sMark {
     margin-top: 0px;
     margin-left: 0px;
 }
-.xRoad_Right .DestinationName{
+
+.xRoad_Right .DestinationName {
     margin-top: -255px;
     margin-left: 180px;
     font-size: 15px;
 }
-.xRoad_Right .e2Name{
+
+.xRoad_Right .e2Name {
     margin-top: -30px;
     margin-left: -120px;
 }
-.xRoad_Right .e1Name{
+
+.xRoad_Right .e1Name {
     margin-top: 50px;
     margin-left: -240px;
     transform: rotate(90deg);
 }
-.xRoad_Right .sourceName{
+
+.xRoad_Right .sourceName {
     margin-top: 105px;
     margin-left: -20px;
     font-size: 15px;
 }
-.xRoad_Right .routeBtw{
+
+.xRoad_Right .routeBtw {
     margin-top: 35px;
     margin-left: -50px;
 }
-.xRoad_Right .routeBtw2{
+
+.xRoad_Right .routeBtw2 {
     margin-top: -180px;
     margin-left: 85px;
 }
-.xRoad_Right .endMargin{
+
+.xRoad_Right .endMargin {
     margin-top: 72px;
     margin-left: 0px;
 }
-.xRoad_Right .mapLegend{
+
+.xRoad_Right .mapLegend {
     margin-top: 0px;
     margin-left: 0px;
     width: 100%;
 }
-.xRoad_Right .mapLegend .routeBtwLegend{
+
+.xRoad_Right .mapLegend .routeBtwLegend {
     margin-top: 5px;
     margin-left: 0px;
 }
-.xRoad_Right .mapLegendEnd{
+
+.xRoad_Right .mapLegendEnd {
     margin-top: 5px;
 }
-.e2Name, .e1Name{
+
+.e2Name,
+.e1Name {
     font-size: 14px;
     border: 3px dashed var(--secondary-color);
     padding: 5px;
@@ -1370,7 +1766,7 @@ button {
 }
 
 /* Universal yRoad Block */
-.yRoadBlockUSL{
+.yRoadBlockUSL {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1379,30 +1775,35 @@ button {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.yRoadBlockUSL .sMark{
+
+.yRoadBlockUSL .sMark {
     margin: 0;
     margin-top: -10px;
 }
-.yRoadBlockUSL .directY{
+
+.yRoadBlockUSL .directY {
     margin: 0;
     height: 50px;
 }
-.yRoadBlockUSL .arrowY{
+
+.yRoadBlockUSL .arrowY {
     margin: 0;
     margin-top: -15px;
-    margin-left:-1.5px;
+    margin-left: -1.5px;
     transform: rotate(0deg);
 }
-.yRoadBlockUSL .eMark1{
-    margin: 0;
-    margin-top: -4px;
-}
-.yRoadBlockUSL .dMark{
+
+.yRoadBlockUSL .eMark1 {
     margin: 0;
     margin-top: -4px;
 }
 
-.yRoad_Down .sourceName{
+.yRoadBlockUSL .dMark {
+    margin: 0;
+    margin-top: -4px;
+}
+
+.yRoad_Down .sourceName {
     margin: 0;
     margin-top: -235px;
     margin-left: 5px;
@@ -1413,7 +1814,7 @@ button {
     overflow: hidden;
 }
 
-.yRoad_Down .e1Name{
+.yRoad_Down .e1Name {
     margin: 0;
     margin-top: 60px;
     margin-left: 5px;
@@ -1424,7 +1825,7 @@ button {
     overflow: hidden;
 }
 
-.yRoad_Down .DestinationName{
+.yRoad_Down .DestinationName {
     margin: 0;
     margin-top: 60px;
     margin-left: 5px;
@@ -1435,102 +1836,125 @@ button {
     overflow: hidden;
 }
 
-.yRoad_Down .routeBtw{
+.yRoad_Down .routeBtw {
     margin: 0;
-    margin-top: -4px;
     width: 80px;
-    margin-top: -180px;
-    margin-left: 160px;
-}
-.yRoad_Down .routeBtw2{
-    margin: 0;
-    margin-top: 45px;
-    width: 80px;
-    margin-left: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: 15px;
 }
 
-.yRoad_Down .endMargin{
+.yRoad_Down .routeBtw2 {
+    margin: 0;
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 70px;
+    margin-left: 15px;
+}
+
+.yRoad_Down .endMargin {
     margin-top: 55px;
 }
-.yRoad_Down .mapLegend{
+
+.yRoad_Down .mapLegend {
     margin-top: 5px;
     width: 100%;
     height: fit-content;
     padding: 0;
     margin-left: -20px;
 }
-.yRoad_Down .mapLegend .symbols{
+
+.yRoad_Down .mapLegend .symbols {
     width: 30%;
     padding-left: 0px;
 }
-.yRoad_Down .mapLegend .orangeMark{
+
+.yRoad_Down .mapLegend .orangeMark {
     margin-top: 10px;
 }
-.yRoad_Down .mapLegend .symbolsDescription{
+
+.yRoad_Down .mapLegend .symbolsDescription {
     width: 70%;
     padding-left: 0px;
     margin-left: -15px;
 }
-.yRoad_Down .mapLegend  .symbolsDescription p:nth-child(2) {
+
+.yRoad_Down .mapLegend .symbolsDescription p:nth-child(2) {
     margin-top: 12px;
 }
-.yRoad_Down .mapLegend  .symbolsDescription p:nth-child(3) {
+
+.yRoad_Down .mapLegend .symbolsDescription p:nth-child(3) {
     margin-top: 15px;
 }
-.yRoad_Down .mapLegend .symbols .routeBtwLegend{
-    margin-left: 0px;
+
+.yRoad_Down .mapLegend .symbols .routeBtwLegend {
+    margin-left: -5px;
     margin-top: 7px;
     width: 42px;
     height: 60px;
+    position: inherit;
 }
-.yRoad_Down .mapLegendEnd{
+
+.yRoad_Down .mapLegendEnd {
     margin-top: 10px;
 }
 
-.yRoad_Up .sourceName{
+.yRoad_Up .sourceName {
     margin: 0px;
     margin-top: 60px;
     margin-left: 165px;
 }
-.yRoad_Up .e1Name{
+
+.yRoad_Up .e1Name {
     margin: 0px;
     margin-top: 60px;
     margin-left: 165px;
 }
-.yRoad_Up .DestinationName{
+
+.yRoad_Up .DestinationName {
     margin: 0px;
     margin-top: -235px;
     margin-left: 165px;
 }
 
-.yRoad_Up .routeBtw{
+.yRoad_Up .routeBtw {
     margin-left: 40px;
     margin-top: 45px;
 }
-.yRoad_Up .routeBtw2{
+
+.yRoad_Up .routeBtw2 {
     margin-left: 40px;
     margin-top: -180px;
 }
-.yRoad_Up .yRoadBlockUSL .sMark{
+
+.yRoad_Up .yRoadBlockUSL .sMark {
     margin: 0;
     margin-top: 0px;
 }
-.yRoad_Up .yRoadBlockUSL .directY{
+
+.yRoad_Up .yRoadBlockUSL .directY {
     margin: 0;
     margin-top: -13px;
     height: 50px;
 }
-.yRoad_Up .yRoadBlockUSL .arrowY{
+
+.yRoad_Up .yRoadBlockUSL .arrowY {
     margin: 0;
     margin-top: -4px;
-    margin-left:0px;
+    margin-left: 0px;
     transform: rotate(180deg);
 }
-.yRoad_Up .yRoadBlockUSL .eMark1{
+
+.yRoad_Up .yRoadBlockUSL .eMark1 {
     margin: 0;
     margin-top: -4px;
 }
-.yRoad_Up .yRoadBlockUSL .dMark{
+
+.yRoad_Up .yRoadBlockUSL .dMark {
     margin: 0;
     margin-top: -10px;
 }
@@ -1597,11 +2021,7 @@ button {
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
 /* Remove if you choose, the minimalist design */
-@media screen and (max-width: 320px) {
-    .nav__name {
-        display: none;
-    }
-}
+@media screen and (max-width: 320px) {}
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
