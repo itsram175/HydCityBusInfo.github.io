@@ -174,19 +174,24 @@ let test = ["ABIDS", "ABIDS GPO", "ADARSH NAGAR", "ADIBATLA", "ADIKMET", "AFZALG
 let forList1 = RouteNumbers;
 let forList2 = BusstopsArray;
 
-var arraysrc = ["SECUNDERABAD","LALAPET","ECIL X ROADS","MEDCHAL","SUCHITRA"]
+var arraysrc = ["SECUNDERABAD", "LB NAGAR", "MIYAPUR X ROADS", "SUCHITRA", "ECIL X ROADS"]
 var arraydst = arraysrc;
 
 var array_BSD = [
-    [["14P", "15H", "16A", "16C", "16D", "17D", "17H", "17V", "242", "250"], ["15D", "15IG", "17HC", "242A", "49M/250C"]],
-    [["3K", "17D", "17H", "242"], ["15D", "15IG", "3C", "3D", "3H", "17HC", "242A"]],
-    [["9X", "9X/272G", "10KJ", "10H", "19K", "19KJ", "218"], ["9K", "9MX", "9K/272G", "10F", "10YF", "47Y"]],
-    [["72J", "90NU", "90L", "290", "290U"], ["90DL", "205G", "279/229"]]
+    [["CVOP"], ["15D", "15IG", "17HC", "242A", "49M/250C"]],
+    [["CVOP"], ["15D", "15IG", "3C", "3D", "3H", "17HC", "242A"]],
+    [["CVOP"], ["9K", "9MX", "9K/272G", "10F", "10YF", "47Y"]],
+    [["72J", "90NU", "90L", "290", "290U"], ["90DL", "205G", "279/229"]],
+    [["CVOP"], ["90DL", "205G", "279/229"]]
+]
+
+var CVBSOP_Array = [
+    [["1", "2", "20P", "38X", "44X", "86J", "107JS", "107VR"], ["18C", "90L", "279", "280", "290"], ["5K", "7Z", "8A", "8C", "40", "47L", "49M"], ["23B", "24B", "25A", "25S", "29B", "30", "233", "227", "229", "272"], ["14P", "15H", "16A", "16C", "17DS", "17H", "242", "250", "250C"]], [["3K", "3KN"], ["3K", "17D", "17H", "242"], ["18C", "90L", "250C"], ["90L", "290U", "279"]], [["224B", "224G", "224X"], ["218", "219", "219L"], ["218C", "218", "219"], []]
 ]
 
 
 var array_FT_RG = [
-    [["15H", "16A", "17H"], ["17DS", "17H", "242", "15H"], ["15H","16A","17H","242","250"], ["229"], ["25S", "227", "229"]],
+    [["15H", "16A", "17H"], ["17DS", "17H", "242", "15H"], ["15H", "16A", "17H", "242", "250"], ["229"], ["25S", "227", "229"]],
     [["17DS", "17H", "242", "15H"], ["3K", "17D", "17H", "242"], ["3K", "17D", "17H", "242"], ["REDIRECT"], ["3K", "17D", "17H", "242"]],
     [["10", "10KJ", "10H"], ["REDIRECT"], ["9X", "10H", "19K", "19KJ", "218"], ["REDIRECT"], ["REDIRECT"]],
     [["90L", "290", "290U"], ["REDIRECT"], ["REDIRECT"], ["72J", "90NU", "90L", "290"], ["90L", "290", "290U"]],
@@ -194,7 +199,7 @@ var array_FT_RG = [
 ]
 
 var array_FT_OG = [
-    [["15H", "16A", "17H"], ["17DS", "17H", "242", "15H"], ["15H","16A","17H","242","250"], ["229"], ["25S", "227", "229"]],
+    [["15H", "16A", "17H"], ["17DS", "17H", "242", "15H"], ["15H", "16A", "17H", "242", "250"], ["229"], ["25S", "227", "229"]],
     [["17DS", "17H", "242", "15H"], ["3K", "17D", "17H", "242"], ["3K", "17D", "17H", "242"], ["REDIRECT"], ["3K", "17D", "17H", "242"]],
     [["10", "10KJ", "10H"], ["REDIRECT"], ["9X", "10H", "19K", "19KJ", "218"], ["REDIRECT"], ["REDIRECT"]],
     [["90L", "290", "290U"], ["REDIRECT"], ["REDIRECT"], ["72J", "90NU", "90L", "290"], ["90L", "290", "290U"]],
@@ -296,6 +301,44 @@ let AlertBoxCloseBtn = document.getElementById("AlertBoxCloseBtn");
 let DirectBusesBlock = document.getElementById("DirectBusesBlock");
 let DirectBusesHeading = document.getElementById("DirectBusesHeading");
 
+// Creative Bus Stop Output Handles
+let fromToBusStopOp = document.querySelector(".fromToBusStopOp");
+let CreativeBusStopOP = document.querySelector(".CreativeBusStopOP");
+let OutputTip = document.getElementById("OutputTip");
+let busStopMainTitle = document.getElementById("busStopMainTitle");
+let crossRoads4BS = document.getElementById("crossRoads4BS");
+let crossRoads3BS = document.getElementById("crossRoads3BS");
+let SecunderabadBusStops = document.getElementById("SecunderabadBusStops");
+
+let BS4X1 = document.querySelector(".BS4X1");
+let BS4X2 = document.querySelector(".BS4X2");
+let BS4Y1 = document.querySelector(".BS4Y1");
+let BS4Y2 = document.querySelector(".BS4Y2");
+
+let BS3X1 = document.querySelector(".BS3X1");
+let BS3X2 = document.querySelector(".BS3X2");
+let BS3Y2 = document.querySelector(".BS3Y2");
+
+let towardsNameY1 = document.getElementById("towardsNameY1");
+let towardsNameY2 = document.getElementById("towardsNameY2");
+let towardsNameX1 = document.getElementById("towardsNameX1");
+let towardsNameX2 = document.getElementById("towardsNameX2");
+
+let towardsNameX13BS = document.getElementById("towardsNameX13BS");
+let towardsNameX23BS = document.getElementById("towardsNameX23BS");
+let towardsNameY23BS = document.getElementById("towardsNameY23BS");
+
+let towardsNameSECBS1 = document.getElementById("towardsNameSECBS1");
+let towardsNameSECBS2 = document.getElementById("towardsNameSECBS2");
+let towardsNameSECBS3 = document.getElementById("towardsNameSECBS3");
+let towardsNameSECBS4 = document.getElementById("towardsNameSECBS4");
+let towardsNameSECBS5 = document.getElementById("towardsNameSECBS5");
+
+// Pop Up Box for Bus Stop
+let popUpForBS = document.getElementById("popUpForBS");
+let bsName = document.getElementById("bsName");
+let BS_FA_Routes = document.getElementById("BS_FA_Routes");
+let BS_RA_Routes = document.getElementById("BS_RA_Routes");
 
 // Alternate Route Handles
 // Creative Alternate Output Handles
@@ -474,27 +517,27 @@ function accessMoreFeatures(ref) {
     if (optionHeading == "Alternate Route") {
         ModifyScreen(optionHeading, "From Where?", "block", BusstopsArray, BusstopsArray);
         NotHighlightMoreMenu();
-        ref.style.backgroundColor = "green";
+        ref.style.backgroundColor = "#004581";
         closeOtherScreens();
         CloseSideBar();
     }
     else if (optionHeading == "Tourist Zone") {
         ModifyScreen(optionHeading, "Type Tourist Place", "none", TouristPlaces, BusstopsArray);
         NotHighlightMoreMenu();
-        ref.style.backgroundColor = "green";
+        ref.style.backgroundColor = "#004581";
         closeOtherScreens();
         CloseSideBar();
     }
     else if (optionHeading == "CBT Exam Centers") {
         ModifyScreen(optionHeading, "Type Center Name", "none", CBTExamCentersArray, BusstopsArray);
         NotHighlightMoreMenu();
-        ref.style.backgroundColor = "green";
+        ref.style.backgroundColor = "#004581";
         closeOtherScreens();
         CloseSideBar();
     }
     else if (optionHeading == "Contact Us") {
         NotHighlightMoreMenu();
-        ref.style.backgroundColor = "green";
+        ref.style.backgroundColor = "#004581";
         CloseSideBar();
         inputMain.style.display = "none";
         closeOtherScreens();
@@ -506,7 +549,7 @@ function accessMoreFeatures(ref) {
     }
     else if (optionHeading == "Check For Update") {
         NotHighlightMoreMenu();
-        ref.style.backgroundColor = "green";
+        ref.style.backgroundColor = "#004581";
         CloseSideBar();
         inputMain.style.display = "none";
         closeOtherScreens();
@@ -1915,10 +1958,52 @@ function searchOutput() {
         closeBlocks();
         Bus_Stops_Output.style.display = "block";
 
+
         if (arraysrc.includes(input.value)) {
             var ref = arraysrc.indexOf(input.value);
+            busStopMainTitle.innerHTML = input.value;
             arrayRG = array_BSD[ref][0]
             arrayOR = array_BSD[ref][1]
+            if (array_BSD[ref][0].toString() == "CVOP") {
+                CreativeBusStopOP.style.display = "flex";
+                fromToBusStopOp.style.display = "none";
+                switch (input.value) {
+                    case "TARNAKA":
+                        crossRoads4BS.style.display = "block";
+                        crossRoads3BS.style.display = "none";
+                        SecunderabadBusStops.style.display = "none";
+                        fillTowardsList("4BS", "Habsiguda", "Mettuguda", "Arts College", "Lalapet");
+                        modifyBusStops("4BS","-80px","-80px","-40px","13px");
+                        break;
+                    case "LB NAGAR":
+                        crossRoads4BS.style.display = "block";
+                        crossRoads3BS.style.display = "none";
+                        SecunderabadBusStops.style.display = "none";
+                        fillTowardsList("4BS", "Hayathnagar", "DSNR", "Sagar X", "Nagole");
+                        modifyBusStops("4BS","25px","-60px","-40px","13px");
+                        break;
+
+                    case "MIYAPUR X ROADS":
+                        crossRoads4BS.style.display = "none";
+                        crossRoads3BS.style.display = "block";
+                        SecunderabadBusStops.style.display = "none";
+                        fillTowardsList("3BS", "JNTUH", "BHEL", "Bachupally");
+                        break;
+
+                    case "SECUNDERABAD":
+                        crossRoads4BS.style.display = "none";
+                        crossRoads3BS.style.display = "none";
+                        SecunderabadBusStops.style.display = "block";
+                        break;
+
+                    default:
+                        alert("Theme Not Found");
+                        break;
+                }
+            } else {
+                CreativeBusStopOP.style.display = "none";
+                fromToBusStopOp.style.display = "block";
+            }
         }
         else {
             openAlertBox("We are working on this Bus Stop's Info, Kindly choose the options form the list provided or Try Again Later.");
@@ -1947,6 +2032,8 @@ function searchOutput() {
     else if (inputBlockHeading.innerHTML == "From - To") {
         closeBlocks();
         From_To_Output.style.display = "block";
+        CreativeBusStopOP.style.display = "none";
+        fromToBusStopOp.style.display = "block";
 
         if (arraysrc.includes(input.value) && arraydst.includes(input2.value)) {
             var i = arraysrc.indexOf(input.value);
@@ -2091,7 +2178,7 @@ function searchOutput() {
                 FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
             }
             else if (input2.value == "RAILAPOOR") {
-               FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
             }
 
 
@@ -2215,7 +2302,7 @@ function searchOutput() {
                 FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "PARADE GROUNDS") {
-              FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "PATNY") {
                 FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
@@ -4184,6 +4271,7 @@ function showDetailedRoute(status) {
     sidebarDetailedRouteMain.style.left = "0px";
     CBTExamCentersOPMain.style.display = "none";
     DetailedRouteOpBlock.style.display = "block";
+    resizeFontRTNO();
     if (status == "RouteList_Up") {
         detRTSource.innerHTML = rtSource_UP.innerHTML;
         detRTDestination.innerHTML = rtDestination_UP.innerHTML;
@@ -8572,6 +8660,101 @@ function ModifyScreen(heading, placeholder, display, listArray1, listArray2) {
     removeElements();
     closeBlocks();
 }
+function openPopUpforBS(ref) {
+    popUpForBS.style.display = "flex";
+
+    if (arraysrc.includes(input.value)) {
+        var refip = arraysrc.indexOf(input.value);
+
+        if (ref == "BS4Y1") {
+            bsName.innerHTML = "Towards " + towardsNameY1.innerHTML;
+            arrayRG = CVBSOP_Array[refip][0];
+        } else if (ref == "BS4Y2") {
+            bsName.innerHTML = "Towards " + towardsNameY2.innerHTML;
+            arrayRG = CVBSOP_Array[refip][1];
+        } else if (ref == "BS4X1") {
+            bsName.innerHTML = "Towards " + towardsNameX2.innerHTML;
+            arrayRG = CVBSOP_Array[refip][2];
+        } else if (ref == "BS4X2") {
+            bsName.innerHTML = "Towards " + towardsNameX1.innerHTML;
+            arrayRG = CVBSOP_Array[refip][3];
+        } else if (ref == "BS3Y2") {
+            bsName.innerHTML = "Towards " + towardsNameY23BS.innerHTML;
+            arrayRG = CVBSOP_Array[refip][0];
+        } else if (ref == "BS3X1") {
+            bsName.innerHTML = "Towards " + towardsNameX23BS.innerHTML;
+            arrayRG = CVBSOP_Array[refip][1];
+        } else if (ref == "BS3X2") {
+            bsName.innerHTML = "Towards " + towardsNameX13BS.innerHTML;
+            arrayRG = CVBSOP_Array[refip][2];
+        }
+        else if (ref == "SECBS3") {
+            bsName.innerHTML = "Rethifile Bus Station";
+            arrayRG = CVBSOP_Array[refip][0];
+        } else if (ref == "SECBS1") {
+            bsName.innerHTML = "Chilkalguda X Roads";
+            arrayRG = CVBSOP_Array[refip][1];
+        } else if (ref == "SECBS4") {
+            bsName.innerHTML = "Railway Station Bus Stop";
+            arrayRG = CVBSOP_Array[refip][2];
+        } else if (ref == "SECBS5") {
+            bsName.innerHTML = "Gurudwara Bus Stop";
+            arrayRG = CVBSOP_Array[refip][3];
+        } else if (ref == "SECBS2") {
+            bsName.innerHTML = "Blue Sea bus Stop";
+            arrayRG = CVBSOP_Array[refip][4];
+        }
+        else {
+            bsName.innerHTML = "Error";
+        }
+
+    }
+
+    var stringRG = "";
+    for (i = 0; i < arrayRG.length; i++) {
+        stringRG = stringRG + "<li onclick='goToRouteDetails(this.innerHTML)'>" + arrayRG[i] + "</li>";
+    }
+    document.getElementById("BS_FA_Routes").innerHTML = stringRG;
+
+    // OTHER ROUTES
+
+    var stringOR = "";
+    for (j = 0; j < arrayOR.length; j++) {
+        stringOR = stringOR + "<li onclick='goToRouteDetails(this.innerHTML)'>" + arrayOR[j] + "</li>";
+    }
+    document.getElementById("BS_RA_Routes").innerHTML = stringOR;
+
+}
+
+function modifyBusStops(t, x1, x2, y1, y2) {
+    if (t == "4BS") {
+        BS4X1.style.marginLeft = x1;
+        BS4X2.style.marginLeft = x2;
+        BS4Y1.style.marginLeft = y1;
+        BS4Y2.style.marginLeft = y2;
+    } else if (t == "3BS") {
+        BS3X1.style.marginLeft = x1;
+        BS3X2.style.marginLeft = x2;
+        BS3Y2.style.marginLeft = y1;
+    } else {
+
+    }
+}
+
+function fillTowardsList(theme, x1, x2, y1, y2) {
+    if (theme == "4BS") {
+        towardsNameX1.innerHTML = x1;
+        towardsNameX2.innerHTML = x2;
+        towardsNameY1.innerHTML = y1;
+        towardsNameY2.innerHTML = y2;
+    } else if (theme == "3BS") {
+        towardsNameX13BS.innerHTML = x1;
+        towardsNameX23BS.innerHTML = x2;
+        towardsNameY23BS.innerHTML = y1;
+    } else {
+        openAlertBox("Sorry Wrong Theme Choosed!");
+    }
+}
 
 function FillAlternateRoute1Block(theme, Exchange1Name, Exchange2Name, MainRoute1, MainRoute2) {
 
@@ -8632,7 +8815,7 @@ function FillAlternateRoute1Block(theme, Exchange1Name, Exchange2Name, MainRoute
         yrd_DestinationName.innerHTML = Destination;
         yrd_mainRoute1.innerHTML = MainRoute1;
         yrd_mainRoute2.innerHTML = MainRoute2;
-        Alternate_Route_Output.style.height = "100vh";
+        Alternate_Route_Output.style.height = "108vh";
     }
     else if (theme == "YU") {
         xRoad_Left.style.display = "none";
@@ -9111,9 +9294,28 @@ function removeElements() {
     });
 }
 
+function resizeFontRTNO(){
+
+    if (rtoNo.style.display == "none") {
+        
+        if (rtmNo.innerHTML.length<=3) {
+            detRTNumber.style.fontSize = "30px";
+        } else {
+            detRTNumber.style.fontSize = "22px";
+        }
+    } else {
+        detRTNumber.style.fontSize = "22px";
+    }
+    console.log(detRTNumber.innerHTML);
+    console.log(detRTNumber.innerHTML.length);
+}
+
+
+
 function TestMode() {
-    menuItems1.click();
-    input.value = "LALAPET";
-    input2.value = "MEDCHAL";
+    navLink2.click();
+    input.value = "TARNAKA";
     searchOutput();
 }
+
+// TestMode();
