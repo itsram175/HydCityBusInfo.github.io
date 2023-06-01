@@ -173,33 +173,146 @@
                         <p id="rtDestination_DN">GANDIMAISAMMA</p>
                     </div>
                 </li>
-                <p id="OutputTip">Click on the above options to view Full Route.</p>
+                <p class="BSOPtip">Click on the above options to view Full Route.</p>
             </ul>
         </div>
 
         <div class="Bus_DetailsOp" id="Output2">
-            <p>Frequently Available</p>
-            <ul class="Bus_Numbers" id="FA_Routes">
-                <li>3K</li>
-                <li>15H</li>
-                <li>17H</li>
-                <li>3K</li>
-                <li>15H</li>
-                <li>17H</li>
-                <li>3K</li>
-                <li>15H</li>
-                <li>17H</li>
-                <li>3K</li>
-                <li>15H</li>
-                <li>17H</li>
-            </ul>
-            <p>Rarely Available</p>
-            <ul class="Bus_Numbers" id="RA_Routes">
-                <li>14P</li>
-                <li>17D</li>
-                <li>3D</li>
-            </ul>
-            <p id="OutputTip">Click on the Route Number to view Route Details.</p>
+            <div class="fromToBusStopOp">
+                <p>Frequently Available</p>
+                <ul class="Bus_Numbers" id="FA_Routes">
+                    <li>3K</li>
+                    <li>15H</li>
+                    <li>17H</li>
+                    <li>3K</li>
+                    <li>15H</li>
+                    <li>17H</li>
+                    <li>3K</li>
+                    <li>15H</li>
+                    <li>17H</li>
+                    <li>3K</li>
+                    <li>15H</li>
+                    <li>17H</li>
+                </ul>
+                <p>Rarely Available</p>
+                <ul class="Bus_Numbers" id="RA_Routes">
+                    <li>14P</li>
+                    <li>17D</li>
+                    <li>3D</li>
+                </ul>
+
+                <p class="BSOPtip">Click on the Bus Route Numbers to view full route.</p>
+            </div>
+
+            <div class="CreativeBusStopOP">
+                <p class="busStopMainTitle" id="busStopMainTitle">AMEERPET</p>
+
+                <div id="crossRoads4BS" class="hide">
+                    <div class="crossRoadsBlock">
+                        <p class="yRoad"></p>
+                        <p class="xRoad"></p>
+                    </div>
+
+                    <p class="busStopicons BS4X1" onclick="openPopUpforBS(this.classList[1])"></p>
+                    <p class="busStopicons BS4X2" onclick="openPopUpforBS(this.classList[1])"></p>
+                    <p class="busStopicons BS4Y1" onclick="openPopUpforBS(this.classList[1])"></p>
+                    <p class="busStopicons BS4Y2" onclick="openPopUpforBS(this.classList[1])"></p>
+
+
+                    <div class="towardsNamesBlock">
+                        <p class="towardsNames" id="towardsNameY1">Arts College</p>
+                        <p class="towardsNames" id="towardsNameX1">Habsiguda</p>
+                        <p class="towardsNames" id="towardsNameX2">Mettuguda</p>
+                        <p class="towardsNames" id="towardsNameY2">Lalapet</p>
+                    </div>
+
+                    <p class="BSOPtip">Click on the blue colour circles to view bus routes which arrives and departs
+                        from there. Only Main Bus Stops are Mentioned here </p>
+
+                </div>
+
+                <div id="crossRoads3BS" class="hide">
+                    <div class="crossRoadsBlock">
+                        <p class="xRoad"></p>
+                        <p class="yRoad"></p>
+                    </div>
+
+                    <div class="busStopIconsBlock">
+                        <p class="busStopicons BS3X1" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons BS3X2" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons BS3Y2" onclick="openPopUpforBS(this.classList[1])"></p>
+                    </div>
+
+                    <div class="towardsNamesBlock">
+                        <p class="towardsNames" id="towardsNameX13BS">Nizampet</p>
+                        <p class="towardsNames" id="towardsNameX23BS">Miyapur</p>
+                        <p class="towardsNames" id="towardsNameY23BS">Bachupally</p>
+                    </div>
+
+                    <p class="BSOPtip">Click on the blue colour circles to view bus routes which arrives and departs
+                        from there. Only Main Bus Stops are Mentioned here </p>
+
+                </div>
+
+                <div id="SecunderabadBusStops" class="">
+                    <div class="crossRoadsBlock">
+                        <p class="xRoad SBSxRoad1"></p>
+                        <p class="yRoad SBSyRoad1"></p>
+                        <p class="xRoad SBSxRoad2"></p>
+                        <p class="yRoad SBSyRoad2"></p>
+                    </div>
+
+                    <div class="busStopIconsBlock">
+                        <p class="busStopicons SECBS1" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons SECBS2" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons SECBS3" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons SECBS4" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons SECBS5" onclick="openPopUpforBS(this.classList[1])"></p>
+                    </div>
+
+                    <div class="towardsNamesBlock">
+                        <p class="towardsNames" id="towardsNameSECBS1">Rethifile</p>
+                        <p class="towardsNames" id="towardsNameSECBS2">Chilkalguda X</p>
+                        <p class="towardsNames" id="towardsNameSECBS3">Alpha(Stn)</p>
+                        <p class="towardsNames" id="towardsNameSECBS4">Gurudwara</p>
+                        <p class="towardsNames" id="towardsNameSECBS5">Blue Sea</p>
+                    </div>
+
+                    <p class="BSOPtip">Click on the blue colour circles to view bus routes which arrives and departs
+                        from there. Only Main Bus Stops are Mentioned here </p>
+
+                </div>
+
+
+                <div class="popUpForBS" id="popUpForBS">
+                    <p class="cancelIcon"></p>
+                    <p class="xMark" onclick="document.querySelector('.popUpForBS').style.display = 'none';">X</p>
+                    <div class="infoBox" id="infoBox">
+                        <div class="infoBoxInfo">
+                            <p id="bsName">Towards Lalapet</p>
+                            <p>Frequently Available:</p>
+                            <ul id="BS_FA_Routes">
+                                <li>15H</li>
+                                <li>17DS</li>
+                                <li>17H</li>
+                                <li>242</li>
+                            </ul>
+                            <p>Rarely Available:</p>
+                            <ul id="BS_RA_Routes">
+                                <li>14P</li>
+                                <li>15D</li>
+                                <li>17D</li>
+                                <li>242A</li>
+                                <li>242B</li>
+                            </ul>
+                        </div>
+                        <p class="endMargin" id="infoBoxEndMargin"></p>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
 
         <div class="Fare_ChartOP Bus_DetailsOp" id="Output3">
@@ -380,12 +493,14 @@
 
                     <div class="routeBtw">
                         <p class="main" id="yrd_mainRoute1">17H</p>
-                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yrd_mainRoute1VM">View More</p>
+                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yrd_mainRoute1VM">View
+                            More</p>
                     </div>
 
                     <div class="routeBtw routeBtw2">
                         <p class="main" id="yrd_mainRoute2">229</p>
-                        <p class="moreRoute vm2" id="yrd_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View More</p>
+                        <p class="moreRoute vm2" id="yrd_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View
+                            More</p>
                     </div>
 
                     <p class="endMargin"></p>
@@ -418,6 +533,7 @@
                 </div>
 
                 <div class="yRoad_Down yRoad_Up" id="yRoad_Up">
+
                     <div class="yRoad yRoadBlockUSL">
                         <p class="dMark markPointers"></p>
                         <p class="arrowY">V</p>
@@ -434,12 +550,14 @@
 
                     <div class="routeBtw routeBtw2">
                         <p class="main" id="yru_mainRoute2">2J</p>
-                        <p class="moreRoute vm2" id="yru_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View More</p>
+                        <p class="moreRoute vm2" id="yru_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View
+                            More</p>
                     </div>
 
                     <div class="routeBtw">
                         <p class="main" id="yru_mainRoute1">3K</p>
-                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yru_mainRoute1VM">View More</p>
+                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yru_mainRoute1VM">View
+                            More</p>
                     </div>
 
                     <p class="endMargin"></p>
