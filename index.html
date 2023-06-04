@@ -5,11 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--=============== BOXICONS ===============-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="style.css">
 
     <title>Hyderabad City Bus Info</title>
@@ -208,15 +203,18 @@
                 <p class="busStopMainTitle" id="busStopMainTitle">AMEERPET</p>
 
                 <div id="crossRoads4BS" class="hide">
+
                     <div class="crossRoadsBlock">
                         <p class="yRoad"></p>
                         <p class="xRoad"></p>
                     </div>
 
-                    <p class="busStopicons BS4X1" onclick="openPopUpforBS(this.classList[1])"></p>
-                    <p class="busStopicons BS4X2" onclick="openPopUpforBS(this.classList[1])"></p>
-                    <p class="busStopicons BS4Y1" onclick="openPopUpforBS(this.classList[1])"></p>
-                    <p class="busStopicons BS4Y2" onclick="openPopUpforBS(this.classList[1])"></p>
+                    <div class="busStopIconsBlock">
+                        <p class="busStopicons BS4X1" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons BS4X2" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons BS4Y1" onclick="openPopUpforBS(this.classList[1])"></p>
+                        <p class="busStopicons BS4Y2" onclick="openPopUpforBS(this.classList[1])"></p>
+                    </div>
 
 
                     <div class="towardsNamesBlock">
@@ -288,7 +286,7 @@
                     <p class="cancelIcon"></p>
                     <p class="xMark" onclick="document.querySelector('.popUpForBS').style.display = 'none';">X</p>
                     <div class="infoBox" id="infoBox">
-                        <div class="infoBoxInfo">
+                        <div class="infoBoxInfo" id="">
                             <p id="bsName">Towards Lalapet</p>
                             <p>Frequently Available:</p>
                             <ul id="BS_FA_Routes">
@@ -487,21 +485,28 @@
                         <p class="dMark markPointers"></p>
                     </div>
 
-                    <p class="sourceName" id="yrd_SourceName">LALAPET</p>
-                    <p class="e1Name" id="yrd_Exchange1Name">ECIL X R</p>
-                    <p class="DestinationName" id="yrd_DestinationName">SUCHITRA</p>
-
-                    <div class="routeBtw">
-                        <p class="main" id="yrd_mainRoute1">17H</p>
-                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yrd_mainRoute1VM">View
-                            More</p>
+                    <div class="pointNamesBlock">
+                        <p class="sourceName" id="yrd_SourceName">LALAPET</p>
+                        <p class="e1Name" id="yrd_Exchange1Name">ECIL X R</p>
+                        <p class="DestinationName" id="yrd_DestinationName">SUCHITRA</p>
                     </div>
 
-                    <div class="routeBtw routeBtw2">
-                        <p class="main" id="yrd_mainRoute2">229</p>
-                        <p class="moreRoute vm2" id="yrd_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View
-                            More</p>
+                    <div class="routeNoBlock">
+                        <div class="routeBtw">
+                            <p class="main" id="yrd_mainRoute1">17H</p>
+                            <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yrd_mainRoute1VM">
+                                View
+                                More</p>
+                        </div>
+
+                        <div class="routeBtw routeBtw2">
+                            <p class="main" id="yrd_mainRoute2">229</p>
+                            <p class="moreRoute vm2" id="yrd_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">
+                                View
+                                More</p>
+                        </div>
                     </div>
+
 
                     <p class="endMargin"></p>
                     <div class="mapLegend">
@@ -544,20 +549,26 @@
                         <p class="sMark markPointers"></p>
                     </div>
 
-                    <p class="DestinationName" id="yru_DestinationName">NIMBOLI A</p>
-                    <p class="e1Name" id="yru_Exchange1Name">FEVER HSP</p>
-                    <p class="sourceName" id="yru_SourceName">LALAPET</p>
-
-                    <div class="routeBtw routeBtw2">
-                        <p class="main" id="yru_mainRoute2">2J</p>
-                        <p class="moreRoute vm2" id="yru_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">View
-                            More</p>
+                    <div class="pointNamesBlock">
+                        <p class="DestinationName" id="yru_DestinationName">NIMBOLI A</p>
+                        <p class="e1Name" id="yru_Exchange1Name">FEVER HSP</p>
+                        <p class="sourceName" id="yru_SourceName">LALAPET</p>
                     </div>
 
-                    <div class="routeBtw">
-                        <p class="main" id="yru_mainRoute1">3K</p>
-                        <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yru_mainRoute1VM">View
-                            More</p>
+                    <div class="routeNoBlock">
+                        <div class="routeBtw routeBtw2">
+                            <p class="main" id="yru_mainRoute2">2J</p>
+                            <p class="moreRoute vm2" id="yru_mainRoute2VM" onclick="viewMoreALTCO(this.classList[1])">
+                                View
+                                More</p>
+                        </div>
+
+                        <div class="routeBtw">
+                            <p class="main" id="yru_mainRoute1">3K</p>
+                            <p class="moreRoute vm1" onclick="viewMoreALTCO(this.classList[1])" id="yru_mainRoute1VM">
+                                View
+                                More</p>
+                        </div>
                     </div>
 
                     <p class="endMargin"></p>
@@ -593,7 +604,7 @@
                     <p class="cancelIcon"></p>
                     <p class="xMark" onclick="closePopUpBox()">X</p>
                     <div class="infoBox" id="infoBox">
-                        <div class="infoBoxInfo">
+                        <div class="infoBoxInfo" id="infoBoxInfoALT">
                             <p id="sdNames">LALAPET - SECUNDERABAD</p>
                             <p>Frequently Available:</p>
                             <ul id="ALT_FA_Routes">
@@ -611,7 +622,7 @@
                                 <li>242B</li>
                             </ul>
                         </div>
-                        <p class="endMargin" id="infoBoxEndMargin"></p>
+                        <p class="endMargin" id="infoBoxEndMarginALT"></p>
 
                         <div class="DescriptiveRoute">
                             <p id="ALTtitle">LALAPET - SECUNDERABAD - MEDCHAL </p>
@@ -715,11 +726,11 @@
                 required></textarea>
             <button class="contact-button" id="sendBtn">Send</button>
         </form>
-
+        <!-- Download the update from RT Apps Store -->
         <ul id="UpdateBlock" style="display: none;">
-            <li><span class="UpdateSubHeading">Update Found</span><br>
-                <span class="UpdateText">Download the update from RT Apps Store</span><br>
-                <a href="https://www.google.com" class="UpdateLink">Download</a>
+            <li><span class="UpdateSubHeading">No Update Found</span><br>
+                <span class="UpdateText">We will notify if there is any Update for this App.</span><br>
+                <a href="https://www.google.com" class="UpdateLink">More Apps</a>
             </li>
         </ul>
     </div>
