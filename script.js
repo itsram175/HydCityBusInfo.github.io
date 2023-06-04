@@ -174,7 +174,7 @@ let test = ["ABIDS", "ABIDS GPO", "ADARSH NAGAR", "ADIBATLA", "ADIKMET", "AFZALG
 let forList1 = RouteNumbers;
 let forList2 = BusstopsArray;
 
-var arraysrc = ["SHIVAM", "LALAPET", "VIDYA NAGAR", "SUCHITRA", "ECIL X ROADS"]
+var arraysrc =  ["SECUNDERABAD", "MIYAPUR X ROADS", "LB NAGAR", "ECIL X ROADS", "TARNAKA"]
 var arraydst = arraysrc;
 
 var array_BSD = [
