@@ -1,6 +1,3 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -485,7 +482,6 @@ button {
     flex-direction: column;
     align-items: center;
     margin-top: 25px;
-
 }
 
 .crossRoadsBlock .yRoad {
@@ -498,59 +494,47 @@ button {
     margin-top: -110px;
 }
 
-
+.busStopIconsBlock {
+    margin: 0;
+    width: 100%;
+    margin-top: -113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .busStopicons {
     width: 28px;
     height: 28px;
     background-color: #004581;
     border-radius: 50%;
-    margin: 0;
     border: 2px solid black;
-    margin-left: 10px;
+    margin: 0;
 }
 
-#crossRoads4BS .BS4X1 {
-    /* margin-top: -50px;
-    margin-left: -50px;  */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -25px;
-    /* margin-left: -85px; */
+#crossRoads4BS .busStopIconsBlock .BS4X1 {
+    margin: 0;
+    margin-top: 62px;
+    margin-left: -120px;
 
 }
 
-#crossRoads4BS .BS4X2 {
-    /* margin-top: 55px;
-    margin-left: -25px; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* margin-left: -85px; */
-    margin-top: 29px;
+#crossRoads4BS .busStopIconsBlock .BS4X2 {
+    margin: 0;
+    margin-top: 24px;
+    margin-left: -110px;
 }
 
-#crossRoads4BS .BS4Y1 {
-    /* margin-top: -85px;
-    margin-left: 20px; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -35px;
-   margin-left: -40px;
-    
+#crossRoads4BS .busStopIconsBlock .BS4Y1 {
+    margin: 0;
+    margin-top: -90px;
+    margin-left: -52px;
 }
 
-#crossRoads4BS .BS4Y2 {
-    /* margin-top: 85px;
-    margin-left: 25px; */
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 35px;
-    margin-left: 13px;
+#crossRoads4BS .busStopIconsBlock .BS4Y2 {
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 52px;
 }
 
 .towardsNamesBlock {
@@ -561,13 +545,13 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .towardsNames {
     font-size: 18px;
     padding: 5px;
     text-align: center;
+    margin-top: -37px;
 }
 
 #crossRoads4BS .towardsNamesBlock #towardsNameX1 {
@@ -589,7 +573,7 @@ button {
 }
 
 #crossRoads4BS .BSOPtip {
-    margin-top: 5px;
+    margin-top: -30px;
     /* display: none; */
 }
 
@@ -612,12 +596,15 @@ button {
 
 #crossRoads3BS .busStopIconsBlock {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    margin-top: -180px;
+    margin-top: -95px;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #crossRoads3BS .busStopIconsBlock .BS3X1 {
-    margin-top: -83px;
+    margin-top: -85px;
     margin-left: -110px;
 }
 
@@ -627,13 +614,13 @@ button {
 }
 
 #crossRoads3BS .busStopIconsBlock .BS3Y2 {
-    margin-left: 55px;
+    margin-left: 52px;
     margin-top: 10px;
 }
 
 #crossRoads3BS .towardsNamesBlock {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    margin-top: -180px;
+    margin-top: -100px;
     height: 185px;
 }
 
@@ -703,33 +690,35 @@ button {
     width: 100%;
     margin-top: -152px;
     height: 200px;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 #SecunderabadBusStops .busStopIconsBlock .SECBS1 {
+    margin-left: -140px;
     margin-top: 25px;
-    margin-left: 75px;
 }
 
 #SecunderabadBusStops .busStopIconsBlock .SECBS2 {
-    margin-top: 110px;
-    margin-left: -25px;
+    margin-top: -30px;
+    margin-left: 25px;
 }
 
 #SecunderabadBusStops .busStopIconsBlock .SECBS3 {
-    margin-top: 22px;
-    margin-left: 35px;
+    margin-top: -28px;
+    margin-left: 180px;
 }
 
 #SecunderabadBusStops .busStopIconsBlock .SECBS4 {
-    margin-top: 22px;
-    margin-left: 35px;
+    margin-top: 30px;
+    margin-left: 255px;
 }
 
 #SecunderabadBusStops .busStopIconsBlock .SECBS5 {
-    margin-top: 80px;
-    margin-left: 30px;
-}   
+    margin-left: -100px;
+}
 
 #SecunderabadBusStops .towardsNamesBlock {
     margin: 0;
@@ -750,14 +739,14 @@ button {
     margin-left: -150px;
     font-size: 14px;
     width: 100px;
-    
+
 }
 
 #SecunderabadBusStops .towardsNamesBlock #towardsNameSECBS3 {
     margin-top: -90px;
     margin-left: 200px;
     font-size: 15px;
-    
+
 }
 
 #SecunderabadBusStops .towardsNamesBlock #towardsNameSECBS4 {
@@ -981,12 +970,15 @@ button {
     justify-content: center;
     height: 100%;
     margin-left: 10px;
-    /* width: 70%; */
+    width: 70%;
 }
 
 .DetailedRouteOp h2 div p {
     margin-top: 3px;
     padding: 0px;
+    /* background-color: #004581; */
+    width: 100%;
+    text-align: left;
 }
 
 .DetailedRouteOp .DetailedStopslist {
@@ -1071,7 +1063,7 @@ button {
 .CBTExamCentersOP .CenterHeading {
     background-color: var(--primary-color);
     color: white;
-    padding: 5px;
+    padding: 10px 5px;
 }
 
 .CBTExamCentersOP .CenterHeading h2 {
@@ -1084,7 +1076,7 @@ button {
 .CBTExamCentersOP .CenterHeading p {
     width: 100%;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     padding-bottom: 3px;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -1802,58 +1794,60 @@ button {
     margin: 0;
     margin-top: -4px;
 }
-
+.yRoad_Down .pointNamesBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -235px;
+}
 .yRoad_Down .sourceName {
     margin: 0;
-    margin-top: -235px;
-    margin-left: 5px;
     width: 110px;
     text-align: center;
     height: 30px;
     padding: 4px;
     overflow: hidden;
+    margin-left: -160px;
 }
 
 .yRoad_Down .e1Name {
     margin: 0;
-    margin-top: 60px;
-    margin-left: 5px;
     width: 110px;
     text-align: center;
     height: 30px;
     padding: 5px;
     overflow: hidden;
+    margin-left: -160px;
+    margin-top: 60px;
 }
 
 .yRoad_Down .DestinationName {
     margin: 0;
-    margin-top: 60px;
-    margin-left: 5px;
     width: 110px;
     text-align: center;
     height: 30px;
     padding: 4px;
     overflow: hidden;
+    margin-left: -160px;
+    margin-top: 60px;
 }
-
+.yRoad_Down .routeNoBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -175px;
+}
 .yRoad_Down .routeBtw {
     margin: 0;
     width: 80px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -15px;
-    margin-left: 15px;
+   margin-left: 110px;
 }
 
 .yRoad_Down .routeBtw2 {
     margin: 0;
     width: 80px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 70px;
-    margin-left: 15px;
+    margin-top: 45px;
+    margin-left: 110px;
 }
 
 .yRoad_Down .endMargin {
@@ -1903,32 +1897,35 @@ button {
     margin-top: 10px;
 }
 
+.yRoad_Up .routeNoBlock{
+    margin: 0;
+}
 .yRoad_Up .sourceName {
     margin: 0px;
+    margin-left: 160px;
     margin-top: 60px;
-    margin-left: 165px;
 }
-
 .yRoad_Up .e1Name {
     margin: 0px;
+    margin-left: 160px;
     margin-top: 60px;
-    margin-left: 165px;
 }
-
 .yRoad_Up .DestinationName {
     margin: 0px;
-    margin-top: -235px;
-    margin-left: 165px;
+    margin-left: 160px;
 }
-
+.yRoad_Up .routeNoBlock{
+    margin-top: -175px;
+}
 .yRoad_Up .routeBtw {
-    margin-left: 40px;
+    margin: 0;
+    margin-left: -110px;
     margin-top: 45px;
 }
 
 .yRoad_Up .routeBtw2 {
-    margin-left: 40px;
-    margin-top: -180px;
+    margin: 0;
+    margin-left: -110px;
 }
 
 .yRoad_Up .yRoadBlockUSL .sMark {
