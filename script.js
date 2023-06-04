@@ -174,7 +174,7 @@ let test = ["ABIDS", "ABIDS GPO", "ADARSH NAGAR", "ADIBATLA", "ADIKMET", "AFZALG
 let forList1 = RouteNumbers;
 let forList2 = BusstopsArray;
 
-var arraysrc = ["SECUNDERABAD", "LB NAGAR", "MIYAPUR X ROADS", "SUCHITRA", "ECIL X ROADS"]
+var arraysrc = ["SHIVAM", "LALAPET", "VIDYA NAGAR", "SUCHITRA", "ECIL X ROADS"]
 var arraydst = arraysrc;
 
 var array_BSD = [
@@ -382,13 +382,13 @@ let yru_mainRoute2 = document.getElementById("yru_mainRoute2");
 // Pop Up Box
 let popUpBox = document.getElementById("popUpBox");
 let infoBox = document.getElementById("infoBox");
-let infoBoxInfo = document.querySelector(".infoBoxInfo");
+let infoBoxInfo = document.querySelector("#infoBoxInfoALT");
 let DescriptiveRoute = document.querySelector(".DescriptiveRoute");
 let ALTtitle = document.getElementById("ALTtitle");
 let DescriptiveRouteAltUL = document.getElementById("DescriptiveRouteAltUL");
 let popUpMsg = document.getElementById("popUpMsg");
 let expMapBtn = document.getElementById("expMapBtn");
-let infoBoxEndMargin = document.getElementById("infoBoxEndMargin");
+let infoBoxEndMargin = document.getElementById("infoBoxEndMarginALT");
 
 
 // Detailed Route Handles
@@ -1973,14 +1973,14 @@ function searchOutput() {
                         crossRoads3BS.style.display = "none";
                         SecunderabadBusStops.style.display = "none";
                         fillTowardsList("4BS", "Habsiguda", "Mettuguda", "Arts College", "Lalapet");
-                        modifyBusStops("4BS","-80px","-80px","-40px","13px");
+                        modifyBusStops("4BS","-120px","-110px","-52px","52px");
                         break;
                     case "LB NAGAR":
                         crossRoads4BS.style.display = "block";
                         crossRoads3BS.style.display = "none";
                         SecunderabadBusStops.style.display = "none";
                         fillTowardsList("4BS", "Hayathnagar", "DSNR", "Sagar X", "Nagole");
-                        modifyBusStops("4BS","25px","-60px","-40px","13px");
+                        modifyBusStops("4BS","60px","-60px","-52px","52px");
                         break;
 
                     case "MIYAPUR X ROADS":
@@ -2113,137 +2113,137 @@ function searchOutput() {
             // LALAPET - SECUNDERABAD BLOCK
             // MEDCHAL ROUTE - LPT
             if (input2.value == "MEDCHAL") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "MEDCHAL CHECKPOST") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "MEDCHAL IDA") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "CMR COLLEGE") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "KANDLAKOYA") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "GUNDLA POCHAMPALLY") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "KOMPALLY") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "DHULAPALLY X ROADS") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "JEEDIMETLA VILLAGE") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "SUCHITRA") {
                 FillAlternateRoute1Block("YD", "ECIL X ROADS", "", "17H", "24S");
             }
             else if (input2.value == "BANK COLONY") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229B");
             }
             else if (input2.value == "BOWENPALLY CHECK POST") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "BOWENPALLY X ROADS") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "229");
             }
             else if (input2.value == "BOWENPALLY") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "TARBUND") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "BALAMRAI") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "229");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
-
+            
             // NUTHANAKAL ROUTE - LPT
             else if (input2.value == "NUTHANAKAL") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "233");
             }
             else if (input2.value == "SRI RANGAVARAM") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "233");
             }
             else if (input2.value == "SRI RANGAVARAM VILLAGE") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "233");
             }
             else if (input2.value == "BANDLA MAHESHWARAM") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "233");
             }
             else if (input2.value == "BANDA MADARAM") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "233");
             }
             else if (input2.value == "RAILAPOOR") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "233");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "233");
             }
-
-
-
+            
+            
+            
             else if (input2.value == "ALWAL") {
                 FillAlternateRoute1Block("YD", "ECIL X ROADS", "", "17H", "24S");
             }
             else if (input2.value == "BHUDEVI NAGAR") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "23B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "23B");
             }
             else if (input2.value == "VENKATAPURAM") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "21W");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "21W");
             }
             else if (input2.value == "WEST VENKATAPURAM") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "21W");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "21W");
             }
             else if (input2.value == "BITS PILANI") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "212");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "212");
             }
             else if (input2.value == "DEVARYAMJAL") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "211DY");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "211DY");
             }
             else if (input2.value == "VARGAL TEMPLE") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "212/702");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "212/702");
             }
-
+            
             // JEEDIMETLA ROUTE - LPT
             else if (input2.value == "DUNDIGAL") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "230");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "230");
             }
             else if (input2.value == "AIR FORCE ACADEMY") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "230A");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "230A");
             }
             else if (input2.value == "GANDIMAISAMMA") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "272");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "272");
             }
             else if (input2.value == "BAHUDURPALLY") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "272");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "272");
             }
             else if (input2.value == "GOVT. COLLEGE (BAHUDRPALLY)") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "272");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "272");
             }
             else if (input2.value == "SURARAM X ROAD") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "272");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "272");
             }
             else if (input2.value == "APUROOPA COLONY") {
                 FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Gurudwara Bus Stop.", "29B", "17H/29B, 29B/272G, 230A", "Secunderabad - Jeedimetla", "At Gurudwara Bus Stop, Board any bus of number shown left side and get down at Jeedimetla. Then walk to bus stop where you can find buses towards Apuroopa colony.", "83JA", "189M", "Jeedimetla - Apuroopa Colony", "At Jeedimetla Bus stop, Board any bus of number shown left side and get down at Apuroopa Colony.");
             }
             else if (input2.value == "JEEDIMETLA") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "29B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "29B");
             }
             else if (input2.value == "JEEDIMETLA SUBSTATION") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "29B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "29B");
             }
             else if (input2.value == "CHINTAL") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "29B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "29B");
             }
             else if (input2.value == "SHAHPUR NAGAR") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "29B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "29B");
             }
             else if (input2.value == "GANESH NAGAR") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "29B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "29B");
             }
             else if (input2.value == "IDPL") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "30");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "30");
             }
             else if (input2.value == "BALANAGAR") {
                 FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
@@ -2255,10 +2255,10 @@ function searchOutput() {
                 FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "GAJULA RAMARAM") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "171");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "171");
             }
             else if (input2.value == "GAJULA RAMARAM X ROADS") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "29B");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "29B");
             }
 
             // PANJAGUTTA ROUTE - LPT
@@ -2322,135 +2322,135 @@ function searchOutput() {
                 FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "SR NAGAR") {
-                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10");
             }
             else if (input2.value == "SR NAGAR M") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10", "10K, 10KJ, 10KM/224G", "Secunderabad - SR Nagar M", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at SR Nagar M.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10");
             }
             else if (input2.value == "ESI HOSPITAL") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10", "10K, 10KJ, 10KM/224G", "Secunderabad - ESI Hospital", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at ESI Hospital.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10");
             }
             else if (input2.value == "ERRAGADDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10", "10K, 10KJ, 10KM/224G", "Secunderabad - Erragadda", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Erragadda.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10");
             }
             else if (input2.value == "BORABANDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10F", "10YF", "Secunderabad - Borabanda", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Borabanda.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10YF");
             }
             else if (input2.value == "SANATH NAGAR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10", "", "Secunderabad - Sanath Nagar", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Sanath Nagar.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10");
             }
             else if (input2.value == "BHARATH NAGAR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10KJ", "10K, 10KM, 10KM/224G", "Secunderabad - Bharath Nagar", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Bharath Nagar.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10KJ");
             }
             else if (input2.value == "MOOSAPET") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10KJ", "10K, 10KM, 10KM/224G", "Secunderabad - Moosapet", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Moosapet.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10KJ");
             }
             else if (input2.value == "YOUSUFGUDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10YF, 10HA, 10HL, 10HW", "Secunderabad - Yousufguda", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Yousufguda.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10YF");
             }
             else if (input2.value == "YOUSUFGUDA CHECK POST") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10YF, 10HA, 10HL, 10HW", "Secunderabad - Yousufguda Checkpost", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Yousufguda Checkpost.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "STATE HOME") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10YF, 10HA, 10HL, 10HW", "Secunderabad - State Home", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at State Home.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "KRISHNA NAGAR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HA, 10HL, 10HW", "Secunderabad - Krishna Nagar", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Krishna Nagar.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "PEDHAMMAGUDI") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA", "Secunderabad - Pedhamma Gudi", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Pedhamma Gudi.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "JUBLIE HILLS CHECK POST") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA, 47L, 47Y, 47YM", "Secunderabad - Jubliee Hills Check Post", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Jubliee Hills Check Post.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "HITECH THEATER") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA", "Secunderabad - Hitech Theater", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Hitech Theater.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "HITEX KAMAN") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA", "Secunderabad - Hitex Kaman", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Hitex Kaman.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "HITECH CITY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA", "Secunderabad - Hitech City", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Hitech City.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "JAYABHERI") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA", "Secunderabad - Jayabheri", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Jayabheri.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "KOTHAGUDA JUNCTION") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA", "Secunderabad - Kothaguda Junction", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Kothaguda Junction.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
             else if (input2.value == "KONDAPUR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10H", "10HW, 10HL, 10HA", "Secunderabad - Kondapur", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Kondapur.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10H");
             }
 
             // KUKATPALLY ROUTE - LPT
             else if (input2.value == "Y JUNCTION") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "16A/219, 17H/219, 18C/219", "Secunderabad - Y Junction", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Y Junction (Prashanth Nagar).", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "KUKATPALLY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10K", "10KJ, 10KM, 219, 17H/219", "Secunderabad - Kukatpally", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Kukatpally.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "KPHB COLONY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10K", "10J, 10KM, 219, 17H/219", "Secunderabad - KPHB Colony", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at KPHB Colony.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "KPHB COLONY 4TH PHASE") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10K", "", "Secunderabad - KPHB Colony 4th Phase", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at KPHB Colony 4th Phase.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10K");
             }
             else if (input2.value == "KUKATPALLY GOVT COLLEGE") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "10K", "10J, 10KM, 219, 17H/219", "Secunderabad - Kukatpally GOVT. College", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Kukatpally GOVT. College.", "", "", "", "");
+               FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "JNTU COLLEGE") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 250/219, 10KM/272G", "Secunderabad - JNTU College", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at JNTU College.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "NIZAMPET X ROADS") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 250/219, 10KM/272G", "Secunderabad - Nizampet X Roads", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Nizampet X Roads.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "HYDER NAGAR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 250/219, 10KM/272G", "Secunderabad - Hyder Nagar", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Hyder Nagar.", "", "", "", "");
+               FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "MIYAPUR METRO STATION") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 250/219, 10KM/272G", "Secunderabad - Miyapur Metro Station", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Miyapur Metro Station.", "", "", "", "");
+               FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "MIYAPUR X ROADS") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 250/219, 10KM/272G", "Secunderabad - Miyapur X Roads", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Miyapur X Roads.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "MIYAPUR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 18C/219, 250/219", "Secunderabad - Miyapur", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Miyapur.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "MADINAGUDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 18C/219, 250/219", "Secunderabad - HUDA Colony", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at HUDA Colony.", "", "", "", "");
+               FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "HUDA COLONY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 18C/219, 250/219", "Secunderabad - HUDA Colony", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at HUDA Colony.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "CHANDA NAGAR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 18C/219, 250/219", "Secunderabad - Chanda Nagar", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Chanda Nagar.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "GANGARAM") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 18C/219, 250/219", "Secunderabad - Gangaram", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Gangaram.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "LINGAMPALLY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "10HA, 17H/219, 18C/219", "Secunderabad - Lingampally", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Lingampally.", "", "", "", "");
+               FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "ASHOK NAGAR - BHEL") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "10HA, 17H/219, 18C/219", "Secunderabad - Ashok Nagar - BHEL", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Ashok Nagar - BHEL.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "RAMACHANDRA PURAM") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "10HL, 17H/219, 18C/219", "Secunderabad - Ramachandra Puram", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Ramachandra Puram.", "", "", "", "");
+               FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "RC PURAM") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "10HL, 17H/219, 18C/219", "Secunderabad - RC Puram", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at RC Puram.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "ICRISAT") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "10HL, 17H/219, 18C/219", "Secunderabad - ICRISAT", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at ICRISAT.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "PATANCHERU") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "10HA, 17H/219, 18C/219", "Secunderabad - Patancheru", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Patancheru.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "ISNAPUR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "", "Secunderabad - Isnapur", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Isnapur.", "219", "", "", "Kindly check the Destination of the bus before Boarding, because sometimes 219 route may end its trip Patancheru only.");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "219");
             }
             else if (input2.value == "JAGATHGIRIGUTTA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel or Gurudwara Bus Stop.", "10KJ", "30, 18C/30, 280/30", "Secunderabad - Jagathgiri Gutta", "At Alpha Hotel Bus Stop, you can find 10KJ and at Gurudwara Bus Stop you can find other buses mentioned left side. Board any of them and get down at Jagathgiri Gutta.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD STN.", "17H", "10KJ");
             }
 
             // NIZAMPET ROUTE
@@ -2492,38 +2492,34 @@ function searchOutput() {
                 FillAlternateRoute2Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "219", "17H/219, 250/219, 10KM/272G", "Secunderabad - Miyapur X Roads", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Miyapur X Roads. Then Cross the road and walk to bus stop, where you can find the buses towards Bachupally.", "224G", "10KM/224G", "Miyapur X Roads - Bowrampet X Roads", "At Miyapur X Roads Bus Stop, Board any bus of number shown left side and get down at Bowrampet X Roads.");
             }
             else if (input2.value == "BOWRAMPET") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Gurudwara Bus Stop.", "272", "", "Secunderabad - Bowrampet", "At Gurudwara Bus Stop, Board any bus of number shown left side and get down at Bowrampet.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "272");
             }
             else if (input2.value == "INDIRAMMA COLONY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Gurudwara Bus Stop.", "272I", "", "Secunderabad - Indiramma Colony", "At Gurudwara Bus Stop, Board any bus of number shown left side and get down at Indiramma Colony.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "272I");
             }
 
 
             // TANK BUND ROUTE - LPT
             else if (input2.value == "CLOCK TOWER") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 8A, 8C", "Secunderabad - Clock Tower", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Clock Tower.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "5K");
             }
             else if (input2.value == "RANIGUNJ") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "8C", "7Z", "Secunderabad - Ranigunj", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Ranigunj.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "8C");
             }
             else if (input2.value == "BATA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "8A, 8AU, 16A/5K", "Secunderabad - Bata", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Bata.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "5K");
             }
             else if (input2.value == "TANK BUND") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 8A, 8C", "Secunderabad - Tank Bund", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Tank Bund.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "5K");
             }
             else if (input2.value == "SECRETARIATE") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 8C, 16A/5K", "Secunderabad - Secretariate", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Secretariate.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "5K");
             }
             else if (input2.value == "BIRLA MANDIR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 8C, 16A/5K", "Secunderabad - Birla Mandir", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Birla Mandir.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Fever Hospital", "First go to Fever Hospital by bus of numbers shown left side.", "113M", "113IM, 113KL, 113F", "Fever Hospital - Birla Mandir", "At Fever Hospital Bus Stop, Board any bus of number shown left side and get down at Birla Mandir.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "5K");
             }
             else if (input2.value == "LAKDI KA PUL") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 8C, 16A/5K", "Secunderabad - Lakdi Ka Pul", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Lakdi Ka Pul.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Fever Hospital", "First go to Fever Hospital by bus of numbers shown left side.", "113M", "113IM, 113KL, 113F", "Fever Hospital - Lakdi ka Pul", "At Fever Hospital Bus Stop, Board any bus of number shown left side and get down at Lakdi ka Pul.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "5K");
             }
             else if (input2.value == "SHADAN COLLEGE") {
                 FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 8C, 16A/5K", "Secunderabad - Lakdi Ka Pul", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Lakdi Ka Pul.", "9X", "9K, 9X/272G, 113F, 113KL, 218", "Lakdi ka pul - Shahdan College", "At Lakdi ka pul Bus Stop, Board any bus of number shown left side and get down at Shahdan College.");
@@ -2538,96 +2534,71 @@ function searchOutput() {
 
 
             else if (input2.value == "ABIDS") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "8A", "8AU, 7Z", "Secunderabad - Abids", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Abids.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "8A");
             }
             else if (input2.value == "LIBERTY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "8A", "8AU, 7Z", "Secunderabad - Liberty", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Liberty.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD GRD.", "17H", "8A");
             }
 
 
             // RTC X ROADS ROUTE - LPT
             else if (input2.value == "YMCA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 86J, 102B", "Secunderabad - YMCA", "At Rethifile Bus Station, Board any bus of number shown left side and get down at YMCA.", "", "", "", "");
-                FillAlternateRoute2Block("3K", "3D, 3H, 3K/242, 3K/281", "Lalapet - Kacheguda X Road", "First go to Kachiguda X Road by bus of numbers shown left side and walk to opposite bus stop.", "3N", "86J, 83J, 83J/272G", "Kacheguda X Road - YMCA", "At Kacheguda X Road Bus Stop, Board any bus of number shown left side and get down at YMCA.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "NARAYANAGUDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 102B, 102M", "Secunderabad - Narayanaguda", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Narayanaguda.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "CHIKKADPALLY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 102B, 102M", "Secunderabad - Chikkadpally", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Chikkadpally.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "RTC X ROADS") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 2, 2J, 107VR, 107VS", "Secunderabad - RTC X Roads", "At Rethifile Bus Station, Board any bus of number shown left side and get down at RTC X Roads.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - RTC X Roads", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at RTC X Roads.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "GOLCONDA X ROADS") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 2, 2J, 107VR, 107VS", "Secunderabad - Golconda X Roads", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Golconda X Roads.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - Golconda X Roads", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Golconda X Roads.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "RAJA DELUXE") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 2, 2J, 107VR, 107VS", "Secunderabad - Raja Deluxe", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Raja Deluxe.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - Raja Deluxe", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Raja Deluxe.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "MUSHEERABAD") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 2, 2J, 107VR, 20P, 107VS", "Secunderabad - Musheerabad", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Musheerabad.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - Musheerabad", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Musheerabad.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "GANDHI HOSPITAL") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 2, 2J, 107VR, 107VS", "Secunderabad - Gandhi Hospital", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Gandhi Hospital.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - Gandhi Hospital", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Gandhi Hospital.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "BOIGUDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "1", "1D, 1J, 1Z, 2, 2J, 107VR, 107VS", "Secunderabad - Boiguda", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Boiguda.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - Boiguda", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Boiguda.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "1");
             }
             else if (input2.value == "BUS BHAVAN") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "2", "2C, 2J, 107VR, 107VS", "Secunderabad - Bus Bhavan", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Bus Bhavan.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - Bus Bhavan", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Bus Bhavan.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "2");
             }
             else if (input2.value == "VST") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "2", "2C, 2J, 86J, 107VR, 107VS", "Secunderabad - VST", "At Rethifile Bus Station, Board any bus of number shown left side and get down at VST.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.Then cross the road and walk to opposite bus stop.", "107VS", "107VR, 107VL", "Vidya Nagar - VST", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at VST.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "2");
             }
 
             else if (input2.value == "RAMAKRISHNA MUTT") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "20P", "", "Secunderabad - Ramakrishna Mutt", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Ramakrishna Mutt.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "20P");
             }
             else if (input2.value == "NTR STADIUM") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "20P", "", "Secunderabad - NTR Stadium", "At Rethifile Bus Station, Board any bus of number shown left side and get down at NTR Stadium.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "20P");
             }
 
             else if (input2.value == "PARSIGUTTA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "44X", "", "Secunderabad - Parsigutta", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Parsigutta.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "44X");
             }
             else if (input2.value == "GANGAPUTRA COLONY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "44X", "", "Secunderabad - Gangaputra Colony", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Gangaputra Colony.", "", "", "", "");
-            }
-
-            else if (input2.value == "CHILKALGUDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "86J", "107JS, 107JD, 107JL", "Secunderabad - Chilkalguda", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Chilkalguda.", "", "", "", "");
-
-                FillAlternateRoute2Block("17S", "17DS", "Lalapet - Chilkalguda", "The buses shown left side are the direct buses to Chilkalguda, But there are less no. of buses operated in that route. We recommend not to wait for those buses and choose Route 1.", "", "", "", "", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "44X");
             }
             else if (input2.value == "PADMARAO NAGAR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "20P", "1P, 1P/25S", "Secunderabad - Padmarao Nagar", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Padmarao Nagar.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "20P");
             }
 
             // MEHDIPATNAM ROUTE - LPT
             else if (input2.value == "MALLEPALLY") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5M", "", "Secunderabad - Mallepally", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Mallepally.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "5M");
             }
             else if (input2.value == "MEHDIPATNAM") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 49M, 16A/49M, 49M/250", "Secunderabad - Mehdipatnam", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Mehdipatnam.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Fever Hospital", "First go to Fever Hospital by bus of numbers shown left side.", "113M", "113IM, 113M/288", "Fever Hospital - Mehdipatnam", "At Fever Hospital Bus Stop, Board any bus of number shown left side and get down at Mehdipatnam.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "5K");
             }
             else if (input2.value == "RAMDEV GUDA") {
                 FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "5K", "5M, 49M, 16A/49M, 49M/250", "Secunderabad - Mehdipatnam", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Mehdipatnam.", "505", "", "Mehdipatnam - Ramdev Guda", "At Mehdipatnam Bus Stop, Board any bus shown left side and get down at Ramdev Guda.");
@@ -2680,25 +2651,21 @@ function searchOutput() {
                 FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Fever Hospital", "First go to Fever Hospital by bus of numbers shown left side.", "113M", "113IM, 113M/288", "Fever Hospital - Mehdipatnam", "At Fever Hospital Bus Stop, Board any bus of number shown left side and get down at Mehdipatnam.", "593", "", "Mehdipatnam - Chevella", "At Mehdipatnam Bus Stop, Board any bus of number shown left side and get down at Chevella.");
             }
             else if (input2.value == "FILM NAGAR") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "47L", "47Y, 47YM, 16A/47L", "Secunderabad - Film Nagar", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Film Nagar.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "47L");
             }
             else if (input2.value == "MANIKONDA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "47L", "47Y, 47YM, 16A/47L", "Secunderabad - Manikonda", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Manikonda.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "47L");
             }
             else if (input2.value == "MANCHIREVULA") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Alpha Hotel Bus Stop.", "47YM", "", "Secunderabad - Manchirevula", "At Alpha Hotel Bus Stop, Board any bus of number shown left side and get down at Manchirevula.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS.", "17H", "47YM");
             }
 
             // AMBERPET ROUTE
             else if (input2.value == "AMBERPET") {
-                FillAlternateRoute1Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.", "107VR", "107JS, 107VL, 107VS", "Vidya Nagar - Amberpet", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Amberpet.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Fever Hospital", "First go to Fever Hospital by bus of numbers shown left side. Then cross the road and walk to Opposite Bus Stop.", "113M", "113IM, 113KL", "Fever Hospital - Amberpet", "At Fever Hospital Bus Stop, Board any bus of number shown left side and get down at Amberpet.", "", "", "", "");
+                FillAlternateRoute1Block("YU", "VIDYA NAGAR", "", "3K", "107VR");
             }
             else if (input2.value == "CHEY NUMBER BUS STOP") {
-                FillAlternateRoute1Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.", "107VR", "107JS, 107VL, 107VS", "Vidya Nagar - Chey Number Bus Stop", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Chey Number Bus Stop.", "", "", "", "");
-
-                FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Fever Hospital", "First go to Fever Hospital by bus of numbers shown left side. Then cross the road and walk to Opposite Bus Stop.", "113M", "113IM, 113KL", "Fever Hospital - Chey Number Bus Stop", "At Fever Hospital Bus Stop, Board any bus of number shown left side and get down at Chey Number Bus Stop.", "", "", "", "");
+                FillAlternateRoute1Block("YU", "VIDYA NAGAR", "", "3K", "107VR");
             }
             else if (input2.value == "TILAK NAGAR") {
                 FillAlternateRoute1Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Fever Hospital", "First go to Fever Hospital by bus of numbers shown left side. Then cross the road and walk to Opposite Bus Stop.", "113M", "113IM, 113KL", "Fever Hospital - Tilak Nagar", "At Fever Hospital Bus Stop, Board any bus of number shown left side and get down at Tilak Nagar.", "", "", "", "");
@@ -2706,7 +2673,7 @@ function searchOutput() {
                 FillAlternateRoute2Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.", "107VR", "107JS, 107VL, 107VS", "Vidya Nagar - Chey Number", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Chey Number Bus Stop. And walk to the bus stop where you can find the buses towards Tilak Nagar", "113M", "113IM, 113KL, 113F", "Chey Number - Tilak Nagar", "At Chey Number Bus Stop, Board any bus of number shown left side and get down at Tilak Nagar.");
             }
             else if (input2.value == "SHIVAM") {
-                FillAlternateRoute1Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.", "107VR", "107JS, 107VL, 107VS", "Vidya Nagar - Shivam", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Shivam.", "", "", "", "");
+                FillAlternateRoute1Block("YU", "VIDYA NAGAR", "", "3K", "107VR");
             }
             else if (input2.value == "RAM NAGAR") {
                 FillAlternateRoute1Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Vidya Nagar", "First go to Vidya Nagar by bus of numbers shown left side.", "107VR", "107JS, 107VL, 107VS", "Vidya Nagar - Ram Nagar", "At Vidya Nagar Bus Stop, Board any bus of number shown left side and get down at Ram Nagar.", "", "", "", "");
@@ -2731,17 +2698,13 @@ function searchOutput() {
 
             }
             else if (input2.value == "JAMAI OSMANIA STN.") {
-                FillAlternateRoute1Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "86J", "107JS, 107JD, 107JL", "Secunderabad - Jamai Osmania STN.", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Jamai Osmania STN..", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS", "17H", "86J");
             }
             else if (input2.value == "ARTS COLLEGE RAILWAY STATION") {
-                FillAlternateRoute1Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Adikmet", "First go to Adikmet by bus of numbers shown left side and walk to Ram Nagar Gundu Bus Stop", "86J", "107JS, 107JD, 107JL", "Ram Nagar Gundu - Arts College Railway Station", "At Ram Nagar Gundu Bus Stop, Board any bus of number shown left side and get down at Arts College Railway Station.", "", "", "", "");
-
-                FillAlternateRoute2Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "86J", "107JS, 107JD, 107JL", "Secunderabad - Arts College Railway Station", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Arts College Railway Station.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS", "17H", "86J");
             }
             else if (input2.value == "WARISGUDA") {
-                FillAlternateRoute1Block("3K", "3D, 3K/102B, 3K/242", "Lalapet - Adikmet", "First go to Adikmet by bus of numbers shown left side and walk to Ram Nagar Gundu Bus Stop", "86J", "107JS, 107JD, 107JL", "Ram Nagar Gundu - Warisguda", "At Ram Nagar Gundu Bus Stop, Board any bus of number shown left side and get down at Warisguda.", "", "", "", "");
-
-                FillAlternateRoute2Block("17H", "15H, 17D, 242, 241T", "Lalapet - Secunderabad", "First go to Secunderabad by bus of numbers shown left side and walk to Rethifile Bus Station.", "86J", "107JS, 107JD, 107JL", "Secunderabad - Warisguda", "At Rethifile Bus Station, Board any bus of number shown left side and get down at Warisguda.", "", "", "", "");
+                FillAlternateRoute1Block("XR", "SEC-BAD", "SEC-BAD RBS", "17H", "86J");
             }
 
 
@@ -2762,7 +2725,7 @@ function searchOutput() {
                 FillAlternateRoute2Block("3K", "3D, 3H, 3K/242, 3K/281", "Lalapet - Koti W.Clg", "First go to Koti Womens College by bus of numbers shown left side and walk to Opposite Bus Stop.", "40", "45F", "Koti W.Clg - Ram Koti", "At Koti Women's College Bus Stop, Board any bus of number shown left side and get down at Ram Koti.", "", "", "", "");
             }
             else if (input2.value == "CHADERGHAT") {
-                FillAlternateRoute1Block("3K", "3D, 3H, 3K/242, 3K/281", "Lalapet - Koti W.Clg", "First go to Koti Womens College by bus of numbers shown left side and walk to Women's College Bus Stop.", "1D", "1V, 1H/D, 102B, 102M, 277D, 299", "Koti W.Clg - Chaderghat", "At Women's College Bus Stop, Board any bus of number shown left side and get down at Chaderghat.", "", "", "", "");
+                FillAlternateRoute1Block("XL", "KOTI W.COLLEGE", "SEC-BAD RBS", "17H", "86J");
             }
             else if (input2.value == "NALGONDA X ROADS") {
                 FillAlternateRoute1Block("3K", "3D, 3H, 3K/242, 3K/281", "Lalapet - Koti W.Clg", "First go to Koti Womens College by bus of numbers shown left side and walk to Women's College Bus Stop.", "1D", "1V, 1H/D, 102B, 102M, 277D, 299", "Koti W.clg - Nalgonda X Roads", "At Women's College Bus Stop, Board any bus of number shown left side and get down at Nalgonda X Roads.", "", "", "", "");
@@ -8688,19 +8651,19 @@ function openPopUpforBS(ref) {
             bsName.innerHTML = "Towards " + towardsNameX13BS.innerHTML;
             arrayRG = CVBSOP_Array[refip][2];
         }
-        else if (ref == "SECBS3") {
+        else if (ref == "SECBS2") {
             bsName.innerHTML = "Rethifile Bus Station";
             arrayRG = CVBSOP_Array[refip][0];
         } else if (ref == "SECBS1") {
             bsName.innerHTML = "Chilkalguda X Roads";
             arrayRG = CVBSOP_Array[refip][1];
-        } else if (ref == "SECBS4") {
+        } else if (ref == "SECBS3") {
             bsName.innerHTML = "Railway Station Bus Stop";
             arrayRG = CVBSOP_Array[refip][2];
-        } else if (ref == "SECBS5") {
+        } else if (ref == "SECBS4") {
             bsName.innerHTML = "Gurudwara Bus Stop";
             arrayRG = CVBSOP_Array[refip][3];
-        } else if (ref == "SECBS2") {
+        } else if (ref == "SECBS5") {
             bsName.innerHTML = "Blue Sea bus Stop";
             arrayRG = CVBSOP_Array[refip][4];
         }
@@ -8777,6 +8740,11 @@ function FillAlternateRoute1Block(theme, Exchange1Name, Exchange2Name, MainRoute
         Source = Source.slice(0, 8);
     } else {
         Source = Source;
+    }
+    if (Exchange1Name.length > 8) {
+        Exchange1Name = Exchange1Name.slice(0, 8);
+    } else {
+        Exchange1Name = Exchange1Name;
     }
 
     wayTitle.innerHTML = input.value + " - " + ExchangeName + " - " + input2.value;
@@ -8885,17 +8853,19 @@ function closePopUpBox() {
 }
 function viewALTdescRoute() {
     infoBox.style.width = "95%";
-    infoBoxInfo.style.display = "none";
     DescriptiveRoute.style.display = "block";
     popUpBox.style.display = "flex";
+    infoBoxInfo.style.display = "none";
     infoBoxEndMargin.style.display = "none";
     ALTtitle.innerHTML = input.value + " - " + ExchangeName + " - " + input2.value;
-
+    
     if (xRoad_Left.style.display == "flex" || xRoad_Right.style.display == "flex") {
         var arrayALT = ["1. First Go To Secunderabad by buses shown in the orange outlined box.", "2. You will be getting down at Secunderabad Blue Sea Hotel Bus Stop.", "3. From there walk to Secunderabad Railways Station Bus Stop.", "4. At Secunderabad Gurudwara Bus Stop Board any bus shown in the Green Outlined Box and Get down at Medchal"]
     } else if (yRoad_Down.style.display == "block" || yRoad_Up.style.display == "block") {
         var arrayALT = ["1. First Go To Ecil X Roads by buses shown in the orange outlined box.", "2. If they dropped you outside of bus station, go inside the bus Station.", "3. At Ecil x roads Bus Station board any bus shown in the green color outlined box and get down at Suchitra."]
+
     }
+
 
 
     var stringALT = "";
@@ -9306,15 +9276,16 @@ function resizeFontRTNO(){
     } else {
         detRTNumber.style.fontSize = "22px";
     }
-    console.log(detRTNumber.innerHTML);
-    console.log(detRTNumber.innerHTML.length);
+    // console.log(detRTNumber.innerHTML);
+    // console.log(detRTNumber.innerHTML.length);
 }
 
 
 
 function TestMode() {
-    navLink2.click();
-    input.value = "TARNAKA";
+    menuItems1.click();
+    input.value = "LALAPET";
+    input2.value = "SHIVAM";
     searchOutput();
 }
 
